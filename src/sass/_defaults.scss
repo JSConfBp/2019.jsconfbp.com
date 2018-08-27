@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,400i,700,700i&subset=latin-ext');
+$main-color: #0d171f;
+$secondary-color: #db3127;
+$link-color: #921811;
+$link-hover-color: #db3127;
+$link-visited-color: #92342f;
+$base-font: 'Open Sans', serif;
+$secondary-font: 'Great Vibes', cursive;
+
+* {
+    box-sizing: border-box;
+}

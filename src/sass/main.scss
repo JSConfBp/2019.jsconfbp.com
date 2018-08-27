@@ -1,0 +1,88 @@
+@import 'reset';
+@import 'defaults';
+
+html {
+    height: 100%;
+}
+
+body {
+    background: {
+        attachment: fixed;
+        color: #f1f1f1;
+        image: url(/img/bg.jpg);
+        size: cover;
+        repeat: no-repeat;
+    }
+    color: $main-color;
+    font: {
+        family: $base-font;
+        size: 16px;
+    }
+    height: 100%;
+    line-height: 1.5;
+}
+
+.home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.date {
+    color: $secondary-color;
+    font: {
+        size: 8em;
+    }
+    text-shadow: 1px 1px 2px #532213;
+    @media screen and (min-width: 1024px) {
+        font-size: 18em;
+    }
+}
+
+.navigation {
+    &_wrapper {
+        &_list {
+            display: flex;
+            justify-content: center;
+            &_item {
+                margin: {
+                    left: 15px;
+                    right: 15px;
+                }
+                &_link {
+                    color: $link-color;
+                    font: {
+                        size: 1em;
+                    }
+                    text-decoration: underline;
+                    &:hover, &:focus {
+                        color: $link-hover-color;
+                        outline: 0;
+                        text-decoration: none;
+                    }
+                    &:visited {
+                        color: $link-visited-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tldr {
+    background-color: rgba(255, 255, 255, .6);
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    max-width: 768px;
+    padding: 20px;
+    @media screen and (min-width: 800px) {
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }        
+}

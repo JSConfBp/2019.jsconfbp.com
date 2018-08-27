@@ -1,0 +1,20 @@
+{
+  "name": "2019.jsconfbp.com",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "scss": "node-sass --include-path / --output-style compressed -o dist/css src/sass",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
+    "build": "npm run scss && npm run autoprefixer"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.6.0",
+    "postcss-cli": "^4.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
