@@ -6,15 +6,16 @@
     "scss": "node-sass --include-path / --output-style compressed -o dist/css src/sass",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "build": "npm run scss && npm run autoprefixer",
-    "start": "docker-compose up",
-    "dev": "npx nodemon index.js"
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "watch": "npx npm-watch"
   },
   "dependencies": {
-    "npm-watch": "0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "node-sass": "^4.6.0",
+    "npm-watch": "0.3.0",
     "postcss-cli": "^4.1.1"
   },
   "browserslist": [
