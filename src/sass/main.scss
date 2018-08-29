@@ -16,7 +16,7 @@ body {
     color: $main-color;
     font: {
         family: $base-font;
-        size: 16px;
+        size: 18px;
     }
     height: 100%;
     line-height: 1.5;
@@ -84,5 +84,53 @@ body {
             top: 15px;
             bottom: 15px;
         }
-    }        
+    }
+}
+
+section {
+    a {
+        color: $link-color;
+        text-decoration: underline;
+        &:hover, &:focus {
+            color: $link-hover-color;
+            outline: 0;
+            text-decoration: none;
+        }
+        &:visited {
+            color: $link-visited-color;
+        }
+    }
+    h1, h2, h3 {
+        color: $secondary-color;
+        margin-top: 1em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h1, h2, h3, ul, p {
+        margin-bottom: 1.25em;
+    }
+    li {
+        margin-left: 1.25em;
+        list-style-type: disc;
+        margin-bottom: 0.5em;
+    }
+    em {
+        font-style: italic;
+    }
+    strong {
+        font-weight: bold;
+    }
 }
