@@ -7,7 +7,7 @@ services:
       - "8080:80"   # HTTP port
       - "443:443"  # HTTPS port
     volumes:
-      - .:/usr/share/nginx/html # this means the current directory (.) will be the document root
+      - ./dist:/usr/share/nginx/html # this means the current directory (.) will be the document root
       # you should not edit anything below
       - ./nginx-https/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./nginx-https/start.sh:/usr/share/nginx/start.sh
