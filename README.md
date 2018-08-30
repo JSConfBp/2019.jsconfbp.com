@@ -29,3 +29,7 @@ Don't forget to stop the https server
 ```
 npm stop
 ```
+
+## Deploy
+
+Merge all the required changes to the `live` branch and push.
