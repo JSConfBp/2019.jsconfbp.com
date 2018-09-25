@@ -32,6 +32,9 @@
                 <li class="navigation_wrapper_list_item">
                     <a class="navigation_wrapper_list_item_link" href="/code-of-conduct.html">Code Of Conduct</a>
                 </li>
+                <li class="navigation_wrapper_list_item">
+                    <a class="navigation_wrapper_list_item_link" href="/privacy-policy.html">Privacy Policy</a>
+                </li>
             </ul>
         </nav>
     </navigation>
