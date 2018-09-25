@@ -6,12 +6,14 @@
     "scss": "node-sass --include-path / --output-style compressed -o dist/css src/sass",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "copy": "cp -Rf src/*.html dist && cp -Rf src/img dist && cp -Rf CNAME dist",
-    "build": "npm run scss && npm run autoprefixer && npm run copy",
+    "build": "npm run scss && npm run autoprefixer && npm run copy && npm run gdpr",
     "start": "docker-compose up -d",
     "stop": "docker-compose down",
-    "watch": "npx npm-watch"
+    "watch": "npx npm-watch",
+    "gdpr": "node scripts/gdpr-generate.js"
   },
   "dependencies": {
+    "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
