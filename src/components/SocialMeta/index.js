@@ -25,10 +25,10 @@ const SocialMeta = () => (
             content: data.site.siteMetadata.description,
           },
           { name: 'og:site_name', content: data.site.siteMetadata.title },
-          { name: 'og:url', content: 'http://jsconfbp.com/index.html' },
+          { name: 'og:url', content: 'https://jsconfbp.com/' },
           {
             name: 'og:image',
-            content: 'http://jsconfbp.com/img/social-card.png',
+            content: 'https://jsconfbp.com/social-cards/social-card.png',
           },
 
           { name: 'twitter:card', content: 'summary_large_image' },
@@ -39,10 +39,10 @@ const SocialMeta = () => (
             name: 'twitter:description',
             content: data.site.siteMetadata.description,
           },
-          { name: 'twitter:url', content: 'http://jsconfbp.com/index.html' },
+          { name: 'twitter:url', content: 'https://jsconfbp.com/' },
           {
             name: 'twitter:image',
-            content: 'http://jsconfbp.com/img/social-card.png',
+            content: 'https://jsconfbp.com/social-cards/social-card.png',
           },
         ]}
       />
