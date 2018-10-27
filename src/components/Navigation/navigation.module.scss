@@ -1,0 +1,40 @@
+@import '../colors.scss';
+
+.navigation {
+    &_wrapper {
+        &_list {
+            margin: 0;
+            padding: 0;
+            
+            display: flex;
+            justify-content: center;
+
+            @media screen and (max-width: 800px) {
+                padding: 2em 0;
+            }
+
+            &_item {
+                list-style-type: none;
+                margin: {
+                    left: 15px;
+                    right: 15px;
+                }
+                a {
+                    color: $link-color;
+                    font: {
+                        size: 1em;
+                    }
+                    text-decoration: underline;
+                    &:hover, &:focus {
+                        color: $link-hover-color;
+                        outline: 0;
+                        text-decoration: none;
+                    }
+                    &:visited {
+                        color: $link-visited-color;
+                    }
+                }
+            }
+        }
+    }
+}
