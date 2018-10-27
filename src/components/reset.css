@@ -47,6 +47,6 @@ table {
     border-spacing: 0;
 }
 
-.root > div {
+body > div > div[role=group] {
     height: 100%;
 }

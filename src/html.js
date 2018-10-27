@@ -19,7 +19,7 @@ export default class HTML extends React.Component {
           <div
             key={`body`}
             style={{ height: '100%' }}
-            className={'root'}
+            className={ 'wrapper' }
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />

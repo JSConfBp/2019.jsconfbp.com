@@ -6,11 +6,14 @@
             margin: 0;
             padding: 0;
             
-            display: flex;
-            justify-content: center;
-
+            display: grid;
+            justify-items: center;
+            justify-content: space-around;
+            align-items: center;
+            grid-template-columns: auto auto auto;
+            
             @media screen and (max-width: 800px) {
-                padding: 2em 0;
+                grid-template-columns: 20% 20% 20%;
             }
 
             &_item {
