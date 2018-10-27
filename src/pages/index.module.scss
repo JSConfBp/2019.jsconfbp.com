@@ -1,0 +1,33 @@
+@import '../components/colors.scss';
+
+.home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.date {
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: 0;
+    font: {
+        size: 8em;
+    }
+    line-height: 0.8em;
+    text-shadow: 1px 1px 2px #532213;
+    @media screen and (min-width: 1024px) {
+        font-size: 12em;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 6em;
+    }
+
+    .month {
+        font: {
+            size: 0.45em;
+        }
+        display: block;
+    }
+}
