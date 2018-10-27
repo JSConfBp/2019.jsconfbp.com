@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx gatsby develop",
+    "prebuild": "npm run gdpr",
     "build": "npx gatsby build",
     "develop": "gatsby develop",
     "format": "npx prettier --write \"src/**/*.js\"",
