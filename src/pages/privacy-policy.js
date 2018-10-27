@@ -6,8 +6,11 @@ const PrivacyPolicy = () => (
   <Layout contentBg={true}>
     <Helmet title={'Privacy Policy | JSConf Budapest'} />
 
-    <div dangerouslySetInnerHTML={ {__html: require('../gdpr/privacy-policy.json').content } } />
-
+    <div
+      dangerouslySetInnerHTML={{
+        __html: require('../gdpr/privacy-policy.json').content,
+      }}
+    />
   </Layout>
 )
 

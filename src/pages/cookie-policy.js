@@ -6,8 +6,11 @@ const CookiePolicy = () => (
   <Layout contentBg={true}>
     <Helmet title={'Cookie Policy | JSConf Budapest'} />
 
-    <div dangerouslySetInnerHTML={ {__html: require('../gdpr/cookie-policy.json').content } } />
-
+    <div
+      dangerouslySetInnerHTML={{
+        __html: require('../gdpr/cookie-policy.json').content,
+      }}
+    />
   </Layout>
 )
 
