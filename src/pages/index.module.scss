@@ -8,6 +8,12 @@
     justify-content: space-around;
 }
 
+.info {
+    text-align: center;
+    padding-top: 3em;
+    font-size: 1.4em;
+}
+
 .date {
     color: $secondary-color;
     text-align: center;
@@ -28,6 +34,15 @@
         font: {
             size: 0.45em;
         }
+        line-height: 1.8em;
+        display: block;
+    }
+
+    .days {
+        font: {
+            size: 0.45em;
+        }
+        line-height: 1em;
         display: block;
     }
 }
