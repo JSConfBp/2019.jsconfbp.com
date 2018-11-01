@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'JSConf Budapest 2019',
-    description: 'JSConf Budapest returns! 2019, Budapest, Hungary',
+    description: 'JSConf Budapest returns! September 26-27. 2019, Budapest, Hungary',
     keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest',
     twitter: '@jsconfbp'
   },
