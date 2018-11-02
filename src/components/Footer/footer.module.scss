@@ -1,0 +1,61 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../sizes.scss';
+
+.text {
+    font-size: $text-sm;
+    line-height: 1.25;
+    margin-bottom: $size-md;
+    &::before {
+        content: 'console.log(footerText)';
+        color: $gray-700;
+        display: block;
+        font-size: $text-xs;
+        margin-bottom: $size-xs;
+    }
+}
+
+.emphasize {
+    text: {
+        decoration: {
+            color: $jsconfred;
+            line: underline;
+            style: double;
+        }
+    }
+}
+
+.list {
+    font-size: $text-sm;
+    &::before {
+        content: 'let footerLinks =';
+        color: $gray-700;
+        display: block;
+        font-size: $text-xs;
+        margin-bottom: $size-xs;
+    }
+}
+
+.item {
+    display: inline;
+    line-height: 1.5;
+    &:first-child {
+        &::before {
+            content: '[';
+        }
+    }
+    &:not(:last-child) {
+        &::after {
+            content: ', '
+        }
+    }
+    &:last-child {
+        &::after {
+            content: ']';
+        }
+    }
+}
+
+.link {
+    color: $jsconfred;
+}

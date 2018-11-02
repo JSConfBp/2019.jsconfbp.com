@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Helmet from 'react-helmet'
-import Layout from '../components/Layout/index'
+import MainLayout from '../components/MainLayout/index'
 import styles from './index.module.scss'
 
 const IndexPage = () => (
-  <Layout className={styles.home}>
+  <MainLayout>
     <h1 className={styles.date}>
       2019 <span className={styles.month}>September</span>{' '}
       <span className={styles.days}>26-27</span>
@@ -15,7 +15,7 @@ const IndexPage = () => (
       <br />
       start in December 2018
     </div>
-  </Layout>
+  </MainLayout>
 )
 
 export default IndexPage
