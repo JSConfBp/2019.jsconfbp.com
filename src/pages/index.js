@@ -1,8 +1,7 @@
 import React from 'react'
-
-import Helmet from 'react-helmet'
 import Layout from '../components/Layout/index'
 import styles from './index.module.scss'
+import MailChimpButton from '../components/MailChimpButton/index'
 
 const IndexPage = () => (
   <Layout className={styles.home}>
@@ -14,6 +13,7 @@ const IndexPage = () => (
       Ticket sales & Call For Papers
       <br />
       start in December 2018
+      <MailChimpButton />
     </div>
   </Layout>
 )

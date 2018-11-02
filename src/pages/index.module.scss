@@ -12,6 +12,10 @@
     text-align: center;
     padding-top: 3em;
     font-size: 1.4em;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1em;
+    }
 }
 
 .date {
@@ -23,11 +27,9 @@
     }
     line-height: 0.8em;
     text-shadow: 1px 1px 2px #532213;
-    @media screen and (min-width: 1024px) {
-        font-size: 12em;
-    }
+
     @media screen and (max-width: 480px) {
-        font-size: 6em;
+        font-size: 4em;
     }
 
     .month {
