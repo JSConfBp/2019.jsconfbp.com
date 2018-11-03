@@ -1,43 +1,23 @@
 @import '../colors.scss';
+@import '../fonts.scss';
+@import '../sizes.scss';
 
-.navigation {
-    &_wrapper {
-        &_list {
-            margin: 0;
-            padding: 0;
-            
-            display: grid;
-            justify-items: center;
-            justify-content: space-around;
-            align-items: center;
-            grid-template-columns: auto auto auto;
-            
-            @media screen and (max-width: 800px) {
-                grid-template-columns: 20% 20% 20%;
-            }
+.nav {
+    color: #fff;
+    padding: $size-sm;
+    text-align: center;
+}
 
-            &_item {
-                list-style-type: none;
-                margin: {
-                    left: 15px;
-                    right: 15px;
-                }
-                a {
-                    color: $link-color;
-                    font: {
-                        size: 1em;
-                    }
-                    text-decoration: underline;
-                    &:hover, &:focus {
-                        color: $link-hover-color;
-                        outline: 0;
-                        text-decoration: none;
-                    }
-                    &:visited {
-                        color: $link-visited-color;
-                    }
-                }
-            }
-        }
+.item {
+    display: inline;
+    font-size: $text-lg;
+    line-height: 1.25;
+    margin: 0 $size-sm;
+    &::before {
+        content: '~';
     }
+}
+
+.link {
+    color: currentColor;
 }

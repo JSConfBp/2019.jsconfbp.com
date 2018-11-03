@@ -1,4 +1,6 @@
+@import '../breakpoints.scss';
 @import '../colors.scss';
+@import '../fonts.scss';
 @import '../sizes.scss';
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -65,11 +67,18 @@ body {
 }
 
 .grid {
-    grid-template-columns: 500px 1fr;
+    --column-width: 20rem;
+    grid-template-columns: var(--column-width) 1fr;
     grid-template-rows: 1fr auto;
     height: 100vh;
-    @media (min-width: 800px) {
+    @media (min-width: $breakpoint-lg) {
         display: grid;
+    }
+    @media (min-width: $breakpoint-xl) {
+        --column-width: 24rem;
+    }
+    @media (min-width: $breakpoint-xxl) {
+        --column-width: 28rem;
     }
 }
 
@@ -86,12 +95,38 @@ body {
     overflow: auto;
 }
 
+.wrapper {
+    font-size: $text-md;
+    padding: $size-md;
+    @media (min-width: $breakpoint-md) {
+        padding: $size-lg;
+    }
+    @media (min-width: $breakpoint-lg) {
+        margin-left: $size-xxxl;
+        padding: $size-xxl $size-xxl $size-xxl 0;
+    }
+    & > * + * {
+        margin-top: 2em;
+    }
+    & p {
+        font-size: $text-lg;
+        line-height: 1.25;
+        max-width: 75ch;
+        text-indent: 2rem;
+        &::first-line {
+            text-decoration-line: overline;
+        }
+    }
+}
+
 .footer {
     background: $gray-900;
-    border-top: 2px dashed $gray-800;
     color: $gray-100;
     grid-column: 1;
     grid-row: 2;
     padding: $size-lg;
     text-align: center;
+    @media (min-width: $breakpoint-lg) {
+        border-top: 2px dashed $gray-800;
+    }
 }

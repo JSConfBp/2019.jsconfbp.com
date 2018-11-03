@@ -15,6 +15,9 @@ const Footer = () => (
             <li className={styles.item}>
                 <Link className={styles.link} to="/privacy-policy">Privacy Policy</Link>
             </li>
+            <li className={styles.item}>
+                <Link className={styles.link} to="/impressum">Impressum</Link>
+            </li>
         </ul>
     </div>
 )
