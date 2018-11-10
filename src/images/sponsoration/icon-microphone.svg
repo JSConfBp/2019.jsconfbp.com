@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="89px" viewBox="0 0 62 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-microphone</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="18.4626897" cy="18.4626897" rx="18.4626897" ry="18.4626897"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="36.9253794" height="36.9253794" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sponsorship" transform="translate(-352.000000, -688.000000)">
+            <g id="2016" transform="translate(0.000000, 480.000000)">
+                <g id="icon-microphone" transform="translate(380.500000, 248.500000) rotate(45.000000) translate(-380.500000, -248.500000) translate(357.000000, 205.000000)">
+                    <use id="Oval-2" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                    <path d="M28.7197395,31.7711495 L25.607025,65.1633098 C25.3846877,67.681134 23.8600164,69.7222339 22.198873,69.7222339 L13.7008014,69.7222339 C12.0401655,69.7222339 10.515047,67.6818188 10.2926494,65.1633098 L7.17993489,31.7711495 L7.17993489,31.7711495" id="Rectangle-3" stroke="#FFFFFF" stroke-width="3"></path>
+                    <rect id="Rectangle-13" fill="#FFFFFF" x="16.4112797" y="43.0796093" width="4.10281994" height="8.20563987" rx="2.05140997"></rect>
+                    <path d="M2.05140997,18.4626897 L33.8482645,18.4626897" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                    <path d="M18.4626897,70.7479389 C18.4626897,70.7479389 18.7068806,74.6906266 20.7705259,77.6714475 C27.6940346,87.6720711 39.2332156,76.1328901 46.1567243,86.1335137" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

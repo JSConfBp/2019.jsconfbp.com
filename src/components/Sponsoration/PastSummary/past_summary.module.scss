@@ -1,0 +1,48 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.past_summary {
+    @extend %block;
+    @extend %block_end;
+
+    background-color: $color-blue;
+    text-align: center;
+
+    h2,h3 {
+        color: $color-white;
+    }
+
+    .big_summary {
+        @extend %block;
+        @extend %block_end;
+		@extend %grid_3;
+
+        .col {
+            width: 10rem;
+            color: $color-white;
+
+			svg {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 0rem;
+			}
+
+            .stat_number {
+                font: {
+                    size: 6rem;
+                    family: $base-font;
+                    weight: 200;
+                }
+				line-height: 5rem;
+				display: block;
+				margin-top: 2rem;
+            }
+
+            .label {
+				display: block;
+				font-size: 1.4rem;
+            }
+        }
+    }
+}

@@ -5,3 +5,11 @@
  */
 
 // You can delete this file if you're not using it
+
+export const onRenderBody = function ({ setBodyAttributes }) {
+
+	setBodyAttributes({
+		className: 'foo-bar'
+	})
+
+}

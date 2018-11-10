@@ -1,0 +1,34 @@
+import React from 'react'
+
+import styles from './nextyear.module.scss'
+
+const NextYear = () => (
+  <>
+    <div className={styles.nextyear}>
+      <div className={styles.block_inner}>
+
+        <h2>Coming up next: 2019 </h2>
+
+        <h3>Ticket sales starts in December, 2018!</h3>
+
+        <div className={ styles.conferences }>
+          <div className={ styles.jsconf }>
+
+<h5>JSConf</h5>
+                                <ul class="unstyled">
+                                    <li>Single track</li>
+                                    <li>400+ attendees</li>
+                                    <li>16 speakers</li>
+                                </ul>
+          </div>
+          <div className={ styles.cssconf }></div>
+        </div>
+
+        <div className={ styles.topics }></div>
+
+      </div>
+    </div>
+  </>
+)
+
+export default NextYear

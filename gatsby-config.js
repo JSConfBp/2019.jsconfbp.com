@@ -41,5 +41,13 @@ module.exports = {
         cookieDomain: "jsconfbp.com",
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: `${__dirname}/src/images`,
+          }
+      }
+    },
   ],
 }

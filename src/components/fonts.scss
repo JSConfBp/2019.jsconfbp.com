@@ -1,10 +1,9 @@
 @charset 'utf-8';
 @import './colors.scss';
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,400i,700,700i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i|Space+Mono:400,700');
 
-$base-font: 'Open Sans', serif;
-$secondary-font: 'Great Vibes', cursive;
-
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Space Mono', monospace;
 
 section {
     a {

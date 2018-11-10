@@ -1,0 +1,40 @@
+@import '../components/colors.scss';
+@import '../components/Sponsoration/sponsoration_common.modules.scss';
+
+.sponsoration {
+
+    @extend %block;
+}
+
+.home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.4em;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+.past_numbers {}
+.reach_numbers {}
+.next_edition {}
+
+.packages_regular {}
+.packages_workshop {}
+.ala_carte {}
+.contact_us {}
+
+.team {}
