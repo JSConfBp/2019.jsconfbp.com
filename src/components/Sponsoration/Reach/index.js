@@ -25,7 +25,7 @@ const Reach = () => (
           <div className={ styles.youtube }>
             <YoutubeLogo />
             <h4>
-              <span className={ styles.subscribers }>100k</span>
+              <span className={ styles.subscribers }>106k</span>
               Subscribers
             </h4>
           </div>

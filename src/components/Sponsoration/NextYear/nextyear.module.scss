@@ -5,7 +5,12 @@
 .nextyear {
     @extend %block;
 
-    background-color: $color-red;
+    background: {
+        image: url('./akvarium.jpg');
+        size: cover;
+        position: top center;
+    }
+
     text-align: center;
 
     h2, h3 {
@@ -24,45 +29,61 @@
         margin-bottom: 1rem;
     }
 
-
-    .numbers {
-        @extend %block;
-        @extend %grid_3;
-
-        grid-template-columns: 13rem 13rem 13rem;
-        font-weight: 200;
-
-        .twitter {
-            h4 {
-                color: $color-twitter;
-            }
-        }
-        .youtube {
-            h4 {
-                color: $color-red;
-            }
-        }
-        .facebook {
-            h4 {
-                color: $color-facebook;
-            }
-        }
-
-        .followers,
-        .subscribers,
-        .reached {
-            font-family: $base-font;
-            font-weight: 200;
-            font-size: 4rem;
-            display: block;
-            color: $color-black;
-        }
-    }
-
-    .notes {
+    .conferences {
+        @extend %grid_2;
         @extend %block;
         @extend %block_end;
-        display: block;
-        font-weight: 200;
+
+        grid-template-columns: 20rem 20rem;
+        grid-gap: 1rem;
+
+        color: $color-white;
+
+        ul {
+            font-weight: 200;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        h5 {
+            font: {
+                weight: bold;
+                size: 1.5rem;
+            }
+        }
+
+        .jsconf,
+        .cssconf {
+            padding-top: 1rem;
+            min-height: 10rem;
+            background: {
+                repeat: no-repeat;
+                size: 150px 150px;
+            }
+        }
+
+        .jsconf {
+            text-align: right;
+            padding-right: 11rem;
+            background: {
+                position: right top;
+                image: url('./jsconf.png');
+            }
+        }
+
+        .cssconf {
+            text-align: left;
+            padding-left: 11rem;
+            background: {
+                position: left top;
+                image: url('./cssconf.png');
+            }
+        }
     }
 }
