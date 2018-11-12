@@ -9,7 +9,7 @@ const contents = [
   },
   { field: 'tickets', desc: 'Discount on tickets for your employees' },
   { field: 'booth', desc: 'Booth at the exhibition area' },
-  { field: 'screen', desc: 'We can provide a flat screen TV for your booth' },
+  
   { field: 'slide', desc: 'Add a slide to the reel between sessions' },
   { field: 'hr', desc: 'HR package' },
 ]
