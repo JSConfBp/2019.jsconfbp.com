@@ -31,6 +31,21 @@ const NextYear = () => (
           </div>
         </div>
 
+
+        <div className={ styles.venue }>
+          <h2>Venue</h2>
+
+          <h5>
+            Akvarium Klub Budapest
+          </h5>
+          <p>
+            Center of the city,
+            580 square meters of exhibition space,
+            literally under a pool
+          </p>
+
+
+        </div>
       </div>
     </div>
   </>

@@ -4,6 +4,8 @@ import PastSummary from '../components/Sponsoration/PastSummary/index'
 import Attendees from '../components/Sponsoration/Attendees/index'
 import Reach from '../components/Sponsoration/Reach/index'
 import NextYear from '../components/Sponsoration/NextYear/index'
+import Packages from '../components/Sponsoration/Packages/index'
+
 import styles from './sponsoration.module.scss'
 
 const IndexPage = () => (
@@ -12,13 +14,11 @@ const IndexPage = () => (
       JSConf Budapest 2019 & CSSConf Budapest 2019 Sponsoration
     </h1>
 
-{/*}
     <PastSummary />
     <Attendees />
-*/}
     <Reach />
     <NextYear />
-
+    <Packages />
 
   </SponsorationLayout>
 )

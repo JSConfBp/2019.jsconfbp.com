@@ -4,7 +4,8 @@
 
 .nextyear {
     @extend %block;
-
+    @extend %block_end;
+    
     background: {
         image: url('./akvarium.jpg');
         size: cover;
@@ -84,6 +85,14 @@
                 position: left top;
                 image: url('./cssconf.png');
             }
+        }
+    }
+
+    .venue {
+        color: $color-white;
+
+        p {
+            font-weight: 200;
         }
     }
 }
