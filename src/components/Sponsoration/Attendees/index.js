@@ -6,22 +6,30 @@ const PastSummary = () => (
   <>
     <div className={styles.attendees}>
       <div className={styles.block_inner}>
-
         <h3>Our attendees</h3>
 
         <div className={styles.stats}>
-
           <div className={styles.stats__age}>
             <h4>Age</h4>
             <dl className={styles.graphs}>
               <dt>18-24</dt>
-              <dd><span style={{width: '6%' }}></span>6 %</dd>
+              <dd>
+                <span style={{ width: '6%' }} />6 %
+              </dd>
               <dt>25-34</dt>
-              <dd className={styles.graphs__top}><span style={{width: '73%' }}></span>73 %</dd>
+              <dd className={styles.graphs__top}>
+                <span style={{ width: '73%' }} />
+                73 %
+              </dd>
               <dt>35-44</dt>
-              <dd><span style={{width: '16%' }}></span>16 %</dd>
+              <dd>
+                <span style={{ width: '16%' }} />
+                16 %
+              </dd>
               <dt>44+</dt>
-              <dd><span style={{width: '4%' }}></span>4 %</dd>
+              <dd>
+                <span style={{ width: '4%' }} />4 %
+              </dd>
             </dl>
           </div>
 
@@ -59,7 +67,8 @@ const PastSummary = () => (
         <div className={styles.countries}>
           <h4>Top Countries</h4>
           <p>
-            Netherlands, Germany, Hungary, United States, United Kingdom, Portugal, Slovakia, Romania, Poland, Serbia
+            Netherlands, Germany, Hungary, United States, United Kingdom,
+            Portugal, Slovakia, Romania, Poland, Serbia
           </p>
         </div>
       </div>

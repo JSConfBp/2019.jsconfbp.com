@@ -19,7 +19,6 @@ const IndexPage = () => (
     <Reach />
     <NextYear />
     <Packages />
-
   </SponsorationLayout>
 )
 

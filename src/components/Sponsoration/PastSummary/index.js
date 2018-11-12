@@ -14,17 +14,17 @@ const PastSummary = () => (
 
         <div className={styles.big_summary}>
           <div className={styles.col}>
-			  <IconMike />
+            <IconMike />
             <span className={styles.stat_number}>19</span>
             <h4 className={styles.label}>Speakers</h4>
           </div>
           <div className={styles.col}>
-		  	<IconAudience />
+            <IconAudience />
             <span className={styles.stat_number}>550</span>
             <h4 className={styles.label}>Attendees</h4>
           </div>
           <div className={styles.col}>
-		  	<IconFlags />
+            <IconFlags />
             <span className={styles.stat_number}>28</span>
             <h4 className={styles.label}>Countries</h4>
           </div>
