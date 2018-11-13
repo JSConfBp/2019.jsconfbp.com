@@ -1,0 +1,31 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+
+
+
+.title {
+	font-size: 2rem;
+	text-align: center;
+	font-family: $heading-font;
+	padding-top: 8rem;
+}
+
+.jsconf,
+.cssconf {
+	display: block;
+	height: 8rem;
+	width: 8rem;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	background-size: cover;
+}
+
+.jsconf {
+	transform: translateX(-120%);
+	background-image: url('./jsconf_red.png');
+}
+.cssconf {
+	transform: translateX(20%);
+	background-image: url('./cssconf_red.png');
+}

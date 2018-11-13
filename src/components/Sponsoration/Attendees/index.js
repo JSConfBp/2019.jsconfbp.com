@@ -10,7 +10,7 @@ const PastSummary = () => (
 
         <div className={styles.stats}>
           <div className={styles.stats__age}>
-            <h4>Age</h4>
+            <h4 className={ styles.stats_title }>Age</h4>
             <dl className={styles.graphs}>
               <dt>18-24</dt>
               <dd>
@@ -34,38 +34,46 @@ const PastSummary = () => (
           </div>
 
           <div className={styles.stats__position}>
-            <h4>Position</h4>
+            <h4 className={ styles.stats_title }>Position</h4>
             <dl className={styles.graphs}>
               <dt>Junior developer</dt>
-              <dd>6 %</dd>
+              <dd><span style={{ width: '4%' }} />4 %</dd>
               <dt>Developer</dt>
-              <dd>73 %</dd>
+              <dd><span style={{ width: '27%' }} />27 %</dd>
               <dt>Senior developer</dt>
-              <dd>16 %</dd>
+              <dd className={styles.graphs__top}><span style={{ width: '53%' }} />53 %</dd>
               <dt>Team leader</dt>
-              <dd>4 %</dd>
+              <dd><span style={{ width: '14%' }} />14 %</dd>
               <dt>C-level executive</dt>
-              <dd>4 %</dd>
+              <dd><span style={{ width: '2%' }} />2 %</dd>
             </dl>
           </div>
 
           <div className={styles.stats__position}>
-            <h4>Knowledge & Practice</h4>
+            <h4 className={ styles.stats_title }>Knowledge & Practice</h4>
             <dl className={styles.graphs}>
               <dt>Beginner</dt>
-              <dd>6 %</dd>
+              <dd>
+                <span style={{ width: '8%' }} />8 %
+              </dd>
               <dt>Intermediate</dt>
-              <dd>73 %</dd>
+              <dd>
+                <span style={{ width: '30%' }} />30 %
+              </dd>
               <dt>Advanced</dt>
-              <dd>16 %</dd>
+              <dd className={styles.graphs__top}>
+                <span style={{ width: '48%' }} />48 %
+              </dd>
               <dt>Expert</dt>
-              <dd>4 %</dd>
+              <dd>
+                <span style={{ width: '14%' }} />14 %
+              </dd>
             </dl>
           </div>
         </div>
 
         <div className={styles.countries}>
-          <h4>Top Countries</h4>
+          <h4 className={ styles.stats_title }>Top Countries</h4>
           <p>
             Netherlands, Germany, Hungary, United States, United Kingdom,
             Portugal, Slovakia, Romania, Poland, Serbia

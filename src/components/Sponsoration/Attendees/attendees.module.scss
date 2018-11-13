@@ -12,12 +12,13 @@
         color: $color-white;
     }
 
-    h4 {
-        
+    .stats_title {
         font-size: 1.2rem;
         color: $color-yellow;
         font-weight: bold;
         margin-bottom: 1rem;
+        min-height: 4rem;
+
     }
 
     .stats {
