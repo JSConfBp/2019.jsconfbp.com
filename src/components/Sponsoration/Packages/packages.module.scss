@@ -17,6 +17,17 @@
         font-weight: normal;
     }
 
+    .scholarship_title {
+        font-family: $base-font;
+        font-size: 2rem;
+        font-weight: 200;
+        margin-bottom: 2rem;
+    }
+    .scholarship_text {
+        margin: 0;
+        font-weight: 200;
+    }
+
     @mixin package_name {
         padding: .5rem 0;
         font-family: $base-font;
@@ -28,6 +39,8 @@
         color: $color-red;
         font-size: 1.6rem;
         font-weight: 200;
+        min-height: 4rem;
+        line-height: 4rem;
     }
 
     @mixin package_content {
@@ -37,10 +50,18 @@
         border-top: 1px solid $color-grey-2;
         min-height: 4rem;
     }
+
     @mixin content_label {
         text-align: right;
         padding-right: .5rem;
+        padding-left: 4rem;
         min-height: 4rem;
+        align-self: center;
+
+    }
+
+    @mixin package_value {
+        line-height: 3rem;
     }
 
     @mixin package_bg($package, $show) {
@@ -69,17 +90,20 @@
 
     .packages_table {
         @extend %block;
+        @extend %block_end;
         margin: 0 auto;
         padding: {
             left: 4rem;
             right: 4rem;
         }
 
-
         display: grid;
         grid-gap: 0;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 
+        //
+        // create labeled grid areas so we can reorder these on mobile
+        //
         $fields: name price;
         $contents: branding tickets screen booth slide hr;
         $packages: silver gold workshop platinum;
@@ -113,9 +137,15 @@
             $rows: append($rows, "#{$row}", 'space');
         }
 
+        //
+        // use areas generated above in here
+        //
         grid-template-areas:
             $rows;
 
+        //
+        // give fields their grid area names
+        //
         @each $package in $packages {
             @each $field in $fields {
                 .package_#{$package}_#{$field} {
@@ -139,11 +169,14 @@
                 }
                 .package_#{$package}_#{$content}_value {
                     @include package_content;
+                    @include package_value;
                     grid-area: #{$package}_#{$content}_value;
                 }
                 .package_#{$package}_#{$content}_included {
                     @include package_bg($package, true);
                 }
+
+
 
 
                 @if $package != silver {
@@ -152,6 +185,13 @@
                     }
                 }
             }
+        }
+
+        .package_workshop_price {
+            font-size: 1.2rem;
+        }
+        .package_silver_booth_label {
+            padding-left: 50%;
         }
     }
 }

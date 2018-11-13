@@ -32,17 +32,30 @@
         grid-template-columns: 13rem 13rem 13rem;
         font-weight: 200;
 
+        .twitter,
+        .youtube,
+        .facebook {
+            background: {
+                repeat: no-repeat;
+                position: top center;
+            }
+            padding-top: 3rem;
+        }
+
         .twitter {
+            background-image: url('./twitter.svg');
             h4 {
                 color: $color-twitter;
             }
         }
         .youtube {
+            background-image: url('./youtube.svg');
             h4 {
                 color: $color-red;
             }
         }
         .facebook {
+            background-image: url('./facebook.svg');
             h4 {
                 color: $color-facebook;
             }

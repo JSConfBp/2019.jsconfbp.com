@@ -3,20 +3,16 @@ import React from 'react'
 import styles from './packages.module.scss'
 
 const contents = [
-  {
-    field: 'branding',
-    desc: 'Branding & logo on site, between sessions, on videos',
-  },
-  { field: 'tickets', desc: 'Discount on tickets for your employees' },
-  { field: 'booth', desc: 'Booth at the exhibition area' },
-  
-  { field: 'slide', desc: 'Add a slide to the reel between sessions' },
-  { field: 'hr', desc: 'HR package' },
+  { field: 'branding',  desc: 'Branding & logo on site, between sessions, on videos', },
+  { field: 'tickets',   desc: 'Discount on tickets for your employees' },
+  { field: 'booth',     desc: 'Booth at the exhibition area' },
+  { field: 'slide',     desc: 'Add a slide to the reel between sessions' },
+  { field: 'hr',        desc: 'HR package' },
 ]
 const packages = [
   {
     name: 'Silver',
-    price: '2000',
+    price: '€3,000',
     content: {
       branding: true,
       tickets: true,
@@ -28,7 +24,7 @@ const packages = [
   },
   {
     name: 'Gold',
-    price: '4000',
+    price: '€7,000',
     content: {
       branding: true,
       tickets: true,
@@ -52,7 +48,7 @@ const packages = [
   },
   {
     name: 'Platinum',
-    price: '10000',
+    price: '€10,000',
     content: {
       branding: true,
       tickets: true,
@@ -113,6 +109,19 @@ const Packages = () => (
         </h3>
 
         <PackageTable />
+
+        <h4 className={ styles.scholarship_title }>
+          10 % to Scholarships
+        </h4>
+
+        <p className={ styles.scholarship_text }>
+          From every package we put 10% directly to our Scholarship Fund - this fund will be used
+          to sponsor individuals or students from underrepresented groups in tech,
+          to travel and attend the conference.
+          <br />
+          Your support can really make a difference!
+        </p>
+
       </div>
     </div>
   </>

@@ -21,140 +21,38 @@
         font-weight: 200;
     }
 
-    @mixin package_name {
-        padding: .5rem 0;
-        font-family: $base-font;
-        font-weight: bold;
-    }
-
-    @mixin package_price {
-        color: $color-red;
-        font-size: 1.6rem;
-        font-weight: 200;
-    }
-
-    @mixin package_content {
-        font-weight: 200;
-        min-height: 4rem;
-        font-size: 1rem;
-        padding: .4rem 0;
-        border-top: 1px solid $color-grey-2;
-    }
-    @mixin content_label {
-        min-height: 4rem;
-        text-align: right;
-        padding-right: .5rem;
-    }
-
-    @mixin package_bg($package, $show) {
-        $bg_color: $color-white;
-
-        @if $show {
-            @if $package == silver { $bg_color: $color-grey-1 }
-            @if $package == gold { $bg_color: $color-grey-2 }
-            @if $package == workshop { $bg_color: $color-grey-3 }
-            @if $package == platinum { $bg_color: $color-grey-4 }
-        }
-
-        background-color: $bg_color;
-
-        border-left: {
-            color: $color-white;
-            style: solid;
-            width: .5rem;
-        }
-        border-right: {
-            color: $color-white;
-            style: solid;
-            width: .5rem;
-        }
-    }
-
-    .packages_table {
+    .perk_list {
         @extend %block;
+        max-width: 40%;
         margin: 0 auto;
-        padding: {
-            left: 4rem;
-            right: 4rem;
-        }
 
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 1rem;
+            border-top: 1px solid $color-grey-2;
+            text-align: right;
 
-        display: grid;
-        grid-gap: 0;
-        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-
-        $fields: name price;
-        $contents: branding tickets screen booth slide hr;
-        $packages: silver gold workshop platinum;
-
-        $rows: null;
-        $row_names: '...';
-        $row_prices: '...';
-
-        @each $package in $packages {
-            @each $field in $fields {
-                @if $field == 'name' {
-                    $var: #{$package}_name;
-                    $row_names: append($row_names, $var, 'space');
-                }
-                @if $field == 'price' {
-                    $var: #{$package}_price;
-                    $row_prices: append($row_prices, $var, 'space');
-                }
+            &:first-child {
+                border: none;
             }
         }
-        $row_names: "#{$row_names}";
-        $row_prices: "#{$row_prices}";
 
-        $rows: append($row_names, $row_prices, 'space');
-
-        @each $content in $contents {
-            $row: silver_#{$content}_label;
-            @each $package in $packages {
-                $row: append($row, #{$package}_#{$content}_value, 'space')
-            }
-            $rows: append($rows, "#{$row}", 'space');
+        .perk_label,
+        .perk_value {
+            display: inline-block;
+            padding: 0 2rem;
+            min-height: 4rem;
+            line-height: 4rem;
         }
 
-        grid-template-areas:
-            $rows;
+        .perk_label {
+            font-weight: 200;
+        }
 
-        @each $package in $packages {
-            @each $field in $fields {
-                .package_#{$package}_#{$field} {
-                    grid-area: #{$package}_#{$field};
-
-                    @if $field == name {
-                        @include package_name;
-                    }
-                    @if $field == price {
-                        @include package_price;
-                    }
-
-                    @include package_bg($package, true);
-                }
-            }
-            @each $content in $contents {
-                .package_#{$package}_#{$content}_label {
-                    @include package_content;
-                    @include content_label;
-                    grid-area: #{$package}_#{$content}_label;
-                }
-                .package_#{$package}_#{$content}_value {
-                    @include package_content;
-                    grid-area: #{$package}_#{$content}_value;
-                }
-                .package_#{$package}_#{$content}_included {
-                    @include package_bg($package, true);
-                }
-
-
-                @if $package != silver {
-                    .package_#{$package}_#{$content}_label {
-                        display: none;
-                    }
-                }
-            }
+        .perk_value {
+            background-color: $color-grey-3;
+            color: $color-red;
         }
     }
 }
