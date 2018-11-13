@@ -3,11 +3,14 @@ import React from 'react'
 import styles from './packages.module.scss'
 
 const contents = [
-  { field: 'branding',  desc: 'Branding & logo on site, between sessions, on videos', },
-  { field: 'tickets',   desc: 'Discount on tickets for your employees' },
-  { field: 'booth',     desc: 'Booth at the exhibition area' },
-  { field: 'slide',     desc: 'Add a slide to the reel between sessions' },
-  { field: 'hr',        desc: 'HR package' },
+  {
+    field: 'branding',
+    desc: 'Branding & logo on site, between sessions, on videos',
+  },
+  { field: 'tickets', desc: 'Discount on tickets for your employees' },
+  { field: 'booth', desc: 'Booth at the exhibition area' },
+  { field: 'slide', desc: 'Add a slide to the reel between sessions' },
+  { field: 'hr', desc: 'HR package' },
 ]
 const packages = [
   {
@@ -110,18 +113,15 @@ const Packages = () => (
 
         <PackageTable />
 
-        <h4 className={ styles.scholarship_title }>
-          10 % to Scholarships
-        </h4>
+        <h4 className={styles.scholarship_title}>10 % to Scholarships</h4>
 
-        <p className={ styles.scholarship_text }>
-          From every package we put 10% directly to our Scholarship Fund - this fund will be used
-          to sponsor individuals or students from underrepresented groups in tech,
-          to travel and attend the conference.
+        <p className={styles.scholarship_text}>
+          From every package we put 10% directly to our Scholarship Fund - this
+          fund will be used to sponsor individuals or students from
+          underrepresented groups in tech, to travel and attend the conference.
           <br />
           Your support can really make a difference!
         </p>
-
       </div>
     </div>
   </>

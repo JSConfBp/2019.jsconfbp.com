@@ -10,7 +10,6 @@ const Reach = () => (
         <h3>100% relevance in the JavaScript community</h3>
 
         <div className={styles.numbers}>
-
           <div className={styles.twitter} title="Twitter">
             <h4>
               <span className={styles.followers}>1.5k</span>
@@ -31,12 +30,13 @@ const Reach = () => (
               People Reached
             </h4>
           </div>
-
         </div>
 
         <p className={styles.notes}>
-          Our videos were watched over <strong>242,000 times</strong> on YouTube. <br />
-          Viewers spend more than <strong>1,742,000 minutes</strong> watching the talks online.
+          Our videos were watched over <strong>242,000 times</strong> on
+          YouTube. <br />
+          Viewers spend more than <strong>1,742,000 minutes</strong> watching
+          the talks online.
         </p>
       </div>
     </div>

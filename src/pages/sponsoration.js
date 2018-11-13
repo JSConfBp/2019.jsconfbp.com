@@ -12,7 +12,6 @@ import styles from './sponsoration.module.scss'
 
 const IndexPage = () => (
   <SponsorationLayout className={styles.sponsoration}>
-
     <Header />
     <PastSummary />
     <Attendees />
@@ -20,7 +19,6 @@ const IndexPage = () => (
     <NextYear />
     <Packages />
     <Perks />
-
   </SponsorationLayout>
 )
 

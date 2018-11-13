@@ -2,7 +2,6 @@ import React from 'react'
 
 import styles from './past_summary.module.scss'
 
-
 const PastSummary = () => (
   <>
     <div className={styles.past_summary}>
@@ -11,7 +10,6 @@ const PastSummary = () => (
         <h3>Here’s what happened so far:</h3>
 
         <div className={styles.big_summary}>
-
           <div className={styles.col_speakers}>
             <span className={styles.stat_number}>72</span>
             <h4 className={styles.label}>Speakers</h4>
