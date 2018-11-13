@@ -35,9 +35,8 @@ const Reach = () => (
         </div>
 
         <p className={styles.notes}>
-          Last year’s videos were watched over <strong>127,000 times</strong> on
-          YouTube. <br />
-          Viewers spend <strong>40,000 minutes</strong> watching the videos.
+          Our videos were watched over <strong>242,000 times</strong> on YouTube. <br />
+          Viewers spend more than <strong>1,742,000 minutes</strong> watching the talks online.
         </p>
       </div>
     </div>

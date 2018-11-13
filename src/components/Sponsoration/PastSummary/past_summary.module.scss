@@ -18,15 +18,26 @@
         @extend %block_end;
 		@extend %grid_3;
 
-        .col {
-            width: 10rem;
+        .col_speakers {
+            background-image: url('./icon-microphone.svg');
+        }
+        .col_attendees {
+            background-image: url('./icon-audience.svg');
+        }
+        .col_countries {
+            background-image: url('./icon-flags.svg');
+        }
+
+        .col_speakers,
+        .col_attendees,
+        .col_countries {
             color: $color-white;
 
-			svg {
-				display: block;
-				margin: 0 auto;
-				margin-bottom: 0rem;
-			}
+            background: {
+                position: top center;
+                repeat: no-repeat;
+            }
+            padding-top: 8rem;
 
             .stat_number {
                 font: {
@@ -36,7 +47,7 @@
                 }
 				line-height: 5rem;
 				display: block;
-				margin-top: 2rem;
+				margin-bottom: 1rem;
             }
 
             .label {
