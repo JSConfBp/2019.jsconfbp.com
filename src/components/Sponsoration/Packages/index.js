@@ -32,7 +32,7 @@ const packages = [
       branding: true,
       tickets: true,
       screen: true,
-      booth: true,
+      booth: '3sqm',
       slide: false,
       hr: false,
     },
@@ -44,7 +44,7 @@ const packages = [
       branding: true,
       tickets: true,
       screen: true,
-      booth: true,
+      booth: '3sqm',
       slide: true,
       hr: false,
     },
@@ -56,7 +56,7 @@ const packages = [
       branding: true,
       tickets: true,
       screen: true,
-      booth: true,
+      booth: '12sqm',
       slide: true,
       hr: true,
     },
@@ -92,7 +92,7 @@ const PackageTable = () => (
                   : '',
               ].join(' ')}
             >
-              {pkg.content[cont.field] ? 'yes' : 'no'}
+              {typeof pkg.content[cont.field] === 'string' ? pkg.content[cont.field] : (pkg.content[cont.field] ? 'yes' : 'no')}
             </strong>
           </>
         ))}

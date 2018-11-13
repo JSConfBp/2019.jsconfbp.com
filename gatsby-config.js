@@ -6,6 +6,7 @@ module.exports = {
     twitter: '@jsconfbp'
   },
   plugins: [
+    'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
