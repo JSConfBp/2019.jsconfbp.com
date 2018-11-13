@@ -8,8 +8,6 @@
 
 export const onRenderBody = function ({ setBodyAttributes }) {
 
-	setBodyAttributes({
-		className: 'foo-bar'
-	})
+
 
 }

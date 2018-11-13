@@ -11,13 +11,6 @@ html {
 }
 
 body {
-    background: {
-        attachment: fixed;
-        color: #f1f1f1;
-        image: url(./bg.jpg);
-        size: cover;
-        repeat: no-repeat;
-    }
     color: $main-color;
     font: {
         family: $base-font;
@@ -25,6 +18,16 @@ body {
     }
     height: 100%;
     line-height: 1.5;
+}
+
+.bg {
+    background: {
+        attachment: fixed;
+        color: #f1f1f1;
+        image: url(./bg.jpg);
+        size: cover;
+        repeat: no-repeat;
+    }
 }
 
 .inner {
@@ -35,6 +38,7 @@ body {
 }
 
 .content {
+
     background-color: rgba(255, 255, 255, .6);
     margin: {
         left: auto;

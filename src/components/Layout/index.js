@@ -21,7 +21,7 @@ const Layout = ({ className, contentBg = false, children }) => (
       }
     `}
     render={data => (
-      <main className={className}>
+      <main className={ [className, styles.bg].join(' ') }>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
