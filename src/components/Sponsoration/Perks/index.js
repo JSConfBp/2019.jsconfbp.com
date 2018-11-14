@@ -15,7 +15,7 @@ const perk_list = [
 const PerkList = () => (
   <ul className={styles.perk_list}>
     {perk_list.map(perk => (
-      <li>
+      <li key={`perk_${perk.label}`}>
         <strong className={styles.perk_label}>{perk.label}</strong>
         <span className={styles.perk_value}>{perk.price}</span>
       </li>

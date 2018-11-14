@@ -6,9 +6,10 @@ const NextYear = () => (
   <>
     <div className={styles.nextyear}>
       <div className={styles.block_inner}>
-        <h2>Coming up next: 2019 </h2>
+        <h2>Coming up next</h2>
 
-        <h3>Ticket sales starts in December, 2018!</h3>
+        <h3>2019 September 25-27
+          <br />Ticket sales starts in December, 2018!</h3>
 
         <div className={styles.conferences}>
           <div className={styles.jsconf}>

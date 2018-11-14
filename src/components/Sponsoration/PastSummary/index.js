@@ -6,8 +6,8 @@ const PastSummary = () => (
   <>
     <div className={styles.past_summary}>
       <div className={styles.block_inner}>
-        <h2>Past years were awesome!</h2>
-        <h3>Here’s what happened so far:</h3>
+        <h2>Our past years were awesome!</h2>
+        <h3>Here’s what happened so far in 3 years:</h3>
 
         <div className={styles.big_summary}>
           <div className={styles.col_speakers}>

@@ -38,6 +38,7 @@
         min-height: 4rem;
 
         @media screen and (max-width: 767px) {
+            padding-top: 1.3rem;
             min-height: auto;
             margin-top: 3rem;
         }

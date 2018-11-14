@@ -39,7 +39,10 @@ const packages = [
   },
   {
     name: 'Workshop',
-    price: 'Contact us!',
+    price: {
+      text: 'Contact Us',
+      href: 'mailto:team@jsconfbp.com?subject=Workshop!'
+    },
     content: {
       branding: true,
       tickets: true,
@@ -63,15 +66,40 @@ const packages = [
   },
 ]
 
+const field_value = (content) => {
+  const isString = typeof content === 'string';
+  let value = 'no';
+  if (isString) {
+    value = content
+  } else if (content) {
+    value = 'yes';
+  }
+  return value;
+}
+
+const Price = (props) => (<>
+  {(typeof props.value === 'string') ? (
+    <>{props.value}</>
+  ) : (
+    <a href={props.value.url}>{props.value.text}</a>
+  )}
+  </>
+)
+
 const PackageTable = () => (
   <div className={styles.packages_table}>
     {packages.map(pkg => (
       <>
-        <h4 className={styles[`package_${pkg.name.toLowerCase()}_name`]}>
-          {pkg.name}
+        <h4
+          className={styles[`package_${pkg.name.toLowerCase()}_name`]}
+          key={ `package_${pkg.name.toLowerCase()}_name` }>
+            {pkg.name}
         </h4>
-        <h5 className={styles[`package_${pkg.name.toLowerCase()}_price`]}>
-          {pkg.price}
+        <h5
+          className={styles[`package_${pkg.name.toLowerCase()}_price`]}
+          key={ `package_${pkg.name.toLowerCase()}_price` }
+          >
+          <Price value={pkg.price} />
         </h5>
         {contents.map(cont => (
           <>
@@ -79,6 +107,7 @@ const PackageTable = () => (
               className={
                 styles[`package_${pkg.name.toLowerCase()}_${cont.field}_label`]
               }
+              key={`package_${pkg.name.toLowerCase()}_${cont.field}_label`}
             >
               {cont.desc}
             </span>
@@ -91,12 +120,9 @@ const PackageTable = () => (
                     ]
                   : '',
               ].join(' ')}
+              key={`package_${pkg.name.toLowerCase()}_${cont.field}_value`}
             >
-              {typeof pkg.content[cont.field] === 'string'
-                ? pkg.content[cont.field]
-                : pkg.content[cont.field]
-                  ? 'yes'
-                  : 'no'}
+              {field_value(pkg.content[cont.field])}
             </strong>
           </>
         ))}

@@ -18,7 +18,11 @@
 .sponsor_header {
 
 	@extend %block;
-    @extend %block_end;
+	@extend %block_end;
+
+	@media screen and (max-width: 767px) {
+		padding-top: 0rem;
+	}
 }
 
 .jsconf,
@@ -30,6 +34,10 @@
 	top: 6rem;
 	left: 50%;
 	background-size: cover;
+
+	@media screen and (max-width: 767px) {
+		top: 3rem;
+	}
 }
 
 .jsconf {
