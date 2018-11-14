@@ -18,7 +18,13 @@ section {
             color: $link-visited-color;
         }
     }
+
+    h1, h2, h3, h4, h5 {
+        font-variant-ligatures: no-common-ligatures;
+    }
+
     h1, h2, h3 {
+
         color: $secondary-color;
         margin-top: 1em;
 
