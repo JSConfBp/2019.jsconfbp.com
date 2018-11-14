@@ -22,6 +22,9 @@
         font-size: 2rem;
         font-weight: 200;
         margin-bottom: 2rem;
+        @media screen and (max-width: 767px) {
+            margin-top: 3rem;
+        }
     }
     .scholarship_text {
         margin: 0;
@@ -33,6 +36,11 @@
         font-family: $base-font;
         font-weight: bold;
         min-height: 4rem;
+
+        @media screen and (max-width: 767px) {
+            min-height: auto;
+            margin-top: 3rem;
+        }
     }
 
     @mixin package_price {
@@ -57,6 +65,9 @@
         padding-left: 4rem;
         min-height: 4rem;
         align-self: center;
+        @media screen and (max-width: 767px) {
+            padding-left: 0rem;
+        }
 
     }
 
@@ -81,11 +92,14 @@
             style: solid;
             width: .5rem;
         }
+
         border-right: {
             color: $color-white;
             style: solid;
             width: .5rem;
         }
+
+
     }
 
     .packages_table {
@@ -109,6 +123,7 @@
         $packages: silver gold workshop platinum;
 
         $rows: null;
+        $mobile_rows: null;
         $row_names: '...';
         $row_prices: '...';
 
@@ -137,11 +152,29 @@
             $rows: append($rows, "#{$row}", 'space');
         }
 
+
+        @each $package in $packages {
+            $mobile_rows: append($mobile_rows, "#{$package}_name #{$package}_name", 'space');
+            $mobile_rows: append($mobile_rows, "#{$package}_price #{$package}_price", 'space');
+
+            @each $content in $contents {
+                $mobile_rows: append($mobile_rows, "#{$package}_#{$content}_label #{$package}_#{$content}_value", 'space');
+
+            }
+        }
+
         //
         // use areas generated above in here
         //
-        grid-template-areas:
-            $rows;
+        grid-template-areas: $rows;
+
+
+        @media screen and (max-width: 767px) {
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: $mobile_rows;
+
+        }
 
         //
         // give fields their grid area names
@@ -178,10 +211,11 @@
 
 
 
-
-                @if $package != silver {
-                    .package_#{$package}_#{$content}_label {
-                        display: none;
+                @media screen and (min-width: 767px) {
+                    @if $package != silver {
+                        .package_#{$package}_#{$content}_label {
+                            display: none;
+                        }
                     }
                 }
             }
