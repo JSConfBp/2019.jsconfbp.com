@@ -1,6 +1,6 @@
 @import '../../colors.scss';
 @import '../../fonts.scss';
-
+@import '../sponsoration_common.modules.scss';
 
 
 .title {
@@ -8,6 +8,17 @@
 	text-align: center;
 	font-family: $heading-font;
 	padding-top: 8rem;
+	font-weight: bold;
+
+	@media screen and (max-width: 767px) {
+		padding-top: 10rem;
+	}
+}
+
+.sponsor_header {
+
+	@extend %block;
+    @extend %block_end;
 }
 
 .jsconf,
@@ -16,7 +27,7 @@
 	height: 8rem;
 	width: 8rem;
 	position: absolute;
-	top: 2rem;
+	top: 6rem;
 	left: 50%;
 	background-size: cover;
 }

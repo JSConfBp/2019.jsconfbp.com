@@ -22,14 +22,6 @@
         font-weight: normal;
     }
 
-    h4 {
-        font-family: $heading-font;
-        font-size: 1.2rem;
-        color: $color-yellow;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-
     .conferences {
         @extend %grid_2;
         @extend %block;
@@ -65,7 +57,13 @@
             min-height: 10rem;
             background: {
                 repeat: no-repeat;
-                size: 150px 150px;
+                size: 10rem 10rem;
+            }
+
+            @media screen and (max-width: 767px) {
+                background: {
+                    size: 8rem 8rem;
+                }
             }
         }
 

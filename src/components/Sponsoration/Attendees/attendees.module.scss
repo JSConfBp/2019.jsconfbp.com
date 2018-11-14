@@ -19,6 +19,9 @@
         margin-bottom: 1rem;
         min-height: 4rem;
 
+        @media screen and (max-width: 767px) {
+            min-height: 3rem;
+        }
     }
 
     .stats {
@@ -26,6 +29,11 @@
         @extend %block;
 
         grid-template-columns: 13rem 18rem 13rem;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+            grid-template-rows: 12rem 14rem 12rem;
+        }
 
         .graphs {
             width: 100%;
@@ -79,6 +87,10 @@
         @extend %block;
 
         padding-bottom: 22rem;
+
+        @media screen and (max-width: 767px) {
+            padding-bottom: 8rem;
+        }
 
         p {
             color: $color-white;

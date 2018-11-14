@@ -30,6 +30,12 @@
         @extend %grid_3;
 
         grid-template-columns: 13rem 13rem 13rem;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+            grid-template-rows: 12rem 12rem 12rem;
+        }
+
         font-weight: 200;
 
         .twitter,
@@ -77,5 +83,9 @@
         @extend %block_end;
         display: block;
         font-weight: 200;
+
+        strong {
+            white-space: nowrap;
+        }
     }
 }

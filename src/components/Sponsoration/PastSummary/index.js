@@ -26,14 +26,16 @@ const PastSummary = () => (
           </div>
         </div>
 
-        <iframe
-          className="mood-video"
-          width="100%"
-          height="518"
-          src="https://www.youtube.com/embed/mJoS_pLbiWc"
-          frameBorder="0"
-          allowFullScreen
-        />
+        <div className={ styles.video }>
+          <iframe
+            className="mood-video"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/mJoS_pLbiWc"
+            frameBorder="0"
+            allowFullScreen
+          />
+        </div>
       </div>
     </div>
   </>
