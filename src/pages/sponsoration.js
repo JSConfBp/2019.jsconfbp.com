@@ -7,6 +7,8 @@ import Reach from '../components/Sponsoration/Reach/index'
 import NextYear from '../components/Sponsoration/NextYear/index'
 import Packages from '../components/Sponsoration/Packages/index'
 import Perks from '../components/Sponsoration/Perks/index'
+import Contact from '../components/Sponsoration/Contact/index'
+import Impressum from '../components/Sponsoration/Impressum/index'
 
 import styles from './sponsoration.module.scss'
 
@@ -19,6 +21,8 @@ const IndexPage = () => (
     <NextYear />
     <Packages />
     <Perks />
+    <Contact />
+    <Impressum />
   </SponsorationLayout>
 )
 

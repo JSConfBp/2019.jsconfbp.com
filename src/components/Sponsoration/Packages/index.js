@@ -92,7 +92,11 @@ const PackageTable = () => (
                   : '',
               ].join(' ')}
             >
-              {typeof pkg.content[cont.field] === 'string' ? pkg.content[cont.field] : (pkg.content[cont.field] ? 'yes' : 'no')}
+              {typeof pkg.content[cont.field] === 'string'
+                ? pkg.content[cont.field]
+                : pkg.content[cont.field]
+                  ? 'yes'
+                  : 'no'}
             </strong>
           </>
         ))}
