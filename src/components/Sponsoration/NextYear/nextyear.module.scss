@@ -30,6 +30,11 @@
         grid-template-columns: 20rem 20rem;
         grid-gap: 1rem;
 
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: .5rem;
+        }
+
         color: $color-white;
 
         ul {
@@ -64,6 +69,7 @@
                 background: {
                     size: 8rem 8rem;
                 }
+                min-width: 8rem;
             }
         }
 
@@ -74,6 +80,12 @@
                 position: right top;
                 image: url('./jsconf.png');
             }
+
+            @media screen and (max-width: 767px) {
+                background-position: top left;
+                padding-right: 0rem;
+                padding-top: 11rem;
+            }
         }
 
         .cssconf {
@@ -82,6 +94,11 @@
             background: {
                 position: left top;
                 image: url('./cssconf.png');
+            }
+            @media screen and (max-width: 767px) {
+                background-position: top right;
+                padding-left: 0rem;
+                padding-top: 11rem;
             }
         }
     }
