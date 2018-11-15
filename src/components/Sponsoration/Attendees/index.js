@@ -14,21 +14,21 @@ const PastSummary = () => (
             <dl className={styles.graphs}>
               <dt>18-24</dt>
               <dd>
-                <span style={{ width: '6%' }} />6 %
+                <span style={{ width: '8%' }} />8 %
               </dd>
               <dt>25-34</dt>
               <dd className={styles.graphs__top}>
-                <span style={{ width: '73%' }} />
-                73 %
+                <span style={{ width: '63%' }} />
+                63 %
               </dd>
               <dt>35-44</dt>
               <dd>
-                <span style={{ width: '16%' }} />
-                16 %
+                <span style={{ width: '13%' }} />
+                13 %
               </dd>
               <dt>44+</dt>
               <dd>
-                <span style={{ width: '4%' }} />4 %
+                <span style={{ width: '2%' }} />2 %
               </dd>
             </dl>
           </div>
@@ -38,26 +38,27 @@ const PastSummary = () => (
             <dl className={styles.graphs}>
               <dt>Junior developer</dt>
               <dd>
-                <span style={{ width: '4%' }} />4 %
+                <span style={{ width: '6%' }} />
+                6 %
               </dd>
               <dt>Developer</dt>
+              <dd className={styles.graphs__top}>
+                <span style={{ width: '38%' }} />
+                38 %
+              </dd>
+              <dt>Senior developer</dt>
               <dd>
                 <span style={{ width: '27%' }} />
                 27 %
               </dd>
-              <dt>Senior developer</dt>
-              <dd className={styles.graphs__top}>
-                <span style={{ width: '53%' }} />
-                53 %
-              </dd>
               <dt>Team leader</dt>
               <dd>
-                <span style={{ width: '14%' }} />
-                14 %
+                <span style={{ width: '10%' }} />
+                10 %
               </dd>
               <dt>C-level executive</dt>
               <dd>
-                <span style={{ width: '2%' }} />2 %
+                <span style={{ width: '1%' }} />1 %
               </dd>
             </dl>
           </div>
@@ -67,22 +68,23 @@ const PastSummary = () => (
             <dl className={styles.graphs}>
               <dt>Beginner</dt>
               <dd>
-                <span style={{ width: '8%' }} />8 %
+                <span style={{ width: '5%' }} />
+                5%
               </dd>
               <dt>Intermediate</dt>
               <dd>
                 <span style={{ width: '30%' }} />
-                30 %
+                30%
               </dd>
               <dt>Advanced</dt>
               <dd className={styles.graphs__top}>
-                <span style={{ width: '48%' }} />
-                48 %
+                <span style={{ width: '35%' }} />
+                35%
               </dd>
               <dt>Expert</dt>
               <dd>
-                <span style={{ width: '14%' }} />
-                14 %
+                <span style={{ width: '10%' }} />
+                10 %
               </dd>
             </dl>
           </div>

@@ -15,10 +15,15 @@
 
     .title {
         font-weight: normal;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 3rem;
+        }
     }
     p {
         font-weight: 200;
+        margin-bottom: 0;
     }
 
     .perk_list {

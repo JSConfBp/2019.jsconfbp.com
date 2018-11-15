@@ -27,7 +27,7 @@ const Perks = () => (
   <>
     <div className={styles.perks}>
       <div className={styles.block_inner}>
-        <h3 className={styles.title}>A’la Carte Sponsorships</h3>
+        <h2 className={styles.title}>A’la Carte Sponsorship</h2>
 
         <p>
           Exclusive perks, brand tailored to your Company, each sold once.{' '}
