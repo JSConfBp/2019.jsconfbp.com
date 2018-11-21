@@ -6,6 +6,15 @@ const Navigation = () => (
     <nav className={styles.nav}>
         <ul>
             <li className={styles.item}>
+                <Link className={styles.link} to="/speakers">Speakers</Link>
+            </li>
+            <li className={styles.item}>
+                <Link className={styles.link} to="/venue">Venue</Link>
+            </li>
+            <li className={styles.item}>
+                <Link className={styles.link} to="/sponsors">Sponsors</Link>
+            </li>
+            <li className={styles.item}>
                 <Link className={styles.link} to="/budapest-guide">Budapest Guide</Link>
             </li>
             <li className={styles.item}>

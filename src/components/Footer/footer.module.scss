@@ -58,4 +58,7 @@
 
 .link {
     color: $jsconfred;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
 }

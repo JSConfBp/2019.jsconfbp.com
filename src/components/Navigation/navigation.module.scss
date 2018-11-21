@@ -1,23 +1,33 @@
 @import '../colors.scss';
 @import '../fonts.scss';
+@import '../font-face.scss';
 @import '../sizes.scss';
 
 .nav {
     color: #fff;
-    padding: $size-sm;
-    text-align: center;
 }
 
 .item {
-    display: inline;
+    border-bottom: 1px dashed #ccc;
     font-size: $text-lg;
     line-height: 1.25;
-    margin: 0 $size-sm;
-    &::before {
-        content: '~';
-    }
 }
 
 .link {
     color: currentColor;
+    display: block;
+    font-family: $secondary-font;
+    padding: {
+        top: .5rem;
+        right: .5rem;
+        bottom: .5rem;
+        left: .5rem;
+    }
+    text-decoration: none;
+    &::before {
+        content: '› ';
+    }
+    &:hover, &:active, &:focus {
+        background-color: darken($jsconfred, 20%);
+    }
 }

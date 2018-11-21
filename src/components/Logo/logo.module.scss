@@ -1,0 +1,16 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.logo {
+    border: 5px solid #fff;
+    box-shadow: -2px 2px 2px $gray-900;
+    display: block;
+    height: 100px;
+    margin: $size-xl auto;
+    width: 100px;
+    & .inner {
+        width: 100%;
+    }
+}

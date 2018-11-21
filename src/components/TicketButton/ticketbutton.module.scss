@@ -1,0 +1,91 @@
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.ticket {
+    background-color: #f5eea6;
+    bottom: $size-lg;
+    color: #442f09;
+    display: block;
+    height: 60px;
+    left: 0;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    position: absolute;
+    right: 0;
+    width: (500px / 3);
+    &:hover, &:focus, &:active {
+        opacity: .9;
+    }
+    &:before {
+        background-color: $jsconfred;
+        border-radius: 50%;
+        box-shadow: 
+            (500px / 3) 0 0 0 $jsconfred, 
+            0 60px 0 0 $jsconfred, 
+            (500px / 3) 60px 0 0 $jsconfred,
+            0 15px 0 -5px $jsconfred,
+            0 25px 0 -5px $jsconfred,
+            0 35px 0 -5px $jsconfred,
+            0 45px 0 -5px $jsconfred,
+            0 55px 0 -5px $jsconfred,
+            (500px / 3) 15px 0 -5px $jsconfred,
+            (500px / 3) 25px 0 -5px $jsconfred,
+            (500px / 3) 35px 0 -5px $jsconfred,
+            (500px / 3) 45px 0 -5px $jsconfred,
+            (500px / 3) 55px 0 -5px $jsconfred;
+        content: "";
+        display: block;
+        height: (50px / 3);
+        left: (-25px / 3);
+        position: absolute;
+        top: (-25px / 3);
+        width: (50px / 3);
+    }
+    & .inner {
+        align-items: center;
+        bottom: 10px;
+        border: 2px solid #5e400b;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        left: 10px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        & .label {
+            font: {
+                family: $secondary-font;
+                size: 20px;
+                weight: 600;
+            }
+            letter-spacing: 3px;
+            position: relative;
+            text-transform: uppercase;
+            &:before, &:after {
+                background-color: #f5eea6;
+                content: '★ ★ ★ ★ ★';
+                font: {
+                family: auto;
+                size: 12px;
+                }
+                letter-spacing: 0;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                width: 75px;
+            }
+            &:before {
+                top: -15px;
+            }
+            &:after {
+                bottom: -15px;
+            }
+        }
+    }
+}
