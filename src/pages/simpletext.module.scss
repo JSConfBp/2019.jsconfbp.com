@@ -1,4 +1,47 @@
+@import '../components/breakpoints.scss';
 @import '../components/colors.scss';
+@import '../components/fonts.scss';
+@import '../components/font-face.scss';
+@import '../components/sizes.scss';
+
+.simpleText {
+    background-color: rgba(255, 255, 255, .85);
+    line-height: 1.35;
+    max-width: 800px;
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    padding: $size-md;
+    position: relative;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: $size-lg;
+
+    }
+    > * {
+        margin-bottom: $size-md;
+    }
+
+    & h1 {
+        font-size: $title-sm;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $title-md;
+        }
+    }
+    & h2, & h3, & h4 {
+        font-size: $title-sm;
+        margin: {
+            top: $size-md;
+            bottom: $size-md;
+        }
+    }
+    & a {
+        color: $jsconfred;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+}
 
 .team_grid {
     display: grid;

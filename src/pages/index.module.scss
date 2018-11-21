@@ -1,7 +1,6 @@
 @import '../components/breakpoints.scss';
 @import '../components/colors.scss';
 @import '../components/fonts.scss';
-@import '../components/font-face.scss';
 @import '../components/sizes.scss';
 
 .home {
@@ -15,7 +14,10 @@
     }
     & .title {
         color: #fff;
-        font-size: $title-lg;
+        font-size: $title-md;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $title-lg;
+        }
     }
     & .date {
         color: #fff;
@@ -32,8 +34,11 @@
     & .venue {
         color: #fff;
         display: block;
-        font-size: $title-md;
+        font-size: $title-sm;
         margin-bottom: $size-xxl;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $title-md;
+        }
     }
     & .updates {
         border: 1px solid #fff;

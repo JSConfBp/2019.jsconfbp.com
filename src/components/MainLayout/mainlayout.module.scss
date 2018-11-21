@@ -80,12 +80,19 @@ $sidebar: 250px;
 
 .header {
     background-color: $jsconfred;
-    bottom: 0;
     color: #fff;
     position: fixed;
     left: 0;
+    height: 45px;
+    right: 0;
     top: 0;
-    width: $sidebar;
+    z-index: 5;
+    @media screen and (min-width: $breakpoint-lg) {
+        bottom: 0;
+        height: auto;
+        right: auto;
+        width: $sidebar;
+    }
 }
 
 .main {
@@ -95,21 +102,26 @@ $sidebar: 250px;
         repeat: no-repeat;
         size: cover;
     }
-    margin-left: $sidebar;
-    min-height: 100vh;
     padding: {
-        top: $size-lg;
-        bottom: $size-lg;
+        top: 45px;
     }
     position: relative;
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-left: $sidebar;
+        min-height: 100vh;
+        padding: {
+            top: $size-xxl;
+            bottom: $size-xxl;
+        }
+    }
     &::before {
-        position: absolute;
         background: rgba(0, 0, 0, .6);
-        top: 0;
+        bottom: 0;
+        content: '';
         left: 0;
         right: 0;
-        bottom: 0;
-        content: "";
+        top: 0;
+        position: absolute;
     }
 }
 
@@ -118,37 +130,9 @@ $sidebar: 250px;
     color: $gray-100;
     font-family: $secondary-font;
     padding: $size-lg;
-    margin-left: $sidebar;
     text-align: center;
     @media (min-width: $breakpoint-lg) {
         border-top: 1px dashed $gray-800;
-    }
-}
-
-.simpleText {
-    background-color: rgba(255, 255, 255, .85);
-    line-height: 1.35;
-    max-width: 800px;
-    margin: {
-        right: auto;
-        left: auto;
-    }
-    padding: $size-lg;
-    position: relative;
-    > * {
-        margin-bottom: $size-md;
-    }
-
-    & h1 {
-        font-size: $title-md;
-    }
-    & h2, & h3, & h4 {
-        font-size: $title-sm;
-    }
-    & a {
-        color: $jsconfred;
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-        }
+        margin-left: $sidebar;
     }
 }

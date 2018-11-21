@@ -1,14 +1,11 @@
+@import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
 @import '../font-face.scss';
 @import '../sizes.scss';
 
-.ticket {
-    background-color: #f5eea6;
+.buy {
     bottom: $size-lg;
-    color: #442f09;
-    display: block;
-    height: 60px;
     left: 0;
     margin: {
         left: auto;
@@ -16,6 +13,26 @@
     }
     position: absolute;
     right: 0;
+    text-align: center;
+    @media screen and (max-width: $breakpoint-lg) {
+        display: none;
+    }
+    & .date {
+        font-size: $text-sm;
+    }
+}
+
+.ticket {
+    background-color: #f5eea6;
+    color: #442f09;
+    display: block;
+    height: 60px;
+    margin: {
+        left: auto;
+        right: auto;
+        top: $size-sm;
+    }
+    position: relative;
     width: (500px / 3);
     &:hover, &:focus, &:active {
         opacity: .9;

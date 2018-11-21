@@ -1,6 +1,6 @@
 import React from 'react'
 import MainLayout from '../components/MainLayout/index'
-import styles from '../components/MainLayout/mainlayout.module.scss'
+import styles from './simpletext.module.scss'
 
 const CodeOfConduct = () => (
   <MainLayout>

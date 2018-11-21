@@ -1,3 +1,4 @@
+@import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
 @import '../font-face.scss';
@@ -5,6 +6,9 @@
 
 .nav {
     color: #fff;
+    @media screen and (max-width: $breakpoint-lg) {
+        display: none;
+    }
 }
 
 .item {
