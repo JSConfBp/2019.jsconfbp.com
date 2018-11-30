@@ -7,14 +7,26 @@
 .logo {
     display: block;
     height: 50px;
-    margin-left: $size-md;
+    left: 0;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 50px;
+    z-index: 15;
     @media screen and (min-width: $breakpoint-lg) {
         border: 5px solid #fff;
         box-shadow: -2px 2px 2px $gray-900;
         height: 100px;
-        margin: $size-xl auto;
-        width: 100px;;
+        margin: {
+            top: $size-xl;
+            bottom: $size-md;
+        }
+        position: static;
+        width: 100px;
 
     }
     & .inner {

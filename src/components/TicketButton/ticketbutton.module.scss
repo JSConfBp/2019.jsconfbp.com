@@ -5,20 +5,16 @@
 @import '../sizes.scss';
 
 .buy {
-    bottom: $size-lg;
-    left: 0;
-    margin: {
-        left: auto;
-        right: auto;
-    }
-    position: absolute;
-    right: 0;
-    text-align: center;
-    @media screen and (max-width: $breakpoint-lg) {
-        display: none;
-    }
-    & .date {
-        font-size: $text-sm;
+    @media screen and (min-width: $breakpoint-lg) {
+        bottom: $size-lg;
+        left: 0;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        position: absolute;
+        right: 0;
+        text-align: center;
     }
 }
 
@@ -26,82 +22,124 @@
     background-color: #f5eea6;
     color: #442f09;
     display: block;
-    height: 60px;
     margin: {
-        left: auto;
-        right: auto;
-        top: $size-sm;
+        right: $size-sm;
+    }
+    padding: {
+        right: $size-md;
+        left: $size-md;
     }
     position: relative;
-    width: (500px / 3);
+    text-decoration: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        margin: {
+            left: auto;
+            right: auto;
+            top: $size-sm;
+        }
+        padding: 0;
+        height: 60px;
+        width: (500px / 3);
+    }
     &:hover, &:focus, &:active {
         opacity: .9;
     }
-    &:before {
+    &::before, &::after {
         background-color: $jsconfred;
         border-radius: 50%;
-        box-shadow: 
-            (500px / 3) 0 0 0 $jsconfred, 
-            0 60px 0 0 $jsconfred, 
-            (500px / 3) 60px 0 0 $jsconfred,
-            0 15px 0 -5px $jsconfred,
-            0 25px 0 -5px $jsconfred,
-            0 35px 0 -5px $jsconfred,
-            0 45px 0 -5px $jsconfred,
-            0 55px 0 -5px $jsconfred,
-            (500px / 3) 15px 0 -5px $jsconfred,
-            (500px / 3) 25px 0 -5px $jsconfred,
-            (500px / 3) 35px 0 -5px $jsconfred,
-            (500px / 3) 45px 0 -5px $jsconfred,
-            (500px / 3) 55px 0 -5px $jsconfred;
         content: "";
-        display: block;
-        height: (50px / 3);
-        left: (-25px / 3);
+        height: 12px;
         position: absolute;
-        top: (-25px / 3);
-        width: (50px / 3);
+        top: 10px;
+        width: 12px;
+    }
+    &::before {
+        left: -6px;
+        @media screen and (min-width: $breakpoint-lg) {
+            box-shadow: 
+                (500px / 3) 0 0 0 $jsconfred, 
+                0 60px 0 0 $jsconfred, 
+                (500px / 3) 60px 0 0 $jsconfred,
+                0 15px 0 -5px $jsconfred,
+                0 25px 0 -5px $jsconfred,
+                0 35px 0 -5px $jsconfred,
+                0 45px 0 -5px $jsconfred,
+                0 55px 0 -5px $jsconfred,
+                (500px / 3) 15px 0 -5px $jsconfred,
+                (500px / 3) 25px 0 -5px $jsconfred,
+                (500px / 3) 35px 0 -5px $jsconfred,
+                (500px / 3) 45px 0 -5px $jsconfred,
+                (500px / 3) 55px 0 -5px $jsconfred;
+            height: (50px / 3);
+            left: (-25px / 3);
+            top: (-25px / 3);
+            width: (50px / 3);
+        }
+    }
+    &::after {
+        right: -6px;
+        @media screen and (min-width: $breakpoint-lg) {
+            content: none;
+        }
     }
     & .inner {
-        align-items: center;
-        bottom: 10px;
-        border: 2px solid #5e400b;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        left: 10px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
+        border-right: 3px dotted #5e400b;
+        padding: {
+            top: $size-sm;
+            right: $size-sm;
+            bottom: $size-sm;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            align-items: center;
+            bottom: 10px;
+            border: 2px solid #5e400b;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            left: 10px;
+            padding: 0;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
         & .label {
             font: {
                 family: $secondary-font;
-                size: 20px;
+                size: 15px;
                 weight: 600;
             }
-            letter-spacing: 3px;
-            position: relative;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 20px;
+                position: relative;
+            }
             &:before, &:after {
-                background-color: #f5eea6;
-                content: '★ ★ ★ ★ ★';
-                font: {
-                family: auto;
-                size: 12px;
+                @media screen and (min-width: $breakpoint-lg) {
+                    background-color: #f5eea6;
+                    content: '★ ★ ★ ★ ★';
+                    font: {
+                    family: auto;
+                    size: 12px;
+                    }
+                    letter-spacing: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    position: absolute;
+                    right: 0;
+                    text-align: center;
+                    width: 75px;
                 }
-                letter-spacing: 0;
-                left: 0;
-                margin: 0 auto;
-                position: absolute;
-                right: 0;
-                text-align: center;
-                width: 75px;
             }
             &:before {
-                top: -15px;
+                @media screen and (min-width: $breakpoint-lg) {
+                    top: -15px;
+                }
             }
             &:after {
-                bottom: -15px;
+                @media screen and (min-width: $breakpoint-lg) {
+                    bottom: -15px;
+                }
             }
         }
     }

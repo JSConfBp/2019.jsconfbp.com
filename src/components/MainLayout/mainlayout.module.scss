@@ -79,19 +79,47 @@ h1, h2, h3, h4, h5 {
 $sidebar: 250px;
 
 .header {
+    align-items: center;
     background-color: $jsconfred;
     color: #fff;
-    position: fixed;
-    left: 0;
+    display: flex;
     height: 45px;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 5;
     @media screen and (min-width: $breakpoint-lg) {
         bottom: 0;
+        display: block;
         height: auto;
         right: auto;
         width: $sidebar;
+    }
+    & .menu_button {
+        border: 1px solid #fff;
+        fill: #fff;
+        height: 30px;
+        margin-left: $size-sm;
+        padding: {
+            left: 5px;
+            right: 5px;
+        }
+        width: 32px;
+        @media screen and (min-width: $breakpoint-lg) {
+            display: none;
+        }
+    }
+    & .date {
+        display: none;
+        @media screen and (min-width: $breakpoint-lg) {
+            display: block;
+            margin: {
+                bottom: $size-xl;
+            }
+            text-align: center;
+        }
     }
 }
 

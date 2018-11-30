@@ -5,9 +5,17 @@
 @import '../sizes.scss';
 
 .nav {
+    background-color: $jsconfred;
     color: #fff;
-    @media screen and (max-width: $breakpoint-lg) {
-        display: none;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    @media screen and (min-width: $breakpoint-lg) {
+        background-color: transparent;
+        display: block;
+        position: static;
     }
 }
 
@@ -22,12 +30,18 @@
     display: block;
     font-family: $secondary-font;
     padding: {
-        top: .5rem;
-        right: .5rem;
-        bottom: .5rem;
-        left: .5rem;
+        top: $size-md;
+        right: $size-sm;
+        bottom: $size-md;
+        left: $size-sm;
     }
     text-decoration: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: {
+            top: $size-sm;
+            bottom: $size-sm;
+        }
+    }
     &::before {
         content: '› ';
     }
