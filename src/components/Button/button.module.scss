@@ -1,0 +1,23 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.button {
+	border: 1px solid #fff;
+	color: #fff;
+	padding: $size-md $size-lg;
+
+	cursor: pointer;
+
+	text: {
+		decoration: none;
+		transform: uppercase;
+	}
+
+	&:hover, &:focus, &:active {
+		background-color: #fff;
+		color: $gray-900;
+	}
+}
