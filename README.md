@@ -13,7 +13,7 @@ npm i
 Start the development server and go to `http://0.0.0.0:8000/`
 
 ```
-npm run dev
+npm start
 ```
 
 ## Done?
