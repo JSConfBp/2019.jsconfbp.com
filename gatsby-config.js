@@ -6,6 +6,7 @@ module.exports = {
     twitter: '@jsconfbp'
   },
   plugins: [
+    'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,6 +41,14 @@ module.exports = {
         siteSpeedSampleRate: 10,
         cookieDomain: "jsconfbp.com",
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: `${__dirname}/src/images`,
+          }
+      }
     },
   ],
 }

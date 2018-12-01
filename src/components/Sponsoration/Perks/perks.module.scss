@@ -1,0 +1,74 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.perks {
+    @extend %block;
+    @extend %block_end;
+
+    background-color: $color-white;
+    text-align: center;
+
+    h2, h3 {
+        color: $color-red;
+    }
+
+    .title {
+        font-weight: normal;
+        margin-bottom: 4rem;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 3rem;
+        }
+    }
+    p {
+        font-weight: 200;
+        margin-bottom: 0;
+    }
+
+    .perk_list {
+        @extend %block;
+
+        margin: 0 auto;
+        max-width: 40%;
+
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 1rem;
+            border-top: 1px solid $color-grey-2;
+            text-align: right;
+
+            &:first-child {
+                border: none;
+            }
+        }
+
+        .perk_label,
+        .perk_value {
+            display: inline-block;
+            padding: 0 2rem;
+            min-height: 4rem;
+            line-height: 4rem;
+
+            @media screen and (max-width: 767px) {
+                padding: 0 1rem;
+                min-height: 3rem;
+                line-height: 3rem;
+            }
+        }
+
+        .perk_label {
+            font-weight: 200;
+        }
+
+        .perk_value {
+            background-color: $color-grey-3;
+            color: $color-red;
+        }
+    }
+}

@@ -11,9 +11,9 @@ const Navigation = () => (
         </Link>
       </li>
       <li className={styles.item}>
-        <Link className={styles.link} to="/sponsoration">
+        <a className={styles.link} href="/sponsoration">
           Sponsoration
-        </Link>
+        </a>
       </li>
       <li className={styles.item}>
         <Link className={styles.link} to="/code-of-conduct">

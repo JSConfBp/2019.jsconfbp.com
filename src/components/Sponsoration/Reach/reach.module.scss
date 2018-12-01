@@ -1,0 +1,91 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.reach {
+    @extend %block;
+
+    background-color: $color-white;
+    text-align: center;
+
+    h2, h3 {
+        color: $color-red;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    h4 {
+        font-family: $heading-font;
+        font-size: 1.2rem;
+        color: $color-yellow;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+
+    .numbers {
+        @extend %block;
+        @extend %grid_3;
+
+        grid-template-columns: 13rem 13rem 13rem;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+            grid-template-rows: 12rem 12rem 12rem;
+        }
+
+        font-weight: 200;
+
+        .twitter,
+        .youtube,
+        .facebook {
+            background: {
+                repeat: no-repeat;
+                position: top center;
+            }
+            padding-top: 3rem;
+        }
+
+        .twitter {
+            background-image: url('./twitter.svg');
+            h4 {
+                color: $color-twitter;
+            }
+        }
+        .youtube {
+            background-image: url('./youtube.svg');
+            h4 {
+                color: $color-red;
+            }
+        }
+        .facebook {
+            background-image: url('./facebook.svg');
+            h4 {
+                color: $color-facebook;
+            }
+        }
+
+        .followers,
+        .subscribers,
+        .reached {
+            font-family: $base-font;
+            font-weight: 200;
+            font-size: 4rem;
+            display: block;
+            color: $color-black;
+        }
+    }
+
+    .notes {
+        @extend %block;
+        @extend %block_end;
+        display: block;
+        font-weight: 200;
+
+        strong {
+            white-space: nowrap;
+        }
+    }
+}

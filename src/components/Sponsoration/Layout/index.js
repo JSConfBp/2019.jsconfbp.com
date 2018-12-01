@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from '../Header/index'
-import Navigation from '../Navigation/index'
 import styles from './layout.module.scss'
 
-const Layout = ({ className, contentBg = false, children }) => (
+const SponsorationLayout = ({ className, contentBg = false, children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteTitleQuery2 {
         site {
           siteMetadata {
             title
@@ -21,9 +19,9 @@ const Layout = ({ className, contentBg = false, children }) => (
       }
     `}
     render={data => (
-      <main className={[className, styles.bg].join(' ')}>
+      <main className={className}>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={`Sponsoration | ${data.site.siteMetadata.title}`}
           meta={[
             {
               name: 'description',
@@ -34,20 +32,19 @@ const Layout = ({ className, contentBg = false, children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+
         <section
           className={[styles.inner, contentBg ? styles.content : ''].join(' ')}
         >
           {children}
         </section>
-        <Navigation />
       </main>
     )}
   />
 )
 
-Layout.propTypes = {
+SponsorationLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default SponsorationLayout

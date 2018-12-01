@@ -1,0 +1,248 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.packages {
+    @extend %block;
+
+
+    background-color: $color-white;
+    text-align: center;
+
+    h2, h3 {
+        color: $color-red;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    .scholarships {
+        background-color: $color-green;
+        color: $color-white;
+        padding: 0 4rem 4rem;
+        margin-top: 4rem;
+
+        @media screen and (max-width: 767px) {
+            padding: 0 1rem 3rem;
+            margin-top: 3rem;
+        }
+    }
+
+    .info_title {
+        @extend %block;
+        font-family: $base-font;
+        font-size: 2rem;
+        font-weight: 200;
+        margin: 0;
+    }
+
+    .info_text {
+        margin-top: 2rem;
+        margin-bottom: 0;
+        font-weight: 200;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 1rem;
+        }
+    }
+
+    @mixin package_name {
+        padding: .5rem 0;
+        font-family: $base-font;
+        font-weight: bold;
+        min-height: 4rem;
+
+        @media screen and (max-width: 767px) {
+            padding-top: 1.3rem;
+            min-height: auto;
+            margin-top: 3rem;
+        }
+    }
+
+    @mixin package_price {
+        color: $color-red;
+        font-size: 1.6rem;
+        font-weight: 200;
+        min-height: 4rem;
+        line-height: 4rem;
+    }
+
+    @mixin package_content {
+        font-weight: 200;
+        font-size: 1rem;
+        padding: .4rem 0;
+        border-top: 1px solid $color-grey-2;
+        min-height: 4rem;
+    }
+
+    @mixin content_label {
+        text-align: right;
+        padding-right: .5rem;
+        padding-left: 4rem;
+        min-height: 4rem;
+        align-self: center;
+        @media screen and (max-width: 767px) {
+            padding-left: 0rem;
+        }
+
+    }
+
+    @mixin package_value {
+        line-height: 3rem;
+    }
+
+    @mixin package_bg($package, $show) {
+        $bg_color: $color-white;
+
+        @if $show {
+            @if $package == silver { $bg_color: $color-grey-1 }
+            @if $package == gold { $bg_color: $color-grey-2 }
+            @if $package == workshop { $bg_color: $color-grey-3 }
+            @if $package == platinum { $bg_color: $color-grey-4 }
+        }
+
+        background-color: $bg_color;
+
+        border-left: {
+            color: $color-white;
+            style: solid;
+            width: .5rem;
+        }
+
+        border-right: {
+            color: $color-white;
+            style: solid;
+            width: .5rem;
+        }
+
+
+    }
+
+    .packages_table {
+        @extend %block;
+
+        margin: 0 auto;
+        padding: {
+            left: 4rem;
+            right: 4rem;
+        }
+
+        display: grid;
+        grid-gap: 0;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+
+        //
+        // create labeled grid areas so we can reorder these on mobile
+        //
+        $fields: name price;
+        $contents: branding tickets screen booth slide hr;
+        $packages: silver gold workshop platinum;
+
+        $rows: null;
+        $mobile_rows: null;
+        $row_names: '...';
+        $row_prices: '...';
+
+        @each $package in $packages {
+            @each $field in $fields {
+                @if $field == 'name' {
+                    $var: #{$package}_name;
+                    $row_names: append($row_names, $var, 'space');
+                }
+                @if $field == 'price' {
+                    $var: #{$package}_price;
+                    $row_prices: append($row_prices, $var, 'space');
+                }
+            }
+        }
+        $row_names: "#{$row_names}";
+        $row_prices: "#{$row_prices}";
+
+        $rows: append($row_names, $row_prices, 'space');
+
+        @each $content in $contents {
+            $row: silver_#{$content}_label;
+            @each $package in $packages {
+                $row: append($row, #{$package}_#{$content}_value, 'space')
+            }
+            $rows: append($rows, "#{$row}", 'space');
+        }
+
+
+        @each $package in $packages {
+            $mobile_rows: append($mobile_rows, "#{$package}_name #{$package}_name", 'space');
+            $mobile_rows: append($mobile_rows, "#{$package}_price #{$package}_price", 'space');
+
+            @each $content in $contents {
+                $mobile_rows: append($mobile_rows, "#{$package}_#{$content}_label #{$package}_#{$content}_value", 'space');
+
+            }
+        }
+
+        //
+        // use areas generated above in here
+        //
+        grid-template-areas: $rows;
+
+
+        @media screen and (max-width: 767px) {
+            padding: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: $mobile_rows;
+
+        }
+
+        //
+        // give fields their grid area names
+        //
+        @each $package in $packages {
+            @each $field in $fields {
+                .package_#{$package}_#{$field} {
+                    grid-area: #{$package}_#{$field};
+
+                    @if $field == name {
+                        @include package_name;
+                    }
+                    @if $field == price {
+                        @include package_price;
+                    }
+
+                    @include package_bg($package, true);
+                }
+            }
+            @each $content in $contents {
+                .package_#{$package}_#{$content}_label {
+                    @include package_content;
+                    @include content_label;
+                    grid-area: #{$package}_#{$content}_label;
+                }
+                .package_#{$package}_#{$content}_value {
+                    @include package_content;
+                    @include package_value;
+                    grid-area: #{$package}_#{$content}_value;
+                }
+                .package_#{$package}_#{$content}_included {
+                    @include package_bg($package, true);
+                }
+
+
+
+                @media screen and (min-width: 767px) {
+                    @if $package != silver {
+                        .package_#{$package}_#{$content}_label {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .package_workshop_price {
+            font-size: 1.2rem;
+        }
+        .package_silver_booth_label {
+            padding-left: 50%;
+        }
+    }
+}

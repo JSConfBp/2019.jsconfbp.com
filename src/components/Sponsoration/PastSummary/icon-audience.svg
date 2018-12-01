@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="85px" viewBox="0 0 110 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-audience</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polyline id="path-1" points="7.71929825 65 0 65 0 0 110 0 110 65 101.315789 65"></polyline>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="110" height="65" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sponsorship" transform="translate(-645.000000, -691.000000)" stroke="#FFFFFF">
+            <g id="2016" transform="translate(0.000000, 480.000000)">
+                <g id="icon-audience" transform="translate(645.000000, 211.000000)">
+                    <use id="Rectangle-18" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                    <ellipse id="Oval-3" stroke-width="3" cx="55.5" cy="47.5" rx="14.5" ry="14.5"></ellipse>
+                    <circle id="Oval-3" stroke-width="3" cx="89" cy="49" r="11"></circle>
+                    <circle id="Oval-3" stroke-width="3" cx="22" cy="49" r="11"></circle>
+                    <path d="M37,72.0079727 C37,66.480722 41.4814851,62 47.0005416,62 L63.9994584,62 C69.522605,62 74,66.4792691 74,72.0079727 L74,83 L37,83 L37,72.0079727 Z" id="Rectangle-14" stroke-width="3"></path>
+                    <path d="M74,68.5 C74,63.8055796 77.7995207,60 82.4965203,60 L95.5034797,60 C100.195978,60 104,63.8151318 104,68.5 L104,77 L74,77 L74,68.5 Z" id="Rectangle-14" stroke-width="3"></path>
+                    <path d="M7,68.5 C7,63.8055796 10.7995207,60 15.4965203,60 L28.5034797,60 C33.1959783,60 37,63.8151318 37,68.5 L37,77 L7,77 L7,68.5 Z" id="Rectangle-14" stroke-width="3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

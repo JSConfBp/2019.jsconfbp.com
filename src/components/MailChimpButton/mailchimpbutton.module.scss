@@ -1,0 +1,25 @@
+@import '../colors.scss';
+
+.mailchimp_button {
+	cursor: pointer;
+	display: block;
+	margin-top: 1em;
+
+	border-radius: .2em;
+	background: $link-color;
+	padding: .5em 1em;
+
+	color: #fff;
+	text-decoration: none;
+
+	&:hover {
+		color: #fff;
+		background: lighten($link-color, 5%);
+	}
+	&:active {
+		transform: translateY(.05em);
+	}
+	&:visited {
+		color: #fff;
+	}
+}

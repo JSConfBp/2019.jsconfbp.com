@@ -1,0 +1,113 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.nextyear {
+    @extend %block;
+    @extend %block_end;
+
+    background: {
+        image: url('./akvarium.jpg');
+        size: cover;
+        position: top center;
+    }
+
+    text-align: center;
+
+    h2, h3 {
+        color: $color-white;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    .conferences {
+        @extend %grid_2;
+        @extend %block;
+        @extend %block_end;
+
+        grid-template-columns: 20rem 20rem;
+        grid-gap: 1rem;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: .5rem;
+        }
+
+        color: $color-white;
+
+        ul {
+            font-weight: 200;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        h5 {
+            font: {
+                weight: bold;
+                size: 1.5rem;
+            }
+        }
+
+        .jsconf,
+        .cssconf {
+            padding-top: 1rem;
+            min-height: 10rem;
+            background: {
+                repeat: no-repeat;
+                size: 10rem 10rem;
+            }
+
+            @media screen and (max-width: 767px) {
+                background: {
+                    size: 8rem 8rem;
+                }
+                min-width: 8rem;
+            }
+        }
+
+        .jsconf {
+            text-align: right;
+            padding-right: 11rem;
+            background: {
+                position: right top;
+                image: url('./jsconf.png');
+            }
+
+            @media screen and (max-width: 767px) {
+                background-position: top left;
+                padding-right: 0rem;
+                padding-top: 11rem;
+            }
+        }
+
+        .cssconf {
+            text-align: left;
+            padding-left: 11rem;
+            background: {
+                position: left top;
+                image: url('./cssconf.png');
+            }
+            @media screen and (max-width: 767px) {
+                background-position: top right;
+                padding-left: 0rem;
+                padding-top: 11rem;
+            }
+        }
+    }
+
+    .venue {
+        color: $color-white;
+
+        p {
+            font-weight: 200;
+        }
+    }
+}

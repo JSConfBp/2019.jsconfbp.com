@@ -1,0 +1,111 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.attendees {
+    @extend %block;
+
+    background-color: darken($color-blue, 5);
+    text-align: center;
+
+    h2, h3 {
+        color: $color-white;
+    }
+
+    .stats_title {
+        font-size: 1.2rem;
+        color: $color-yellow;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        min-height: 4rem;
+
+        @media screen and (max-width: 767px) {
+            min-height: 3rem;
+        }
+    }
+
+    .stats {
+        @extend %grid_3;
+        @extend %block;
+
+        grid-template-columns: 13rem 18rem 13rem;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: auto;
+            grid-template-rows: 12rem 14rem 12rem;
+        }
+
+        .graphs {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: .5rem;
+
+            dd, dt {
+                font-size: .7em;
+                color: $color-white;
+            }
+            dt {
+                text-align: right;
+                font-weight: 200;
+            }
+            dd {
+                font: {
+                    weight: 200;
+                    size: .6em;
+                }
+
+                text-align: left;
+                line-height: 1.2rem;
+                height: 1.2rem;
+                color: rgba(0,0,0,0);
+
+                span {
+                    opacity: .5;
+                    height: 1.2rem;
+                    display: inline-block;
+                    background-color: $color-white;
+                    vertical-align: top;
+                    margin-right: .3rem;
+                }
+
+                &.graphs__top {
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__age,
+        &__position {
+            width: 100%;
+        }
+    }
+
+    .countries {
+        @extend %block;
+
+        padding-bottom: 22rem;
+
+        @media screen and (max-width: 767px) {
+            padding-bottom: 8rem;
+        }
+
+        p {
+            color: $color-white;
+
+            font: {
+                size: 1rem;
+                weight: 200;
+            }
+        }
+
+        background: {
+            image: url('./Map@2x.png');
+            position: bottom center;
+            size: 100% auto;
+            repeat: no-repeat;
+        }
+    }
+}
