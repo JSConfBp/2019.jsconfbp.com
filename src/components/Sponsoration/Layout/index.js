@@ -8,7 +8,7 @@ import styles from './layout.module.scss'
 const SponsorationLayout = ({ className, contentBg = false, children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery2 {
+      query SiteTitleQuery3 {
         site {
           siteMetadata {
             title

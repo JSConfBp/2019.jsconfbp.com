@@ -78,7 +78,7 @@ $sidebar: 250px;
 .main {
     background: {
         attachment: fixed;
-        image: url(../../images/budapest.jpg);
+        image: url('./budapest.jpg');
         repeat: no-repeat;
         size: cover;
     }

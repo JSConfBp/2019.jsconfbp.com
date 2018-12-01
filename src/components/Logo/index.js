@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styles from './logo.module.scss'
-import logoImage from '../../images/logo2.png'
+import LogoImage from './image'
 
 const Logo = () => (
   <Link className={styles.logo} to="/">
-    <img className={styles.inner} src={logoImage} alt="" />
+    <LogoImage  className={styles.inner} />
+  
   </Link>
 )
 

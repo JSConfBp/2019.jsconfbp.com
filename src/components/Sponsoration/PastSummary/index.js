@@ -26,7 +26,7 @@ const PastSummary = () => (
           </div>
         </div>
 
-        <div className={ styles.video }>
+        <div className={styles.video}>
           <iframe
             className="mood-video"
             width="100%"

@@ -38,8 +38,7 @@ const PastSummary = () => (
             <dl className={styles.graphs}>
               <dt>Junior developer</dt>
               <dd>
-                <span style={{ width: '6%' }} />
-                6 %
+                <span style={{ width: '6%' }} />6 %
               </dd>
               <dt>Developer</dt>
               <dd className={styles.graphs__top}>
