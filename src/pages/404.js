@@ -1,11 +1,23 @@
+
+
 import React from 'react'
-import Layout from '../components/Layout/index'
+import { Link } from 'gatsby'
+import Button from '../components/Button/index'
+import MainLayout from '../components/MainLayout/index'
+import styles from './index.module.scss'
+import MailChimpButton from '../components/MailChimpButton/index'
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <MainLayout>
+    <div className={styles.home}>
+      <div className={styles.homeContent}>
+        <h1 className={styles.title}>404 Not Found</h1>
+        <span className={styles.date}>Something's missing here...</span>
+      
+
+      </div>
+    </div>
+  </MainLayout>
 )
 
 export default NotFoundPage

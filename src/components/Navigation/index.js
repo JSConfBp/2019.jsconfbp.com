@@ -15,12 +15,12 @@ const Navigation = () => (
           Sponsoration
         </a>
       </li>
-      <li className={styles.item}>
-        <Link className={styles.link} to="/code-of-conduct">
-          News
-        </Link>
-      </li>
       {/*
+            <li className={styles.item}>
+              <Link className={styles.link} to="/code-of-conduct">
+                News
+              </Link>
+            </li>      
             <li className={styles.item}>
                 <Link className={styles.link} to="/speakers">Speakers</Link>
             </li>
@@ -36,7 +36,7 @@ const Navigation = () => (
             <li className={styles.item}>
                 <Link className={styles.link} to="/updates">Updates</Link>
             </li>
-             */}
+      */}
       <li className={styles.item}>
         <Link className={styles.link} to="/code-of-conduct">
           Code of Conduct

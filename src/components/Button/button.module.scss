@@ -5,8 +5,8 @@
 @import '../sizes.scss';
 
 .button {
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid $color-yellow;
+	color: $color-yellow;
 	padding: $size-md $size-lg;
 
 	margin-bottom: $size-lg;
@@ -19,11 +19,21 @@
 	}
 
 	&:hover, &:focus, &:active {
-		background-color: #fff;
+		border-color: $color-white;
+		background-color: $color-white; // #fff;
 		color: $gray-900;
 	}
 
 	&__block {
 		display: block;
+		width: fit-content;
+		margin: 0 auto;
+		margin-bottom: $size-lg;
+	}
+
+	&__fill {
+		border: none;
+		background-color: $color-yellow;
+		color: $gray-900;
 	}
 }

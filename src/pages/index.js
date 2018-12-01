@@ -19,6 +19,7 @@ const IndexPage = () => (
 
         <Button
           block={true}
+          fill={true}
           href="https://ti.to/jsconf-bp/jsconf-budapest-2019"
         >
           Buy tickets
