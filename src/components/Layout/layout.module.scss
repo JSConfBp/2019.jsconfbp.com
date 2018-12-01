@@ -1,3 +1,35 @@
+@import '../reset.css';
+@import '../colors.scss';
+@import '../fonts.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: $main-color;
+    font: {
+        family: $base-font;
+        size: 18px;
+    }
+    height: 100%;
+    line-height: 1.5;
+}
+
+.bg {
+    background: {
+        attachment: fixed;
+        color: #f1f1f1;
+        image: url(./bg.jpg);
+        size: cover;
+        repeat: no-repeat;
+    }
+}
+
 .inner {
     margin: 0 auto;
     max-width: 960px;
@@ -6,6 +38,7 @@
 }
 
 .content {
+
     background-color: rgba(255, 255, 255, .6);
     margin: {
         left: auto;
