@@ -9,37 +9,37 @@
     justify-content: center;
     min-height: 100vh;
     text-align: center;
+    
     & .homeContent {
         position: relative;
     }
+
     & .title {
         color: #fff;
-        font-size: $title-md;
+        font-size: $size-xxl;
+        line-height: 1.2;
         @media screen and (min-width: $breakpoint-lg) {
-            font-size: $title-lg;
+            font-size: $size-xxxl;
         }
     }
     & .date {
         color: #fff;
         display: block;
         font: {
-            size: $title-md;
+            size: $size-lg;
             weight: 300;
         }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-xl;
+        }
+
         margin: {
             top: $size-lg;
             bottom: $size-xl;
         }
     }
-    & .venue {
-        color: #fff;
-        display: block;
-        font-size: $title-sm;
-        margin-bottom: $size-xxl;
-        @media screen and (min-width: $breakpoint-lg) {
-            font-size: $title-md;
-        }
-    }
+    
     & .updates {
         border: 1px solid #fff;
         color: #fff;

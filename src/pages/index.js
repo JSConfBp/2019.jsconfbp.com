@@ -11,7 +11,6 @@ const IndexPage = () => (
       <div className={styles.homeContent}>
         <h1 className={styles.title}>JSConf Budapest 2019</h1>
         <span className={styles.date}>26-27th September</span>
-        <span className={styles.venue}>Akvárium Klub</span>
 
         <Button block={true} to="/call-for-speakers">
           Submit your Talk!

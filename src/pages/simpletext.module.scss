@@ -23,18 +23,56 @@
     }
 
     & h1 {
-        font-size: $title-sm;
+        font-size: $size-xxl;
+
         @media screen and (min-width: $breakpoint-lg) {
-            font-size: $title-md;
+            font-size: $size-xxl;
         }
     }
+
     & h2, & h3, & h4 {
-        font-size: $title-sm;
         margin: {
             top: $size-md;
             bottom: $size-md;
         }
+        line-height: 1.35;   
     }
+
+    & h2 {
+        font-size: $size-xl;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-xl;
+        }
+    }
+
+    & h3 {
+        font-size: $size-lg;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-lg;
+        }
+    }
+
+    & p + h2,
+    & p + h3,
+    & ul + h2,
+    & ul + h3 {
+        margin: {
+            top: $size-xl;
+        }
+    }
+
+    & ul li {
+        list-style-type: disc;
+        margin: {
+            left: $size-lg;
+            bottom: $size-md;
+        } 
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     & a {
         color: $jsconfred;
         &:hover, &:active, &:focus {
