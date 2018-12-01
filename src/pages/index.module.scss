@@ -36,10 +36,19 @@
 
         margin: {
             top: $size-lg;
-            bottom: $size-xl;
+            bottom: $size-lg;
         }
     }
-    
+    & .venue {
+        color: #fff;
+        display: block;
+        font-size: $title-sm;
+        margin-bottom: $size-xl;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $title-md;
+            margin-bottom: $size-xxl;
+        }
+    }
     & .updates {
         border: 1px solid #fff;
         color: #fff;

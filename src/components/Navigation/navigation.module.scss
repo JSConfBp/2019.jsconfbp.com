@@ -12,6 +12,9 @@
     position: fixed;
     right: 0;
     z-index: 10;
+    &.isOpen {
+        display: block;
+    }
     @media screen and (min-width: $breakpoint-lg) {
         background-color: transparent;
         display: block;

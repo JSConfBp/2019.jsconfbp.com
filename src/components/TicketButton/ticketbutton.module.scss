@@ -85,9 +85,9 @@
     & .inner {
         border-right: 3px dotted #5e400b;
         padding: {
-            top: $size-sm;
+            top: 2px;
             right: $size-sm;
-            bottom: $size-sm;
+            bottom: 3px;
         }
         @media screen and (min-width: $breakpoint-lg) {
             align-items: center;
