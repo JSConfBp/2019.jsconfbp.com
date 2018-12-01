@@ -8,11 +8,20 @@ const IndexPage = () => (
   <MainLayout>
     <div className={styles.home}>
       <div className={styles.homeContent}>
-          <h1 className={styles.title}>JSConf Budapest 2019</h1>
-          <span className={styles.date}>26-27th September</span>
-          <span className={styles.venue}>Akvárium Klub</span>
+        <h1 className={styles.title}>JSConf Budapest 2019</h1>
+        <span className={styles.date}>26-27th September</span>
+        <span className={styles.venue}>Akvárium Klub</span>
 
-          <Button className={styles.updates} to="/register">Get updates</Button>
+        <Button block={true} to="/call-for-speakers">
+          Submit your Talk!
+        </Button>
+
+        <Button
+          block={true}
+          href="https://ti.to/jsconf-bp/jsconf-budapest-2019"
+        >
+          Buy tickets
+        </Button>
       </div>
     </div>
   </MainLayout>

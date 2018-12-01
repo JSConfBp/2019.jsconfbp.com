@@ -38,11 +38,9 @@ const MainLayout = props => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <main className={styles.main}>
-          {props.children}
-        </main>
+        <main className={styles.main}>{props.children}</main>
         <footer className={styles.footer}>
-            <Footer/>
+          <Footer />
         </footer>
       </div>
     )}

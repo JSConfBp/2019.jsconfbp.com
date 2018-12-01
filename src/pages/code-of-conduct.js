@@ -9,8 +9,8 @@ const CodeOfConduct = () => (
       <p>
         All attendees, speakers, sponsors and volunteers at JSConf Budapest are
         required to agree with the following code of conduct. Organizers will
-        enforce this code throughout the event. We are expecting coorporation from
-        all participants to help ensuring a safe environment for everybody.
+        enforce this code throughout the event. We are expecting coorporation
+        from all participants to help ensuring a safe environment for everybody.
       </p>
       <p>
         <em>tl;dr: Don’t be a Jerk. Be excellent!</em>
@@ -45,9 +45,10 @@ const CodeOfConduct = () => (
       </p>
       <p>
         Sponsors are also subject to the anti-harassment policy. In particular,
-        sponsors should not use sexualized images, activities, or other material.
-        Booth staff (including volunteers) should not use sexualized
-        clothing/uniforms/costumes, or otherwise create a sexualized environment.
+        sponsors should not use sexualized images, activities, or other
+        material. Booth staff (including volunteers) should not use sexualized
+        clothing/uniforms/costumes, or otherwise create a sexualized
+        environment.
       </p>
       <h2>Reporting</h2>
       <p>
@@ -58,13 +59,13 @@ const CodeOfConduct = () => (
       <p>You can make a personal report by:</p>
       <ul>
         <li>
-          Contacting a staff member, identified by our bright yellow tshirts with
-          our logo on it
+          Contacting a staff member, identified by our bright yellow tshirts
+          with our logo on it
         </li>
         <li>Twitter direct messages: our DMs on twitter are always open</li>
         <li>
-          Email - but it might take up a few hours or a day before we can respond
-          on email during or after the event.
+          Email - but it might take up a few hours or a day before we can
+          respond on email during or after the event.
         </li>
       </ul>
       <h2>Enforcement</h2>
@@ -75,8 +76,8 @@ const CodeOfConduct = () => (
       <p>
         If a participant engages in harassing behaviour, event organisers retain
         the right to take any actions to keep the event a welcoming environment
-        for all participants. This includes warning the offender or expulsion from
-        the conference with no refund.
+        for all participants. This includes warning the offender or expulsion
+        from the conference with no refund.
       </p>
       <p>
         We expect participants to follow these rules at conference and workshop
@@ -116,17 +117,18 @@ const CodeOfConduct = () => (
       </ul>
       <h2>Inclusive language</h2>
       <p>
-        In our commitment to a harassment-free and inclusive environment we strongly
-      believe it's important to pay attention to harmful language patterns.
+        In our commitment to a harassment-free and inclusive environment we
+        strongly believe it's important to pay attention to harmful language
+        patterns.
       </p>
       <h3>Ableism</h3>
       <p>
         Words like "crazy", "dumb", "insane" or "lame" are examples of ableist
-        language, devaluating people who have physical or mental disabilities. Its
-        appearance often stems not from any intentional desire to offend, but from
-        our innate sense of what it means to be normal. These words can be avoided
-        by using more fitting, clearer descriptions of what we want to
-        communicate.
+        language, devaluating people who have physical or mental disabilities.
+        Its appearance often stems not from any intentional desire to offend,
+        but from our innate sense of what it means to be normal. These words can
+        be avoided by using more fitting, clearer descriptions of what we want
+        to communicate.
       </p>
       <p>
         To find out more about ableism and replacement terms please read{' '}

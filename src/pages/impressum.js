@@ -6,7 +6,6 @@ const Impressum = () => (
   <MainLayout>
     <div className={styles.simpleText}>
       <h1>Impressum</h1>
-      
     </div>
   </MainLayout>
 )
