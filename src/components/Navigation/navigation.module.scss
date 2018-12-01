@@ -23,6 +23,10 @@
     border-bottom: 1px dashed #ccc;
     font-size: $text-lg;
     line-height: 1.25;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 .link {
