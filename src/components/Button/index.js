@@ -4,7 +4,12 @@ import styles from './button.module.scss'
 
 export default class Button extends React.Component {
   getButtonClass() {
-    const { block = false, fill = false } = this.props
+    const {
+      color = 'yellow',
+      block = false,
+      fill = false,
+      className: propClasses = [],
+    } = this.props
 
     const className = [styles.button]
 
@@ -13,10 +18,16 @@ export default class Button extends React.Component {
     }
 
     if (fill) {
-      className.push(styles.button__fill)
+      if (color) {
+        className.push(styles[`button__fill__color__${color}`])
+      } else {
+        className.push(styles.button__fill)
+      }
+    } else if (color) {
+      className.push(styles[`button__color__${color}`])
     }
 
-    return className.join(' ')
+    return className.concat(propClasses).join(' ')
   }
 
   render() {

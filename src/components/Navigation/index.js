@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styles from './navigation.module.scss'
-
+import Helmet from 'react-helmet'
 // , styles.nav__open
 
 const Navigation = props => {
   const { open } = props
-
   const className = [styles.nav]
 
   if (open) {
@@ -54,9 +53,13 @@ const Navigation = props => {
           </Link>
         </li>
         <li className={styles.item}>
-          <Link className={styles.link} to="/code-of-conduct">
+          <a
+            className={styles.link}
+            href="http://eepurl.com/dMgAr-/"
+            target="_blank"
+          >
             Get Updates
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

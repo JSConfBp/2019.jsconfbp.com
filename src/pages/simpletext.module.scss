@@ -79,6 +79,14 @@
             text-decoration: none;
         }
     }
+
+    & .cfp__button {
+        color: $gray-300;
+        &:hover, &:active, &:focus {
+            color: $jsconfred;
+        }
+    }
+
 }
 
 .team_grid {

@@ -33,7 +33,25 @@
 
 	&__fill {
 		border: none;
-		background-color: $color-yellow;
 		color: $gray-900;
+
+		&__color {
+			&__red {
+				background-color: $color-red;
+			}
+			&__yellow {
+				background-color: $color-yellow;
+			}
+		}
 	}
+
+	&__color {
+		&__red {
+			border-color: $color-red;
+		}
+		&__yellow {
+			border-color: $color-yellow;
+		}
+	}
+
 }
