@@ -2,20 +2,31 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './navigation.module.scss'
 
-const Navigation = () => (
-  <nav className={styles.nav}>
-    <ul>
-      <li className={styles.item}>
-        <Link className={styles.link} to="/call-for-speakers">
-          Call for Speakers
-        </Link>
-      </li>
-      <li className={styles.item}>
-        <a className={styles.link} href="/sponsoration">
-          Sponsoration
-        </a>
-      </li>
-      {/*
+// , styles.nav__open
+
+const Navigation = props => {
+  const { open } = props
+
+  const className = [styles.nav]
+
+  if (open) {
+    className.push(styles.nav__open)
+  }
+
+  return (
+    <nav className={className.join(' ')}>
+      <ul>
+        <li className={styles.item}>
+          <Link className={styles.link} to="/call-for-speakers">
+            Call for Speakers
+          </Link>
+        </li>
+        <li className={styles.item}>
+          <a className={styles.link} href="/sponsoration">
+            Sponsoration
+          </a>
+        </li>
+        {/*
             <li className={styles.item}>
               <Link className={styles.link} to="/code-of-conduct">
                 News
@@ -37,18 +48,19 @@ const Navigation = () => (
                 <Link className={styles.link} to="/updates">Updates</Link>
             </li>
       */}
-      <li className={styles.item}>
-        <Link className={styles.link} to="/code-of-conduct">
-          Code of Conduct
-        </Link>
-      </li>
-      <li className={styles.item}>
-        <Link className={styles.link} to="/code-of-conduct">
-          Get Updates
-        </Link>
-      </li>
-    </ul>
-  </nav>
-)
+        <li className={styles.item}>
+          <Link className={styles.link} to="/code-of-conduct">
+            Code of Conduct
+          </Link>
+        </li>
+        <li className={styles.item}>
+          <Link className={styles.link} to="/code-of-conduct">
+            Get Updates
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  )
+}
 
 export default Navigation

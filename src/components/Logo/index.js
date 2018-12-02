@@ -5,8 +5,7 @@ import LogoImage from './image'
 
 const Logo = () => (
   <Link className={styles.logo} to="/">
-    <LogoImage  className={styles.inner} />
-  
+    <LogoImage className={styles.inner} />
   </Link>
 )
 

@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import { Link } from 'gatsby'
 import Button from '../components/Button/index'
@@ -13,8 +11,6 @@ const NotFoundPage = () => (
       <div className={styles.homeContent}>
         <h1 className={styles.title}>404 Not Found</h1>
         <span className={styles.date}>Something's missing here...</span>
-      
-
       </div>
     </div>
   </MainLayout>

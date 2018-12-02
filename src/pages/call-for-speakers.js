@@ -5,7 +5,11 @@ import styles from './simpletext.module.scss'
 const CallForSpeakers = () => (
   <MainLayout>
     <div className={styles.simpleText}>
-      <h1>JSConf Budapest 2019<br />Call for Speakers</h1>
+      <h1>
+        JSConf Budapest 2019
+        <br />
+        Call for Speakers
+      </h1>
       <p>
         All attendees, speakers, sponsors and volunteers at JSConf Budapest are
         required to agree with the following code of conduct. Organizers will
