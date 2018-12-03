@@ -2,6 +2,7 @@ import React from 'react'
 import MainLayout from '../components/MainLayout/index'
 import styles from './simpletext.module.scss'
 import Button from '../components/Button/index'
+import SocialMeta from '../components/SocialMeta/index'
 
 const CFP_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSeox5OTuhXmrLXhWtLAcj4AFfpKj9kiv0B17A1rhEU0Qy3xrQ/viewform'
