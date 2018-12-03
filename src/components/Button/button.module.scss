@@ -4,6 +4,18 @@
 @import '../font-face.scss';
 @import '../sizes.scss';
 
+
+
+@mixin hover-gray() {
+	&:hover, &:focus, &:active {
+		color: $gray-900;
+	}
+}
+@mixin visited-gray() {
+	&:visited {
+		color: $gray-900;
+	}
+}
 .button {
 	border: 1px solid $color-yellow;
 	
@@ -38,9 +50,12 @@
 		&__color {
 			&__red {
 				background-color: $color-red;
+				@include visited-gray();
 			}
 			&__yellow {
 				background-color: $color-yellow;
+				@include visited-gray();
+
 			}
 		}
 	}
@@ -49,10 +64,24 @@
 		&__red {
 			border-color: $color-red;
 			color: $color-red;
+
+			@include hover-gray();
+
+			&:visited {
+				color: $color-red;
+				@include hover-gray();
+			}
 		}
 		&__yellow {
-			color: $color-yellow;
 			border-color: $color-yellow;
+			color: $color-yellow;
+
+			@include hover-gray();
+
+			&:visited {
+				color: $color-yellow;
+				@include hover-gray();
+			}
 		}
 	}
 

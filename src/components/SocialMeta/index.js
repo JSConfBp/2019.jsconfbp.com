@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-const SocialMeta = (props) => (
+const SocialMeta = props => (
   <StaticQuery
     query={graphql`
       query SiteSocialMetaQuery {
@@ -28,7 +28,7 @@ const SocialMeta = (props) => (
           { name: 'og:url', content: 'https://jsconfbp.com/' },
           {
             name: 'og:image',
-            content: `https://jsconfbp.com/social-cards/${ props.image }`,
+            content: `https://jsconfbp.com/social-cards/${props.image}`,
           },
 
           { name: 'twitter:card', content: 'summary_large_image' },
@@ -42,7 +42,7 @@ const SocialMeta = (props) => (
           { name: 'twitter:url', content: 'https://jsconfbp.com/' },
           {
             name: 'twitter:image',
-            content: `https://jsconfbp.com/social-cards/${ props.image }`,
+            content: `https://jsconfbp.com/social-cards/${props.image}`,
           },
         ]}
       />
