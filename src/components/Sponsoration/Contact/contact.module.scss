@@ -1,0 +1,64 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+@import '../sponsoration_common.modules.scss';
+
+.contact {
+    @extend %block;
+    @extend %block_end;
+    background-color: darken($color-grey-4, 50);
+    text-align: center;
+
+    h2, h3 {
+        color: $color-white;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    .button {
+        background-color: $color-yellow;
+        display: inline-block;
+        color: darken($color-grey-4, 50);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+
+        &:hover {
+            background-color: $color-white;
+        }
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+
+    .contacts {
+        @extend %block;
+        @extend %block_end;
+        @extend %grid_2;
+
+        .team_member {
+            color: $color-white;
+            font-weight: 200;
+            font-size: 1.2rem;
+
+            .photo {
+                width: 12rem;
+                height: 12rem;
+                margin: 0 auto;
+
+                @media screen and (max-width: 767px) {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                margin-bottom: 1rem;
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

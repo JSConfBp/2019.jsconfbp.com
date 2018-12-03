@@ -1,0 +1,61 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.nav {
+    background-color: $jsconfred;
+    color: #fff;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+
+    &__open {
+        display: block;
+        top: 45px;
+    }
+    
+    @media screen and (min-width: $breakpoint-lg) {
+        background-color: transparent;
+        display: block;
+        position: static;
+    }
+}
+
+.item {
+    border-bottom: 1px dashed #ccc;
+    font-size: $text-lg;
+    line-height: 1.25;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.link {
+    color: currentColor;
+    display: block;
+    font-family: $secondary-font;
+    padding: {
+        top: $size-md;
+        right: $size-sm;
+        bottom: $size-md;
+        left: $size-sm;
+    }
+    text-decoration: none;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: {
+            top: $size-sm;
+            bottom: $size-sm;
+        }
+    }
+    &::before {
+        content: '› ';
+    }
+    &:hover, &:active, &:focus {
+        background-color: darken($jsconfred, 20%);
+    }
+}

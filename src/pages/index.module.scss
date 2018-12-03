@@ -1,0 +1,65 @@
+@import '../components/breakpoints.scss';
+@import '../components/colors.scss';
+@import '../components/fonts.scss';
+@import '../components/sizes.scss';
+
+.home {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    
+    & .homeContent {
+        position: relative;
+    }
+
+    & .title {
+        color: #fff;
+        font-size: $size-xxl;
+        line-height: 1.2;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-xxxl;
+        }
+    }
+    & .date {
+        color: #fff;
+        display: block;
+        font: {
+            size: $size-lg;
+            weight: 300;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-xl;
+        }
+
+        margin: {
+            top: $size-lg;
+            bottom: $size-lg;
+        }
+    }
+    & .venue {
+        color: #fff;
+        display: block;
+        font-size: $title-sm;
+        margin-bottom: $size-xl;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $title-md;
+            margin-bottom: $size-xxl;
+        }
+    }
+    & .updates {
+        border: 1px solid #fff;
+        color: #fff;
+        padding: $size-md $size-lg;
+        text: {
+            decoration: none;
+            transform: uppercase;
+        }
+        &:hover, &:focus, &:active {
+            background-color: #fff;
+            color: $gray-900;
+        }
+    }
+}
