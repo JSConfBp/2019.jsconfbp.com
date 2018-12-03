@@ -20,6 +20,7 @@ const CFP_Button = () => (
 
 const CallForSpeakers = () => (
   <MainLayout>
+    <SocialMeta image="social_card_cfp.jpg" />
     <div className={styles.simpleText}>
       <h1>
         JSConf Budapest 2019
@@ -179,8 +180,11 @@ const CallForSpeakers = () => (
       </ul>
 
       <p>
-        We follow the <a href="https://blog.cssconf.eu/2015/08/15/a-talk-selection-process-explained/">selection process laid out by our mentors at JSConnf &
-        CSSconf EU</a> and value:
+        We follow the{' '}
+        <a href="https://blog.cssconf.eu/2015/08/15/a-talk-selection-process-explained/">
+          selection process laid out by our mentors at JSConnf & CSSconf EU
+        </a>{' '}
+        and value:
       </p>
 
       <ul>

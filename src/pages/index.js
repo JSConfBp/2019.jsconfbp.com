@@ -4,9 +4,11 @@ import Button from '../components/Button/index'
 import MainLayout from '../components/MainLayout/index'
 import styles from './index.module.scss'
 import MailChimpButton from '../components/MailChimpButton/index'
+import SocialMeta from '../components/SocialMeta/index'
 
 const IndexPage = () => (
   <MainLayout>
+    <SocialMeta image="social_card_earlybird.jpg" />
     <div className={styles.home}>
       <div className={styles.homeContent}>
         <h1 className={styles.title}>JSConf Budapest 2019</h1>
