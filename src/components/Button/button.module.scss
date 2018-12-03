@@ -6,7 +6,7 @@
 
 .button {
 	border: 1px solid $color-yellow;
-	color: $color-yellow;
+	
 	padding: $size-md $size-lg;
 
 	margin-bottom: $size-lg;
@@ -48,8 +48,10 @@
 	&__color {
 		&__red {
 			border-color: $color-red;
+			color: $color-red;
 		}
 		&__yellow {
+			color: $color-yellow;
 			border-color: $color-yellow;
 		}
 	}

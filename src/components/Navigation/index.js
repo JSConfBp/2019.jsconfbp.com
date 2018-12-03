@@ -61,6 +61,33 @@ const Navigation = props => {
             Get Updates
           </a>
         </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://2017.jsconfbp.com"
+            target="_blank"
+          >
+            2017
+          </a>
+        </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://2016.jsconfbp.com"
+            target="_blank"
+          >
+            2016
+          </a>
+        </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://2015.jsconfbp.com"
+            target="_blank"
+          >
+            2015
+          </a>
+        </li>
       </ul>
     </nav>
   )
