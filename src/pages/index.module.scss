@@ -62,4 +62,26 @@
             color: $gray-900;
         }
     }
+
+    & p {
+        padding: 0 $size-xxl;
+        font-size: $size-l;
+        color: $color-white;
+        font-weight: 200;
+        display: block;
+        margin-bottom:$size-xl;
+
+        @media screen and (min-width: $breakpoint-lg) {
+            padding: 0 $size-xxl;
+            max-width: 40vw;
+        }
+        @media screen and (max-width: 380px) {
+            padding: 0 $size-md;
+            font-size: $size-md;
+        }
+
+        a {
+            color: $color-yellow;
+        }
+    }
 }
