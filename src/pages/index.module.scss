@@ -73,11 +73,13 @@
 
         @media screen and (min-width: $breakpoint-lg) {
             padding: 0 $size-xxl;
+            line-height: 1.8rem;
         }
-        
+
         @media screen and (max-width: 380px) {
             padding: 0 $size-md;
             font-size: $size-md;
+            line-height: 1.4rem;
         }
 
         a {
