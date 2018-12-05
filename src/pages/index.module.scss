@@ -73,8 +73,8 @@
 
         @media screen and (min-width: $breakpoint-lg) {
             padding: 0 $size-xxl;
-            max-width: 40vw;
         }
+        
         @media screen and (max-width: 380px) {
             padding: 0 $size-md;
             font-size: $size-md;
