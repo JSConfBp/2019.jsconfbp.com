@@ -189,7 +189,7 @@ const CallForSpeakers = () => (
       </p>
 
       <ul>
-        <li>relevance of the topic for the CSS community,</li>
+        <li>relevance of the topic for the JS community,</li>
         <li>coherence and clarity of the proposal,</li>
         <li>and novelty/originality of the topic</li>
       </ul>
