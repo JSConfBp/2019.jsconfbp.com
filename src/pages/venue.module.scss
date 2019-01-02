@@ -7,7 +7,10 @@
 .venue_main {
 	background: {
         attachment: fixed;
-        image: url('./images/akvarium.jpg');
+        // pre-loading link target on navigation overwrites this
+        // rule, so either quickly use important, or put layout-main
+        // code in a mixin
+        image: url('./images/akvarium.jpg') !important;
         repeat: no-repeat;
         size: cover;
     }
