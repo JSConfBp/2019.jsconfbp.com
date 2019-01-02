@@ -25,12 +25,12 @@ const Navigation = props => {
             Sponsoration
           </a>
         </li>
-        {/*
         <li className={styles.item}>
           <Link className={styles.link} to="/venue">
             Venue
           </Link>
         </li>
+        {/*
             <li className={styles.item}>
               <Link className={styles.link} to="/code-of-conduct">
                 News

@@ -150,12 +150,16 @@
                 top: 0;
                 left: $size-xxl;
                 right: $size-xxl;
-                bottom: $size-xxl;    
+                bottom: $size-xxl;
             }
 
             a {
                 color: $color-red;
             }
         }
+    }
+
+    &_google_map {
+        padding: 0 $size-xxl;
     }
 }
