@@ -3,20 +3,28 @@
 @import '../components/fonts.scss';
 @import '../components/sizes.scss';
 
-.home {
+
+.venue_main {
+	background: {
+        attachment: fixed;
+        image: url('./images/akvarium.jpg');
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+.venue {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 150vh;
     text-align: center;
-
 
     @media screen and (max-width: 380px) {
         padding: 0 $size-lg;
     }
 
-    
-    & .homeContent {
+    & .venueContent {
         position: relative;
     }
 
@@ -28,7 +36,7 @@
             font-size: $size-xxxl;
         }
     }
-    & .date {
+    & .address {
         color: #fff;
         display: block;
         font: {
@@ -45,16 +53,19 @@
             bottom: $size-lg;
         }
     }
-    & .venue {
-        color: #fff;
-        display: block;
-        font-size: $title-sm;
-        margin-bottom: $size-xl;
+
+    &_map {
+        height: 40vw;
+        margin: $size-xxxl 0;
         @media screen and (min-width: $breakpoint-lg) {
-            font-size: $title-md;
-            margin-bottom: $size-xxl;
+            height: 30vw;
+        }
+
+        @media screen and (max-width: 380px) {
+            height: 70vw;
         }
     }
+
     & .updates {
         border: 1px solid #fff;
         color: #fff;
@@ -69,7 +80,8 @@
         }
     }
 
-    & p {
+    & p,
+    & blockquote {
         padding: 0 $size-xxl;
         font-size: $size-l;
         color: $color-white;
@@ -90,6 +102,60 @@
 
         a {
             color: $color-yellow;
+        }
+    }
+
+    & blockquote {
+        font-style: italic;
+        font-size: $size-md;
+        margin: {
+            top: $size-xxl;
+            left: $size-xxl;
+            right: $size-xxl;
+            bottom: $size-sm;
+
+        }
+        color: darken($color-white, 30);
+        line-height: 1.4rem;
+
+        @media screen and (max-width: 380px) {
+            margin-left: $size-lg;
+            margin-rigt: $size-lg;
+        }
+
+        &:before,
+        &:after {
+            font-size: $size-xxl;
+            line-height: 0;
+            display: inline-block;
+            padding: 0 10px;
+            color: $color-red;
+        }
+        &:before {
+            transform: translateY(10px);
+            content: '‟';
+        }
+        &:after {
+            transform: rotate(180deg) translateY(-10px);
+            content: '‟'
+        }
+
+        + cite {
+            display: block;
+            text-align: right;
+            font-size: $size-md;
+            color: $color-red;
+            padding: 0 $size-xxl;
+            margin: {
+                top: 0;
+                left: $size-xxl;
+                right: $size-xxl;
+                bottom: $size-xxl;    
+            }
+
+            a {
+                color: $color-red;
+            }
         }
     }
 }

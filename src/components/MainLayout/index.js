@@ -38,7 +38,9 @@ const MainLayout = props => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <main className={styles.main}>{props.children}</main>
+        <main className={[styles.main, ...props.mainClassNames].join(' ')}>
+          {props.children}
+        </main>
         <footer className={styles.footer}>
           <Footer />
         </footer>
@@ -49,6 +51,11 @@ const MainLayout = props => (
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  mainClassNames: PropTypes.array,
+}
+
+MainLayout.defaultProps = {
+  mainClassNames: [],
 }
 
 export default MainLayout
