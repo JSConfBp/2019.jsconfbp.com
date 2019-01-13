@@ -72,10 +72,8 @@ h1, h2, h3, h4, h5 {
     font-family: $secondary-font;
 }
 
-//todo
-$sidebar: 250px;
-
 .main {
+    height: 98vh;
     background: {
         attachment: fixed;
         image: url('./budapest.jpg');
@@ -83,17 +81,10 @@ $sidebar: 250px;
         size: cover;
     }
     padding: {
-        top: 45px;
+        top: 64px;
     }
     position: relative;
-    @media screen and (min-width: $breakpoint-lg) {
-        margin-left: $sidebar;
-        min-height: 100vh;
-        padding: {
-            top: $size-xxl;
-            bottom: $size-xxl;
-        }
-    }
+    
     &::before {
         background: rgba(0, 0, 0, .6);
         bottom: 0;
@@ -111,8 +102,6 @@ $sidebar: 250px;
     font-family: $secondary-font;
     padding: $size-lg;
     text-align: center;
-    @media (min-width: $breakpoint-lg) {
-        border-top: 1px dashed $gray-800;
-        margin-left: $sidebar;
-    }
+    
+    
 }

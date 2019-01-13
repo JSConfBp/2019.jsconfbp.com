@@ -30,6 +30,30 @@ const Navigation = props => {
             Venue
           </Link>
         </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://eepurl.com/dMgAr-/"
+            target="_blank"
+          >
+            Get Updates
+          </a>
+        </li>
+        <li className={styles.item}>
+          <Link className={styles.link} to="/code-of-conduct">
+            Code of Conduct
+          </Link>
+        </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://2017.jsconfbp.com"
+            target="_blank"
+          >
+            2017
+          </a>
+        </li>
+        
         {/*
             <li className={styles.item}>
               <Link className={styles.link} to="/code-of-conduct">
@@ -51,21 +75,8 @@ const Navigation = props => {
             <li className={styles.item}>
                 <Link className={styles.link} to="/updates">Updates</Link>
             </li>
-      */}
-        <li className={styles.item}>
-          <Link className={styles.link} to="/code-of-conduct">
-            Code of Conduct
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <a
-            className={styles.link}
-            href="http://eepurl.com/dMgAr-/"
-            target="_blank"
-          >
-            Get Updates
-          </a>
-        </li>
+      
+        
         <li className={styles.item}>
           <a
             className={styles.link}
@@ -93,6 +104,7 @@ const Navigation = props => {
             2015
           </a>
         </li>
+        */}
       </ul>
     </nav>
   )

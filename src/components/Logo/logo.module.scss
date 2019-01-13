@@ -6,29 +6,23 @@
 
 .logo {
     display: block;
-    height: 50px;
-    left: 0;
+    
+    height: calc(calc(var(--scroll-ratio) + 1) * 64px);
+    width: calc(calc(var(--scroll-ratio) + 1) * 64px);
+    
+    
     margin: {
         left: auto;
         right: auto;
     }
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
-    z-index: 15;
-    @media screen and (min-width: $breakpoint-lg) {
-        border: 5px solid #fff;
-        box-shadow: -2px 2px 2px $gray-900;
-        height: 100px;
-        margin: {
-            top: $size-xl;
-            bottom: $size-md;
-        }
-        position: static;
-        width: 100px;
 
-    }
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    
+    z-index: 15;
+    
     & .inner {
         width: 100%;
     }
