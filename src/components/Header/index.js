@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../Logo/'
-import TicketButton from '../TicketButton/'
+
 import Navigation from '../Navigation/'
 import styles from './header.module.scss'
 
@@ -41,7 +41,7 @@ class Header extends React.Component {
         <Logo />
         <span className={styles.date}>2019 September 26-27</span>
         <Navigation open={menuOpen} />
-        <TicketButton />
+
       </header>
     )
   }

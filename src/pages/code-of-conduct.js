@@ -1,9 +1,9 @@
 import React from 'react'
-import MainLayout from '../components/MainLayout/index'
+import Layout from '../components/Layout/index'
 import styles from './simpletext.module.scss'
 
 const CodeOfConduct = () => (
-  <MainLayout>
+  <Layout>
     <div className={styles.simpleText}>
       <h1>Code of Conduct</h1>
       <p>
@@ -165,7 +165,7 @@ const CodeOfConduct = () => (
         <a href="http://confcodeofconduct.com/">Conference Code of Conduct</a>.
       </p>
     </div>
-  </MainLayout>
+  </Layout>
 )
 
 export default CodeOfConduct

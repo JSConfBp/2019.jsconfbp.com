@@ -5,14 +5,16 @@
 @import '../sizes.scss';
 
 .header {
-
-    
-
     align-items: center;
     color: #fff;
     display: flex;
 
     height: calc(calc(calc(var(--scroll-ratio) * 2.5) + 1) * 84px);
+
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 68px;
+        position: absolute;
+    }
 
     justify-content: space-between;
     left: 0;
@@ -20,7 +22,7 @@
     right: 0;
     top: 0;
     z-index: 5;
-    
+
     
     & .menu_button {
         border: 1px solid #fff;

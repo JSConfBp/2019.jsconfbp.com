@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-
-import Header from '../Header/index'
-import Navigation from '../Navigation/index'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import styles from './layout.module.scss'
+import Footer from '../Footer/'
+import Logo from '../Logo/'
+import TicketButton from '../TicketButton/'
+import Navigation from '../Navigation/'
 
-const Layout = ({ className, contentBg = false, children }) => (
+import Header from '../Header/'
+
+const MainLayout = props => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query LayoutQuery {
         site {
           siteMetadata {
             title
@@ -21,7 +24,7 @@ const Layout = ({ className, contentBg = false, children }) => (
       }
     `}
     render={data => (
-      <main className={[className, styles.bg].join(' ')}>
+      <div className={styles.grid2}>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -34,20 +37,25 @@ const Layout = ({ className, contentBg = false, children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <section
-          className={[styles.inner, contentBg ? styles.content : ''].join(' ')}
-        >
-          {children}
-        </section>
-        <Navigation />
-      </main>
+        <Header />
+        <main className={[styles.main, ...props.mainClassNames].join(' ')}>
+          {props.children}
+        </main>
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
+      </div>
     )}
   />
 )
 
-Layout.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  mainClassNames: PropTypes.array,
 }
 
-export default Layout
+MainLayout.defaultProps = {
+  mainClassNames: [],
+}
+
+export default MainLayout

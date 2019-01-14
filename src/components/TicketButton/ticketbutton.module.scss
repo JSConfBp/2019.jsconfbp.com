@@ -50,7 +50,7 @@
         opacity: .9;
     }
     &::before, &::after {
-        background-color: $jsconfred;
+        background-color: rgba(0,0,0,0);
         border-radius: 50%;
         content: "";
         height: 12px;

@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5 {
 
 .main {
     height: 98vh;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        height: auto;
+    }
     background: {
         attachment: fixed;
         image: url('./budapest.jpg');

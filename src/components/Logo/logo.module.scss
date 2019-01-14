@@ -10,7 +10,11 @@
     height: calc(calc(var(--scroll-ratio) + 1) * 64px);
     width: calc(calc(var(--scroll-ratio) + 1) * 64px);
     
-    
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 48px;
+        height: 48px;
+    }
+
     margin: {
         left: auto;
         right: auto;

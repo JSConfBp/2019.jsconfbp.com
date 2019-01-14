@@ -7,7 +7,6 @@
 .nav {
     background-color: rgba(255,255,255, calc(0.1 - calc(var(--scroll-ratio) * 0.1)));
     color: #fff;
-    //display: block;
     top: 0;
     left: 0;
     position: fixed;
@@ -30,7 +29,7 @@
     }
 
     ul {
-        transform: translateX(calc(-8px - calc(var(--scroll-ratio) * -8px)))
+        transform: translateX(calc(22px - calc(var(--scroll-ratio) * 22px)))
     }
 
     li:nth-child(3) {
@@ -39,16 +38,32 @@
     li:nth-child(4) {
         padding-left: calc(47px - calc(var(--scroll-ratio) * 47px));
     }
-    
+
+    @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+
+        ul {
+            transform: none;
+        }
+        li:nth-child(3) {
+            padding-right: 0;
+        }
+        li:nth-child(4) {
+            padding-left: 0;
+        }
+    }
 }
 
 .item {
-    //border-bottom: 1px dashed #ccc;
     font-size: $text-lg;
     line-height: 1.25;
 
     &:last-child {
         border-bottom: none;
+    }
+
+    &_ticketButton {
+        padding-left: $size-md;
     }
 }
 
