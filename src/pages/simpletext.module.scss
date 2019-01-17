@@ -91,6 +91,10 @@
         font-weight: 700;
     }
 
+    & strikethrough {
+        text-decoration: line-through;
+        opacity: .5;
+    }
 }
 
 .team_grid {

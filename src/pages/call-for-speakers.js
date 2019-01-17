@@ -34,9 +34,12 @@ const CallForSpeakers = () => (
         upcoming JSConf Budapest (September 26-27, 2019, Budapest, Hungary).
       </p>
       <p>
-        This Call for Speakers closes on <strong>February 28th, 2019</strong>!
+        This Call for Speakers closes on <strikethrough>February 28th,
+          2019</strikethrough> <strong>March 10th, 2019</strong>!
       </p>
-
+      <p>
+        <strong>We extend the CFP closing date to March 10, so participants in the <a href="https://www.globaldiversitycfpday.com/">Global Diversity CFP Day</a> have time to submit their first CFP</strong>!
+      </p>
       <CFP_Button />
 
       <h3>Topics</h3>
@@ -125,7 +128,7 @@ const CallForSpeakers = () => (
       <h3>Guidelines</h3>
       <p>
         Submit your proposal by{' '}
-        <strong>February 28th 2019, 23:59:59 CEST</strong>.
+        <strong>March 10th 2019, 23:59:59 CEST</strong>.
       </p>
       <p>All talks are in English.</p>
       <p>
