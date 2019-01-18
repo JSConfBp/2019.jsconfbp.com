@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .main {
-    height: 98vh;
+    min-height: 98vh;
 
     @media screen and (max-width: $breakpoint-sm) {
         height: auto;
@@ -84,9 +84,24 @@ h1, h2, h3, h4, h5 {
         repeat: no-repeat;
         size: cover;
     }
-    padding: {
-        top: 64px;
+    
+    @media screen and (min-width: $breakpoint-sm) and (max-height: 620px) {
+        padding: {
+            top: calc(calc(calc(var(--scroll-ratio) * 1.2) + 2) * 84px);
+        }
     }
+    @media screen and (min-width: $breakpoint-sm) {
+        padding: {
+            top: calc(calc(calc(var(--scroll-ratio) * 1.4) + 1) * 84px);
+        }    
+    }
+    
+    @media screen and (min-width: $breakpoint-sm) and (min-height: 796px) {
+        padding: {
+            top: calc(calc(calc(var(--scroll-ratio) * 0.5) + 1) * 84px);
+        }
+    }
+    
     position: relative;
     
     &::before {

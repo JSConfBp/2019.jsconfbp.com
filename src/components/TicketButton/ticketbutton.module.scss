@@ -4,20 +4,18 @@
 @import '../font-face.scss';
 @import '../sizes.scss';
 
-.buy {
-    /*
-    @media screen and (min-width: $breakpoint-lg) {
-        bottom: $size-lg;
-        left: 0;
-        margin: {
-            left: auto;
-            right: auto;
-        }
-        position: absolute;
-        right: 0;
-        text-align: center;
+.buy {   
+    margin: {
+        left: auto;
+        right: auto;
     }
-    */
+    
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 .ticket {
@@ -33,19 +31,16 @@
     }
     position: relative;
     text-decoration: none;
-    
-    /*
-    @media screen and (min-width: $breakpoint-lg) {
-        margin: {
-            left: auto;
-            right: auto;
-            top: $size-sm;
-        }
-        padding: 0;
-        height: 60px;
-        width: (500px / 3);
+
+    margin: {
+        left: auto;
+        right: auto;
+        top: $size-sm;
     }
-    */
+    padding: 0;
+    height: 60px;
+    width: (500px / 3);
+
     &:hover, &:focus, &:active {
         opacity: .9;
     }
@@ -59,35 +54,34 @@
         width: 12px;
     }
     &::before {
+        $darkred: darken($jsconfred, 20%);
+        
         left: -6px;
-        /*
-        @media screen and (min-width: $breakpoint-lg) {
-            box-shadow: 
-                (500px / 3) 0 0 0 $jsconfred, 
-                0 60px 0 0 $jsconfred, 
-                (500px / 3) 60px 0 0 $jsconfred,
-                0 15px 0 -5px $jsconfred,
-                0 25px 0 -5px $jsconfred,
-                0 35px 0 -5px $jsconfred,
-                0 45px 0 -5px $jsconfred,
-                0 55px 0 -5px $jsconfred,
-                (500px / 3) 15px 0 -5px $jsconfred,
-                (500px / 3) 25px 0 -5px $jsconfred,
-                (500px / 3) 35px 0 -5px $jsconfred,
-                (500px / 3) 45px 0 -5px $jsconfred,
-                (500px / 3) 55px 0 -5px $jsconfred;
-            height: (50px / 3);
-            left: (-25px / 3);
-            top: (-25px / 3);
-            width: (50px / 3);
-        }
-        */
+        background-color: $darkred;
+        box-shadow: 
+            (500px / 3) 0 0 0 $darkred, 
+            0 60px 0 0 $darkred, 
+            (500px / 3) 60px 0 0 $darkred,
+            0 15px 0 -5px $darkred,
+            0 25px 0 -5px $darkred,
+            0 35px 0 -5px $darkred,
+            0 45px 0 -5px $darkred,
+            0 55px 0 -5px $darkred,
+            (500px / 3) 15px 0 -5px $darkred,
+            (500px / 3) 25px 0 -5px $darkred,
+            (500px / 3) 35px 0 -5px $darkred,
+            (500px / 3) 45px 0 -5px $darkred,
+            (500px / 3) 55px 0 -5px $darkred;
+
+        height: (50px / 3);
+        left: (-25px / 3);
+        top: (-25px / 3);
+        width: (50px / 3);
+        
     }
     &::after {
         right: -6px;
-        @media screen and (min-width: $breakpoint-lg) {
-            //content: none;
-        }
+        content: none;
     }
     & .inner {
         border-right: 3px dotted #5e400b;
@@ -96,8 +90,7 @@
             right: $size-sm;
             bottom: 3px;
         }
-        /*
-        @media screen and (min-width: $breakpoint-lg) {
+        
             align-items: center;
             bottom: 10px;
             border: 2px solid #5e400b;
@@ -109,8 +102,8 @@
             position: absolute;
             right: 10px;
             top: 10px;
-        }
-        */
+        
+        
         & .label {
             font: {
                 family: $secondary-font;
@@ -119,16 +112,12 @@
             }
             letter-spacing: 1px;
             text-transform: uppercase;
-            /*
-            @media screen and (min-width: $breakpoint-lg) {
+            
                 font-size: 20px;
                 position: relative;
-            }
-            */
-
+            
             &:before, &:after {
-                /*
-                @media screen and (min-width: $breakpoint-lg) {
+                
                     background-color: #f5eea6;
                     content: '★ ★ ★ ★ ★';
                     font: {
@@ -142,18 +131,15 @@
                     right: 0;
                     text-align: center;
                     width: 75px;
-                }
-                */
+                
             }
             &:before {
-                @media screen and (min-width: $breakpoint-lg) {
-                    //top: -15px;
-                }
+                top: -15px;
+                
             }
             &:after {
-                @media screen and (min-width: $breakpoint-lg) {
-                    //bottom: -15px;
-                }
+                bottom: -15px;
+                
             }
         }
     }

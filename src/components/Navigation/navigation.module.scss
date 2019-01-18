@@ -19,11 +19,7 @@
         top: 10px;
         bottom: 10px;
     }
-    &__open {
-        background-color: $jsconfred;
-        display: block;
-        top: 45px;
-    }
+
     ul, li {
         display: inline-block;
     }
@@ -40,17 +36,39 @@
     }
 
     @media screen and (max-width: $breakpoint-sm) {
+        background-color: darken($jsconfred, 20%);
         display: none;
+        top: 0;
+        height: auto;
+        padding: {
+            top: 68px;
+        }
 
+        &__open {
+            display: block;
+        }
         ul {
             transform: none;
+            display: block;
         }
+
+        li {
+            display: block;
+        }
+
+        .link {
+            line-height: 48px;
+        }
+
         li:nth-child(3) {
             padding-right: 0;
         }
         li:nth-child(4) {
             padding-left: 0;
         }
+
+
+        
     }
 }
 
@@ -64,6 +82,12 @@
 
     &_ticketButton {
         padding-left: $size-md;
+        
+        @media screen and (max-width: $breakpoint-sm) {
+            padding-right: $size-md;
+            padding-top: $size-md;
+            padding-bottom: $size-md;
+        }
     }
 }
 

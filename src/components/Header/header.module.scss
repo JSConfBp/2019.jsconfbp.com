@@ -28,12 +28,14 @@
         border: 1px solid #fff;
         fill: #fff;
         height: 30px;
-        margin-left: $size-sm;
+        margin-left: $size-md;
         padding: {
             left: 5px;
             right: 5px;
         }
         width: 32px;
+        position: relative;
+        z-index: 15;
         
         @media screen and (min-width: $breakpoint-lg) {
             display: none;
