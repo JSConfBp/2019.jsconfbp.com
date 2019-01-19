@@ -23,13 +23,13 @@ class Header extends React.Component {
     const { menuOpen } = this.state
     const { dark } = this.props
 
-    const className = [ styles.header ]
-    const menuTriggerClassName = [ styles.menu_button ]
+    const className = [styles.header]
+    const menuTriggerClassName = [styles.menu_button]
 
     if (dark) {
       menuTriggerClassName.push(styles.menu_button_dark)
     }
-    
+
     if (menuOpen) {
       className.push(styles.header__nav__open)
       menuTriggerClassName.push(styles.menu_button_open)
