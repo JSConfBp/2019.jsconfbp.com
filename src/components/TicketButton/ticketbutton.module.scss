@@ -12,10 +12,17 @@
     
     text-align: center;
 
+
+    @media screen and (min-width: $breakpoint-sm) {
+        position: absolute;
+    }
+
     @media screen and (max-width: $breakpoint-sm) {
         width: 60%;
         margin: 0 auto;
     }
+
+    
 }
 
 .ticket {
@@ -35,11 +42,21 @@
     margin: {
         left: auto;
         right: auto;
-        top: $size-sm;
+        
     }
+
+    
+
     padding: 0;
     height: 60px;
     width: (500px / 3);
+
+    @media screen and (min-width: $breakpoint-sm) {
+        height: 52px;
+        width: (400px / 3);
+    }
+
+
 
     &:hover, &:focus, &:active {
         opacity: .9;
@@ -53,36 +70,67 @@
         top: 10px;
         width: 12px;
     }
-    &::before {
-        $darkred: darken($jsconfred, 20%);
-        
-        left: -6px;
-        background-color: $darkred;
-        box-shadow: 
-            (500px / 3) 0 0 0 $darkred, 
-            0 60px 0 0 $darkred, 
-            (500px / 3) 60px 0 0 $darkred,
-            0 15px 0 -5px $darkred,
-            0 25px 0 -5px $darkred,
-            0 35px 0 -5px $darkred,
-            0 45px 0 -5px $darkred,
-            0 55px 0 -5px $darkred,
-            (500px / 3) 15px 0 -5px $darkred,
-            (500px / 3) 25px 0 -5px $darkred,
-            (500px / 3) 35px 0 -5px $darkred,
-            (500px / 3) 45px 0 -5px $darkred,
-            (500px / 3) 55px 0 -5px $darkred;
 
-        height: (50px / 3);
-        left: (-25px / 3);
-        top: (-25px / 3);
-        width: (50px / 3);
-        
+    @media screen and (min-width: $breakpoint-sm) {
+        &::before {
+            border-radius: 0;
+            $darkred: darken($jsconfred, 20%);
+            
+            left: -6px;
+            
+            box-shadow: 
+                0 12px 0 -5px #f5eea6,
+                0 22px 0 -5px #f5eea6,
+                0 32px 0 -5px #f5eea6,
+                0 42px 0 -5px #f5eea6,
+                (400px / 3) 12px 0 -5px #f5eea6,
+                (400px / 3) 22px 0 -5px #f5eea6,
+                (400px / 3) 32px 0 -5px #f5eea6,
+                (400px / 3) 42px 0 -5px #f5eea6;
+                
+
+            height: (50px / 3);
+            left: (-25px / 3);
+            top: (-25px / 3);
+            width: (50px / 3);
+        }
+        &::after {
+            right: -6px;
+            content: none;
+        }
     }
-    &::after {
-        right: -6px;
-        content: none;
+    @media screen and (max-width: $breakpoint-sm) {
+        &::before {
+            $darkred: darken($jsconfred, 20%);
+            
+            left: -6px;
+            background-color: $darkred;
+            box-shadow: 
+                (500px / 3) 0 0 0 $darkred, 
+                0 60px 0 0 $darkred, 
+                (500px / 3) 60px 0 0 $darkred,
+                0 15px 0 -5px $darkred,
+                0 25px 0 -5px $darkred,
+                0 35px 0 -5px $darkred,
+                0 45px 0 -5px $darkred,
+                0 55px 0 -5px $darkred,
+                (500px / 3) 15px 0 -5px $darkred,
+                (500px / 3) 25px 0 -5px $darkred,
+                (500px / 3) 35px 0 -5px $darkred,
+                (500px / 3) 45px 0 -5px $darkred,
+                (500px / 3) 55px 0 -5px $darkred;
+
+            height: (50px / 3);
+            left: (-25px / 3);
+            top: (-25px / 3);
+            width: (50px / 3);
+        }
+        &::after {
+            right: -6px;
+            content: none;
+        }
     }
+
     & .inner {
         border-right: 3px dotted #5e400b;
         padding: {
@@ -110,6 +158,11 @@
                 size: 15px;
                 weight: 600;
             }
+
+            @media screen and (min-width: $breakpoint-sm) {
+                font-size: 14px;
+            }
+
             letter-spacing: 1px;
             text-transform: uppercase;
             
@@ -117,13 +170,19 @@
                 position: relative;
             
             &:before, &:after {
-                
                     background-color: #f5eea6;
                     content: '★ ★ ★ ★ ★';
-                    font: {
-                    family: auto;
-                    size: 12px;
+
+                    @media screen and (min-width: $breakpoint-sm) {
+                        content: '★ ★ ★ ★';
+                        width: 65px;
                     }
+
+                    font: {
+                        family: auto;
+                        size: 12px;
+                    }
+
                     letter-spacing: 0;
                     left: 0;
                     margin: 0 auto;
@@ -131,7 +190,6 @@
                     right: 0;
                     text-align: center;
                     width: 75px;
-                
             }
             &:before {
                 top: -15px;

@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 @import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
@@ -8,8 +9,15 @@
     align-items: center;
     color: #fff;
     display: flex;
+    
+    background: {
+        attachment: fixed;
+        image: url('../budapest.jpg');
+        repeat: no-repeat;
+        size: cover;
+    }
 
-    height: calc(calc(calc(var(--scroll-ratio) * 2.5) + 1) * 84px);
+    @include valueByHeaderScroll('height', 84px, 364px);
 
     @media screen and (max-width: $breakpoint-sm) {
         height: 68px;
@@ -23,7 +31,16 @@
     top: 0;
     z-index: 5;
 
-    
+    &::before {
+        background: rgba(0, 0, 0, .6);
+        bottom: 0;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
     & .menu_button {
         border: 1px solid $color-white;
         fill: $color-white;

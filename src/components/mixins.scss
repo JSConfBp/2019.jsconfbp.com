@@ -1,0 +1,22 @@
+
+// --scroll-ratio is 
+// - 1 when the page is not scolled and
+// - 0 when the page is scolled beyond the header
+// 
+
+// valueByHeaderScroll
+// will set $property_name to 
+// - $min when scoll ratio is 0
+// - $max when scoll ratio is 1
+@mixin valueByHeaderScroll($property_name, $min, $max) {
+    #{$property_name}: calc(#{$min} + calc(calc(#{$max} - #{$min}) * var(--scroll-ratio)));
+}
+
+
+// valueByInverseHeaderScroll
+// will set $property_name to 
+// - $min when scoll ratio is 1
+// - $max when scoll ratio is 0
+@mixin valueByInverseHeaderScroll($property_name, $min, $max) {
+    #{$property_name}: calc(#{$max} - calc(calc(#{$max} - #{$min}) * var(--scroll-ratio)));
+}

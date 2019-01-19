@@ -73,18 +73,30 @@ h1, h2, h3, h4, h5 {
 }
 
 .main {
-    min-height: 98vh;
+    
+    box-sizing: border-box;
 
     @media screen and (max-width: $breakpoint-sm) {
+        min-height: 98vh;
         height: auto;
     }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        padding-top: 364px;
+        min-height: calc(136vh - 364px);
+    }
+
+    
     background: {
         attachment: fixed;
-        image: url('./budapest.jpg');
+        image: url('../budapest.jpg');
         repeat: no-repeat;
         size: cover;
     }
     
+
+    
+    /*
     @media screen and (min-width: $breakpoint-sm) and (max-height: 620px) {
         padding: {
             top: calc(calc(calc(var(--scroll-ratio) * 1.2) + 2) * 84px);
@@ -101,6 +113,7 @@ h1, h2, h3, h4, h5 {
             top: calc(calc(calc(var(--scroll-ratio) * 0.5) + 1) * 84px);
         }
     }
+    */
     
     position: relative;
     

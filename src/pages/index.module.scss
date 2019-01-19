@@ -7,9 +7,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    
     text-align: center;
 
+    @media screen and (min-width: 380px) {
+        align-items: flex-start;
+    }
 
     @media screen and (max-width: 380px) {
         padding: $size-lg;

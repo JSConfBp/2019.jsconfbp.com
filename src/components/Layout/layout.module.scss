@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 @import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
@@ -5,6 +6,11 @@
 @import '../sizes.scss';
 
 .main {
+
+    @media screen and (min-width: $breakpoint-sm) {
+        @include valueByHeaderScroll('padding-top', 84px, 364px);
+    }
+
     background: {
         color: #f9f9f9;
         attachment: fixed;

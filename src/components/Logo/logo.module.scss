@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 @import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
@@ -7,9 +8,9 @@
 .logo {
     display: block;
     
-    height: calc(calc(var(--scroll-ratio) + 1) * 64px);
-    width: calc(calc(var(--scroll-ratio) + 1) * 64px);
-    
+    @include valueByHeaderScroll('height', 64px, 128px);
+    @include valueByHeaderScroll('width', 64px, 128px);
+
     @media screen and (max-width: $breakpoint-sm) {
         width: 48px;
         height: 48px;
@@ -22,7 +23,9 @@
 
     position: absolute;
     left: 50%;
-    bottom: 10px;
+
+    @include valueByHeaderScroll('bottom', 10px, 64px);
+
     transform: translateX(-50%);
     
     z-index: 15;
