@@ -26,8 +26,7 @@
     }
 
     ul {
-    
-        transform: translateX(calc(5px - calc(var(--scroll-ratio) * 5px)))
+        transform: translateX(calc(28px - calc(var(--scroll-ratio) * 28px)))
     }
 
     li:nth-child(3) {
@@ -87,12 +86,17 @@
         position: relative;
         vertical-align: middle;
         height: 64px;
-        width: 100px;
         
+    
+        @media screen and (min-width: $breakpoint-sm) {
+            width: (450px / 3);
+        }
+
         @media screen and (max-width: $breakpoint-sm) {
+            
             padding-right: $size-md;
             padding-top: $size-md;
-            padding-bottom: $size-md;
+            padding-bottom: 5rem;
         }
     }
 }

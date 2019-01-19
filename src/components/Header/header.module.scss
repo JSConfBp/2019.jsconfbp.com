@@ -15,11 +15,13 @@
         image: url('../budapest.jpg');
         repeat: no-repeat;
         size: cover;
+        
     }
 
     @include valueByHeaderScroll('height', 84px, 364px);
 
     @media screen and (max-width: $breakpoint-sm) {
+        background-image: none;
         height: 68px;
         position: absolute;
     }
@@ -31,14 +33,16 @@
     top: 0;
     z-index: 5;
 
-    &::before {
-        background: rgba(0, 0, 0, .6);
-        bottom: 0;
-        content: '';
-        left: 0;
-        right: 0;
-        top: 0;
-        position: absolute;
+    @media screen and (min-width: $breakpoint-sm) {
+        &::before {
+            background: rgba(0, 0, 0, .6);
+            bottom: 0;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            position: absolute;
+        }
     }
 
     & .menu_button {
