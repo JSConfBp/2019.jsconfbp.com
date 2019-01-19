@@ -37,7 +37,7 @@ const MainLayout = props => (
         >
           <html lang="en" />
         </Helmet>
-        <Header />
+        <Header dark={true} />
         <main className={[styles.main, ...props.mainClassNames].join(' ')}>
           {props.children}
         </main>

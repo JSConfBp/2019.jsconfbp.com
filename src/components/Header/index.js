@@ -21,18 +21,25 @@ class Header extends React.Component {
 
   render() {
     const { menuOpen } = this.state
+    const { dark } = this.props
 
-    const className = [styles.header]
+    const className = [ styles.header ]
+    const menuTriggerClassName = [ styles.menu_button ]
 
+    if (dark) {
+      menuTriggerClassName.push(styles.menu_button_dark)
+    }
+    
     if (menuOpen) {
       className.push(styles.header__nav__open)
+      menuTriggerClassName.push(styles.menu_button_open)
     }
 
     return (
       <header className={className.join(' ')}>
         <svg
           onClick={e => this.menuButtonClick(e)}
-          className={styles.menu_button}
+          className={menuTriggerClassName.join(' ')}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 283.426 283.426"
         >
@@ -41,7 +48,6 @@ class Header extends React.Component {
         <Logo />
         <span className={styles.date}>2019 September 26-27</span>
         <Navigation open={menuOpen} />
-
       </header>
     )
   }

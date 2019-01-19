@@ -1,5 +1,5 @@
 import React from 'react'
-import MainLayout from '../components/MainLayout/index'
+import MainLayout from '../components/Layout/index'
 import styles from './simpletext.module.scss'
 import Button from '../components/Button/index'
 import SocialMeta from '../components/SocialMeta/index'

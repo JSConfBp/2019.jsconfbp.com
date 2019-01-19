@@ -12,7 +12,8 @@
 
 
     @media screen and (max-width: 380px) {
-        padding: 0 $size-lg;
+        padding: $size-lg;
+        padding-top: 6rem;
     }
 
 
