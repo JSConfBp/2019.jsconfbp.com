@@ -1,5 +1,5 @@
 import React from 'react'
-import MainLayout from '../components/Layout/index'
+import Layout from '../components/Layout/index'
 import styles from './simpletext.module.scss'
 import Button from '../components/Button/index'
 import SocialMeta from '../components/SocialMeta/index'
@@ -20,7 +20,7 @@ const CFP_Button = () => (
 )
 
 const CallForSpeakers = () => (
-  <MainLayout>
+  <Layout>
     <SocialMeta image="social_card_cfp.jpg" />
     <div className={styles.simpleText}>
       <h1>
@@ -233,7 +233,7 @@ const CallForSpeakers = () => (
 
       <CFP_Button />
     </div>
-  </MainLayout>
+  </Layout>
 )
 
 export default CallForSpeakers

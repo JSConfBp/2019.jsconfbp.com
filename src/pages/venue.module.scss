@@ -14,6 +14,16 @@
         repeat: no-repeat;
         size: cover;
     }
+
+
+    @media screen and (min-width: 380px) {
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 380px) {
+        padding: $size-lg;
+        padding-top: 6rem;
+    }
 }
 
 .venue {

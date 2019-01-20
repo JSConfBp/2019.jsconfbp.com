@@ -7,7 +7,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    
     text-align: center;
 
     @media screen and (min-width: 380px) {
@@ -18,7 +17,6 @@
         padding: $size-lg;
         padding-top: 6rem;
     }
-
 
     & .homeContent {
         position: relative;

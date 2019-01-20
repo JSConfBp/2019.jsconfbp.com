@@ -36,6 +36,21 @@
         @include valueByInverseHeaderScroll('padding-left', 0px, 47px);
     }
 
+    @media screen and (min-width: $breakpoint-sm) {
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            backdrop-filter: blur(6px) brightness(.6);
+
+            @include valueByInverseHeaderScroll('opacity', 0, 0.9);
+        }
+    }
+
     @media screen and (max-width: $breakpoint-sm) {
         background-color: darken($jsconfred, 20%);
         display: none;
@@ -102,6 +117,7 @@
 }
 
 .link {
+
     color: $color-white;
     display: inline-block;
     font-family: $base-font;

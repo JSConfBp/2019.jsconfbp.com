@@ -12,22 +12,20 @@ class Header extends React.Component {
   }
 
   menuButtonClick(e) {
-    console.log(e)
-
     const { menuOpen } = this.state
-
     this.setState({ menuOpen: !menuOpen })
   }
 
   render() {
     const { menuOpen } = this.state
-    const { dark } = this.props
+    const { transparent } = this.props
 
     const className = [styles.header]
     const menuTriggerClassName = [styles.menu_button]
 
-    if (dark) {
-      menuTriggerClassName.push(styles.menu_button_dark)
+    if (transparent) {
+      className.push(styles.header_transparent)
+      menuTriggerClassName.push(styles.menu_button_transparent)
     }
 
     if (menuOpen) {

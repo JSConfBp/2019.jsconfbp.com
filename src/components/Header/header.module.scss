@@ -17,6 +17,10 @@
         size: cover;
     }
 
+    &_transparent {
+        background-image: none;
+    }
+
     @include valueByHeaderScroll('height', 84px, 364px);
 
     @media screen and (max-width: $breakpoint-sm) {
@@ -47,11 +51,16 @@
             top: 0;
             position: absolute;
         }
+
+        &_transparent::before {
+            display: none;
+        }
     }
 
     & .menu_button {
-        border: 1px solid $color-white;
-        fill: $color-white;
+        fill: darken($jsconfred, 20%);
+        border: 1px solid darken($jsconfred, 20%);
+
         height: 30px;
         margin-left: $size-md;
         padding: {
@@ -61,14 +70,14 @@
         width: 32px;
         position: relative;
         z-index: 15;
-        
+
         @media screen and (min-width: $breakpoint-lg) {
             display: none;
         }
 
-        &_dark {
-            fill: darken($jsconfred, 20%);
-            border-color: darken($jsconfred, 20%);
+        &_transparent {
+            fill: $color-white;
+            border-color: $color-white;
         }
 
         &_open {
