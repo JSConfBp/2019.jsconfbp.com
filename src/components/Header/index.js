@@ -18,9 +18,9 @@ class Header extends React.Component {
 
   render() {
     const { menuOpen } = this.state
-    const { transparent } = this.props
+    const { transparent, classNames = [] } = this.props
 
-    const className = [styles.header]
+    const className = [styles.header].concat(classNames)
     const menuTriggerClassName = [styles.menu_button]
 
     if (transparent) {

@@ -45,9 +45,6 @@
             right: 0;
             top: 0;
             bottom: 0;
-            backdrop-filter: blur(6px) brightness(.6);
-
-            @include valueByInverseHeaderScroll('opacity', 0, 0.9);
         }
     }
 
