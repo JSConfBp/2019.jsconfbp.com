@@ -18,6 +18,7 @@
         padding: $size-lg;
 
     }
+
     > * {
         margin-bottom: 1.2rem;
     }
@@ -25,11 +26,6 @@
     & h1 {
         font-size: $size-xxl;
         line-height: 1.2;
-
-
-        @media screen and (min-width: $breakpoint-lg) {
-            font-size: $size-xxl;
-        }
     }
 
     & h2, & h3, & h4 {
@@ -38,7 +34,6 @@
             bottom: $size-md;
         }
         line-height: 1.2;
-        font-weight: bold;
     }
 
     & h2 {

@@ -39,7 +39,7 @@ const CallForSpeakers = () => (
 
       <CFP_Button />
 
-      <h3>Topics</h3>
+      <h2>Topics</h2>
 
       <p>We like to see anything that fits into the topics like:</p>
 
@@ -60,7 +60,7 @@ const CallForSpeakers = () => (
         </li>
       </ul>
 
-      <h3>Perks</h3>
+      <h2>Perks</h2>
 
       <p>
         If you get selected as a speaker at JSConf Budapest, here’s what we
@@ -122,7 +122,7 @@ const CallForSpeakers = () => (
         know, we can usually work these things out.
       </p>
 
-      <h3>Guidelines</h3>
+      <h2>Guidelines</h2>
       <p>
         Submit your proposal by{' '}
         <strong>February 28th 2019, 23:59:59 CEST</strong>.
@@ -160,7 +160,7 @@ const CallForSpeakers = () => (
         knowledge.
       </p>
 
-      <h3>Selection Process</h3>
+      <h2>Selection Process</h2>
 
       <p>Here’s how we pick our talks:</p>
 
@@ -196,7 +196,7 @@ const CallForSpeakers = () => (
 
       <p>in a submission.</p>
 
-      <h3>We are here to help!</h3>
+      <h2>We are here to help!</h2>
 
       <p>
         Not everybody is a natural talent on stage. Not everybody can produce
