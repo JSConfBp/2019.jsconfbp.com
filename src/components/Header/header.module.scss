@@ -9,7 +9,6 @@
     align-items: center;
     color: #fff;
     display: flex;
-    
     background: {
         attachment: fixed;
         image: url('../budapest.jpg');
@@ -27,13 +26,10 @@
         background-image: none;
         height: 68px;
         position: absolute;
-
         &__nav__open {
             position: fixed;
         }
     }
-
-
     justify-content: space-between;
     left: 0;
     position: fixed;
