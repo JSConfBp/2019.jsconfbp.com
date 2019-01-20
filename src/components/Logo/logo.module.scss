@@ -6,32 +6,25 @@
 @import '../sizes.scss';
 
 .logo {
-    display: block;
-    
+    display: block;    
     @media screen and (min-width: $breakpoint-sm) {
         @include valueByHeaderScroll('bottom', 10px, 64px);
         @include valueByHeaderScroll('height', 64px, 128px);
         @include valueByHeaderScroll('width', 64px, 128px);
     }
-    @media screen and (max-width: $breakpoint-sm) {
-        width: 48px;
+    @media screen and (max-width: $breakpoint-md) {
         height: 48px;
+        top: 1.4rem;
+        width: 48px;
     }
-
     margin: {
         left: auto;
         right: auto;
     }
-
     position: absolute;
     left: 50%;
-
-    
-
     transform: translateX(-50%);
-    
     z-index: 15;
-    
     & .inner {
         width: 100%;
     }

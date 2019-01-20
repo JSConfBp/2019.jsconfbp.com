@@ -14,7 +14,7 @@
         align-items: flex-start;
     }
 
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: $breakpoint-md) {
         padding: $size-lg;
         padding-top: 6rem;
     }
@@ -74,26 +74,88 @@
     }
 
     & p {
-        padding: 0 $size-xxl;
-        font-size: $size-l;
-        color: $color-white;
-        font-weight: 200;
         display: block;
-        margin-bottom:$size-xl;
-
-        @media screen and (min-width: $breakpoint-lg) {
-            padding: 0 $size-xxl;
-            line-height: 1.8rem;
-        }
-
+        color: $color-white;
+        font-size: $size-l;
+        line-height: 2rem;
+        margin-bottom: $size-xl;
+        padding: 0 $size-xxl;
         @media screen and (max-width: 380px) {
             padding: 0 $size-md;
             font-size: $size-md;
-            line-height: 1.4rem;
         }
-
+        @media screen and (min-width: $breakpoint-lg) {
+            padding: 0 $size-xxl;
+        }
         a {
             color: $color-yellow;
         }
+    }
+}
+
+.updates {
+    background-color: rgba(222, 222, 225, 0.8);
+    line-height: 1.35;
+    max-width: 800px;
+    margin: {
+        top: 1rem;
+        right: auto;
+        left: auto;
+    }
+    padding: $size-lg;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+        margin-top: 3rem;
+    }
+    > * {
+        margin-bottom: $size-md;
+    }
+
+    & h1 {
+        font-size: $title-md;
+    }
+    & h2, & h3, & h4 {
+        font-size: $title-sm;
+        margin: {
+            top: $size-md;
+            bottom: $size-md;
+        }
+    }
+    & a {
+        color: $jsconfred;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+    & .date {
+        color: $gray-800;
+        display: block;
+        font: {
+            size: $text-sm;
+            style: italic;
+        }
+    }
+    & .title {
+        display: inline-block;
+        font: {
+            size: $title-sm;
+            weight: 700;
+        }
+        margin: {
+            top: $size-sm;
+            bottom: $size-sm;
+        }
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+            color: darken($jsconfred, 10%);
+        }
+    }
+}
+
+.updates_list {
+    &_item:not(:last-child) {
+        border-bottom: 1px dashed $gray-500;
+        margin-bottom: $size-lg;
+        padding-bottom: $size-lg;
     }
 }
