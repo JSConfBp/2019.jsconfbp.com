@@ -11,17 +11,15 @@ exports.onRouteUpdate = ({ location }) => {
 
     window.addEventListener('scroll', () => {
         window.requestAnimationFrame(() => {
-
             let s = 0
 
             if (window.scrollY > 64) {
                 s = 0
             } else {
-                s = 64 - window.scrollY 
+                s = 64 - window.scrollY
             }
 
             document.documentElement.style.setProperty('--scroll-ratio', s / 64);
         })
-        
     })
   }

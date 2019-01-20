@@ -14,8 +14,7 @@
         attachment: fixed;
         image: url('../budapest.jpg');
         repeat: no-repeat;
-        size: cover;
-        
+        size: cover;   
     }
 
     @include valueByHeaderScroll('height', 84px, 364px);
@@ -24,7 +23,12 @@
         background-image: none;
         height: 68px;
         position: absolute;
+
+        &__nav__open {
+            position: fixed;
+        }
     }
+
 
     justify-content: space-between;
     left: 0;
