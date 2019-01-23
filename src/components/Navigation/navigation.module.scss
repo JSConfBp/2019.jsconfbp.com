@@ -128,21 +128,23 @@
     position: relative;
     text-decoration: none;
     
-    &:hover, &:active, &:focus {
-        &::after {
-            content: '';
-            
-            height: 1px;
-            position: absolute;
-            bottom: 18px;
-            left: 0;
-            right: 0;
-            margin: {
-                right: $size-md;
-                left: $size-md;
+    @media screen and (min-width: $breakpoint-sm) {
+        &:hover, &:active, &:focus {
+            &::after {
+                content: '';
+                
+                height: 1px;
+                position: absolute;
+                bottom: 18px;
+                left: 0;
+                right: 0;
+                margin: {
+                    right: $size-md;
+                    left: $size-md;
+                }
+                border-bottom: 1px dashed $color-white;
+                
             }
-            border-bottom: 1px dashed $color-white;
-            
         }
     }
 }
