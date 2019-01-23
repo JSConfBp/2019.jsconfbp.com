@@ -67,7 +67,7 @@
         position: relative;
         z-index: 15;
 
-        @media screen and (min-width: $breakpoint-lg) {
+        @media screen and (min-width: $breakpoint-sm) {
             display: none;
         }
 
