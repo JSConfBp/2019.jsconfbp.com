@@ -12,11 +12,13 @@
         right: auto;
         left: auto;
     }
-    padding: $size-md;
-    position: relative;
-    @media screen and (min-width: $breakpoint-lg) {
-        padding: $size-lg;
 
+    padding: $size-md;
+
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 3rem 0 $size-lg;
     }
 
     > * {

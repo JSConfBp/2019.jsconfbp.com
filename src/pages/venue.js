@@ -6,7 +6,10 @@ import styles from './venue.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
 
 const VenuePage = () => (
-  <MainLayout headerClassNames={[styles.venue_header]} mainClassNames={[styles.venue_main]}>
+  <MainLayout
+    headerClassNames={[styles.venue_header]}
+    mainClassNames={[styles.venue_main]}
+  >
     <SocialMeta image="social_card_venue.jpg" />
     <div className={styles.venue}>
       <div className={styles.venueContent}>

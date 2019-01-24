@@ -36,7 +36,9 @@ const IndexPage = () => (
           </Button>
         </div>
       </div>
-        <div className={styles.updates}>
+
+      <div className={styles.updates}>
+        <div className={styles.updates_content}>
           <h1>Updates</h1>
           <ul className={styles.updates_list}>
             <li className={styles.updates_list_item}>
@@ -47,9 +49,9 @@ const IndexPage = () => (
               <p className={styles.lead}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                 convallis viverra posuere. Mauris ut mauris ac purus malesuada
-                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus vel
-                velit. Sed facilisis felis non pellentesque ultricies. In massa
-                eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
+                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus
+                vel velit. Sed facilisis felis non pellentesque ultricies. In
+                massa eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
                 <Link to="#">Read more →</Link>
               </p>
             </li>
@@ -61,14 +63,16 @@ const IndexPage = () => (
               <p className={styles.lead}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                 convallis viverra posuere. Mauris ut mauris ac purus malesuada
-                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus vel
-                velit. Sed facilisis felis non pellentesque ultricies. In massa
-                eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
+                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus
+                vel velit. Sed facilisis felis non pellentesque ultricies. In
+                massa eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
                 <Link to="#">Read more →</Link>
               </p>
             </li>
           </ul>
         </div>
+      </div>
+
     </div>
   </MainLayout>
 )
