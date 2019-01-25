@@ -22,6 +22,7 @@ class Header extends React.Component {
 
     const className = [styles.header].concat(classNames)
     const menuTriggerClassName = [styles.menu_button]
+    const logoStyle = ''
 
     if (transparent) {
       className.push(styles.header_transparent)
@@ -43,7 +44,7 @@ class Header extends React.Component {
         >
           <path d="M0 40.84h283.426v47.735H0zM0 117.282h283.426v47.735H0zM0 194.851h283.426v47.735H0z" />
         </svg>
-        <Logo />
+        <Logo menuOpen={menuOpen} />
         <span className={styles.date}>2019 September 26-27</span>
         <Navigation open={menuOpen} />
       </header>

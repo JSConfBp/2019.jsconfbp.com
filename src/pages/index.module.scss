@@ -13,7 +13,7 @@
         align-items: flex-start;
     }
 
-    @media screen and (max-width: $breakpoint-md) {
+    @media screen and (max-width: $breakpoint-sm) {
         padding: $size-lg;
         padding-top: 6rem;
     }
@@ -26,6 +26,7 @@
         color: #fff;
         font-size: $size-xxl;
         line-height: 1.2;
+
         @media screen and (min-width: $breakpoint-lg) {
             font-size: $size-xxxl;
         }
@@ -93,6 +94,12 @@
 
 .updates {
 
+    @media screen and (max-width: $breakpoint-lg) {
+        padding: 3rem;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 3rem 1rem;
+    }
     &_content {
         max-width: 800px;
         margin: 0 auto;
@@ -120,7 +127,7 @@
 
     &_list {
         margin-bottom: 0;
-        
+
         &_item:not(:last-child) {
             border-bottom: 1px dashed $gray-500;
             margin-bottom: 3rem;

@@ -12,7 +12,7 @@
     left: 0;
     position: fixed;
     right: 0;
-    z-index: 10;
+    z-index: 20;
     height: 64px;
     box-sizing: content-box;
     text-align: center;
@@ -48,7 +48,7 @@
         }
     }
 
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-lg) {
         background-color: darken($jsconfred, 20%);
         display: none;
         top: 0;
@@ -80,9 +80,6 @@
         li:nth-child(4) {
             padding-left: 0;
         }
-
-
-        
     }
 }
 
@@ -99,14 +96,12 @@
         position: relative;
         vertical-align: middle;
         height: 64px;
-        
-    
+
         @media screen and (min-width: $breakpoint-sm) {
             width: (450px / 3);
         }
 
         @media screen and (max-width: $breakpoint-sm) {
-            
             padding-right: $size-md;
             padding-top: $size-md;
             padding-bottom: 5rem;
@@ -115,7 +110,6 @@
 }
 
 .link {
-
     color: $color-white;
     display: inline-block;
     font-family: $base-font;
@@ -127,12 +121,12 @@
     }
     position: relative;
     text-decoration: none;
-    
+
     @media screen and (min-width: $breakpoint-sm) {
         &:hover, &:active, &:focus {
             &::after {
                 content: '';
-                
+
                 height: 1px;
                 position: absolute;
                 bottom: 18px;
@@ -143,7 +137,7 @@
                     left: $size-md;
                 }
                 border-bottom: 1px dashed $color-white;
-                
+
             }
         }
     }

@@ -7,7 +7,7 @@
 
 .main {
 
-    @media screen and (min-width: $breakpoint-sm) {
+    @media screen and (min-width: $menu-breakpoint) {
         @include valueByHeaderScroll('padding-top', 84px, 364px);
     }
 

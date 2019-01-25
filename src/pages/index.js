@@ -72,7 +72,6 @@ const IndexPage = () => (
           </ul>
         </div>
       </div>
-
     </div>
   </MainLayout>
 )

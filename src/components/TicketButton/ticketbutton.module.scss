@@ -54,9 +54,14 @@
         width: (400px / 3);
     }
 
+    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
+        width: (350px / 3);
+    }
+
     &:hover, &:focus, &:active {
         opacity: .9;
     }
+
     &::before, &::after {
         background-color: rgba(0,0,0,0);
         border-radius: 50%;
@@ -71,10 +76,10 @@
         &::before {
             border-radius: 0;
             $darkred: darken($jsconfred, 20%);
-            
+
             left: -6px;
-            
-            box-shadow: 
+
+            box-shadow:
                 0 12px 0 -5px #f5eea6,
                 0 22px 0 -5px #f5eea6,
                 0 32px 0 -5px #f5eea6,
@@ -83,7 +88,7 @@
                 (400px / 3) 22px 0 -5px #f5eea6,
                 (400px / 3) 32px 0 -5px #f5eea6,
                 (400px / 3) 42px 0 -5px #f5eea6;
-                
+
 
             height: (50px / 3);
             left: (-25px / 3);
@@ -93,6 +98,21 @@
         &::after {
             right: -6px;
             content: none;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
+        &::before {
+            box-shadow:
+                0 12px 0 -5px #f5eea6,
+                0 22px 0 -5px #f5eea6,
+                0 32px 0 -5px #f5eea6,
+                0 42px 0 -5px #f5eea6,
+                (350px / 3) 12px 0 -5px #f5eea6,
+                (350px / 3) 22px 0 -5px #f5eea6,
+                (350px / 3) 32px 0 -5px #f5eea6,
+                (350px / 3) 42px 0 -5px #f5eea6;
+
         }
     }
     @media screen and (max-width: $breakpoint-sm) {
@@ -134,20 +154,19 @@
             right: $size-sm;
             bottom: 3px;
         }
-        
-            align-items: center;
-            bottom: 10px;
-            border: 2px solid #5e400b;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            left: 10px;
-            padding: 0;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        
-        
+
+        align-items: center;
+        bottom: 10px;
+        border: 2px solid #5e400b;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        left: 10px;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
         & .label {
             font: {
                 family: $secondary-font;
@@ -172,6 +191,10 @@
                     @media screen and (min-width: $breakpoint-sm) {
                         content: '★ ★ ★ ★';
                         width: 65px;
+                    }
+
+                    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
+                        content: '★ ★';
                     }
 
                     font: {
