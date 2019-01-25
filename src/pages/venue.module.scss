@@ -20,7 +20,7 @@
         align-items: flex-start;
     }
 
-    @media screen and (max-width: 380px) {
+    @media screen and (max-width: $breakpoint-sm) {
         padding: $size-lg;
         padding-top: 6rem;
     }
@@ -35,6 +35,12 @@
 
     &_header {
         background-image: url('./images/akvarium.jpg') !important;
+
+        @media screen and (max-width: $menu-breakpoint) {
+            background-image: none !important;
+        }
+
+
     }
 
     @media screen and (max-width: 380px) {
