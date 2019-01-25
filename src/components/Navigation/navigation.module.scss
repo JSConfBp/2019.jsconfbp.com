@@ -97,11 +97,11 @@
         vertical-align: middle;
         height: 64px;
 
-        @media screen and (min-width: $breakpoint-sm) {
+        @media screen and (min-width: $breakpoint-lg) {
             width: (450px / 3);
         }
 
-        @media screen and (max-width: $breakpoint-sm) {
+        @media screen and (max-width: $breakpoint-lg) {
             padding-right: $size-md;
             padding-top: $size-md;
             padding-bottom: 5rem;

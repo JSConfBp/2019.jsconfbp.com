@@ -9,20 +9,16 @@
         left: auto;
         right: auto;
     }
-    
+
     text-align: center;
 
-
-    @media screen and (min-width: $breakpoint-sm) {
+    @media screen and (min-width: $breakpoint-lg) {
         position: absolute;
     }
 
-    @media screen and (max-width: $breakpoint-sm) {
-        
+    @media screen and (max-width: $breakpoint-lg) {
         margin: 0 auto;
     }
-
-    
 }
 
 .ticket {
@@ -42,20 +38,15 @@
     margin: {
         left: auto;
         right: auto;
-        
     }
 
     padding: 0;
     height: 60px;
     width: (500px / 3);
 
-    @media screen and (min-width: $breakpoint-sm) {
+    @media screen and (min-width: $breakpoint-lg) {
         height: 52px;
         width: (400px / 3);
-    }
-
-    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
-        width: (350px / 3);
     }
 
     &:hover, &:focus, &:active {
@@ -72,7 +63,7 @@
         width: 12px;
     }
 
-    @media screen and (min-width: $breakpoint-sm) {
+    @media screen and (min-width: $breakpoint-lg) {
         &::before {
             border-radius: 0;
             $darkred: darken($jsconfred, 20%);
@@ -101,21 +92,7 @@
         }
     }
 
-    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
-        &::before {
-            box-shadow:
-                0 12px 0 -5px #f5eea6,
-                0 22px 0 -5px #f5eea6,
-                0 32px 0 -5px #f5eea6,
-                0 42px 0 -5px #f5eea6,
-                (350px / 3) 12px 0 -5px #f5eea6,
-                (350px / 3) 22px 0 -5px #f5eea6,
-                (350px / 3) 32px 0 -5px #f5eea6,
-                (350px / 3) 42px 0 -5px #f5eea6;
-
-        }
-    }
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-lg) {
         &::before {
             $darkred: darken($jsconfred, 20%);
             
@@ -174,7 +151,7 @@
                 weight: 600;
             }
 
-            @media screen and (min-width: $breakpoint-sm) {
+            @media screen and (min-width: $breakpoint-lg) {
                 font-size: 14px;
             }
 
@@ -188,14 +165,11 @@
                     background-color: #f5eea6;
                     content: '★ ★ ★ ★ ★';
 
-                    @media screen and (min-width: $breakpoint-sm) {
+                    @media screen and (min-width: $breakpoint-lg) {
                         content: '★ ★ ★ ★';
                         width: 65px;
                     }
 
-                    @media screen and (max-width: $breakpoint-lg) and (min-width: $breakpoint-sm) {
-                        content: '★ ★';
-                    }
 
                     font: {
                         family: auto;

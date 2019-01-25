@@ -30,19 +30,20 @@
     @media screen and (max-width: $breakpoint-sm) {
         height: 48px;
         width: 48px;
+        z-index: 22;
     }
 
     margin: {
         left: auto;
         right: auto;
     }
+
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
+
     & .inner {
         width: 100%;
     }
-
-
 }

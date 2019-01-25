@@ -5,12 +5,11 @@
 @import '../font-face.scss';
 @import '../sizes.scss';
 
-
-
 .header {
     align-items: center;
     color: #fff;
     display: flex;
+
     background: {
         attachment: fixed;
         image: url('../budapest.jpg');
@@ -24,7 +23,7 @@
         background-image: none;
         height: 68px;
         position: absolute;
-        
+
         &__nav__open {
             position: fixed;
         }
@@ -47,10 +46,6 @@
             top: 0;
             position: absolute;
         }
-
-        &_transparent::before {
-          //  display: none;
-        }
     }
 
     & .menu_button {
@@ -59,10 +54,12 @@
 
         height: 30px;
         margin-left: $size-md;
+
         padding: {
             left: 5px;
             right: 5px;
         }
+
         width: 32px;
         position: relative;
         z-index: 21;
@@ -81,6 +78,7 @@
             border-color: $color-white;
         }
     }
+    
     & .date {
         display: none;
     }
