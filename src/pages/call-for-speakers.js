@@ -183,7 +183,7 @@ const CallForSpeakers = () => (
       <p>
         We follow the{' '}
         <a href="https://blog.cssconf.eu/2015/08/15/a-talk-selection-process-explained/">
-          selection process laid out by our mentors at JSConnf & CSSconf EU
+          selection process laid out by our mentors at JSConf & CSSconf EU
         </a>{' '}
         and value:
       </p>

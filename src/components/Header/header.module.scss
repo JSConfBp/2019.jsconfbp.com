@@ -19,9 +19,14 @@
 
     @include valueByHeaderScroll('height', 84px, 364px);
 
-    @media screen and (max-width: $menu-breakpoint) {
+    @media screen and (max-width: $breakpoint-sm) {
         background-image: none;
         height: 68px;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        //
+        height: 320px;
         position: absolute;
 
         &__nav__open {
@@ -36,7 +41,7 @@
     top: 0;
     z-index: 5;
 
-    @media screen and (min-width: $menu-breakpoint) {
+    @media screen and (min-width: $breakpoint-sm)  {
         &::before {
             background: rgba(0, 0, 0, .6);
             bottom: 0;
@@ -61,11 +66,18 @@
         }
 
         width: 32px;
-        position: relative;
+        position: absolute;
+        top: 19px;
+        left: 0;
         z-index: 21;
 
         @media screen and (min-width: $menu-breakpoint) {
             display: none;
+        }
+
+        @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+            fill: $color-white;
+            border-color: $color-white;
         }
 
         &_transparent {

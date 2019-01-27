@@ -18,8 +18,11 @@
         size: cover;
     }
 
-    padding: {
-        top: 68px;
+    padding-top: 68px;
+    
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding-top: 320px;
     }
 
     position: relative;

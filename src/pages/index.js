@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+
 import Button from '../components/Button/index'
 import MainLayout from '../components/MainLayout/index'
 import styles from './index.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
 
-const IndexPage = () => (
+const IndexPage = props => (
   <MainLayout>
     <SocialMeta image="social_card_earlybird.jpg" />
     <div>
@@ -41,34 +42,23 @@ const IndexPage = () => (
         <div className={styles.updates_content}>
           <h1>Updates</h1>
           <ul className={styles.updates_list}>
-            <li className={styles.updates_list_item}>
-              <span className={styles.date}>2018 November 21.</span>
-              <Link className={styles.title} to="#">
-                Ticket sales & Call For Papers start in December 2018
-              </Link>
-              <p className={styles.lead}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                convallis viverra posuere. Mauris ut mauris ac purus malesuada
-                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus
-                vel velit. Sed facilisis felis non pellentesque ultricies. In
-                massa eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
-                <Link to="#">Read more →</Link>
-              </p>
-            </li>
-            <li className={styles.updates_list_item}>
-              <span className={styles.date}>2018 November 21.</span>
-              <Link className={styles.title} to="#">
-                Ticket sales & Call For Papers start in December 2018
-              </Link>
-              <p className={styles.lead}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                convallis viverra posuere. Mauris ut mauris ac purus malesuada
-                tincidunt. Sed leo risus, tincidunt a tempor facilisis, rhoncus
-                vel velit. Sed facilisis felis non pellentesque ultricies. In
-                massa eros, pellentesque ut malesuada id, ultricies a ligula.{' '}
-                <Link to="#">Read more →</Link>
-              </p>
-            </li>
+            {props.data.allMdx.edges.map(({ node }) => (
+              <li key={node.id} className={styles.updates_list_item}>
+                <span className={styles.date}>{node.frontmatter.date}</span>
+                <Link
+                  className={styles.title}
+                  to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
+                >
+                  {node.frontmatter.title}
+                </Link>
+                <p className={styles.lead}>{node.frontmatter.lead} </p>
+                <Link
+                  to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
+                >
+                  Read more →
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -77,3 +67,26 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query MDXQuery {
+    allMdx {
+      edges {
+        node {
+          id
+          parent {
+            ... on File {
+              name
+              sourceInstanceName
+            }
+          }
+          frontmatter {
+            title
+            date
+            lead
+          }
+        }
+      }
+    }
+  }
+`

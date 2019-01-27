@@ -8,6 +8,9 @@
     background-color: #f9f9f9;
     line-height: 1.48rem;
     max-width: 800px;
+
+    min-height: 100vh;
+
     margin: {
         right: auto;
         left: auto;
@@ -17,11 +20,15 @@
 
     position: relative;
 
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: $breakpoint-sm) {
         padding: 3rem 0 $size-lg;
     }
 
-    > * {
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding: 3rem  $size-lg $size-lg;
+    }
+
+    * {
         margin-bottom: 1.2rem;
     }
 
