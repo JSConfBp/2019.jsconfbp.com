@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '../Logo/'
-
 import Navigation from '../Navigation/'
 import styles from './header.module.scss'
 
@@ -22,7 +21,6 @@ class Header extends React.Component {
 
     const className = [styles.header].concat(classNames)
     const menuTriggerClassName = [styles.menu_button]
-    const logoStyle = ''
 
     if (transparent) {
       className.push(styles.header_transparent)

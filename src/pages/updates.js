@@ -29,6 +29,7 @@ export const query = graphql`
             title
             date
             lead
+            socialCard
           }
         }
       }

@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Button from '../components/Button/index'
 import MainLayout from '../components/MainLayout/index'
 import styles from './index.module.scss'
-import MailChimpButton from '../components/MailChimpButton/index'
 
 const NotFoundPage = () => (
   <MainLayout>

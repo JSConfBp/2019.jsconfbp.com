@@ -8,7 +8,11 @@ import styles from '../pages/simpletext.module.scss'
 function PostPageTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <SocialMeta image="social_card_cfp.jpg" />
+      <SocialMeta
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.lead}
+        image={mdx.frontmatter.socialCard || 'social-card.png'}
+      />
       <div className={styles.simpleText}>
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
       </div>
@@ -24,6 +28,11 @@ export const pageQuery = graphql`
       id
       code {
         body
+      }
+      frontmatter {
+        title
+        lead
+        socialCard
       }
     }
   }

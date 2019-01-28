@@ -28,6 +28,7 @@ const PastSummary = () => (
 
         <div className={styles.video}>
           <iframe
+            title="JSConf Budapest Mood video"
             className="mood-video"
             width="100%"
             height="100%"

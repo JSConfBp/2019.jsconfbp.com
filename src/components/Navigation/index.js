@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './navigation.module.scss'
 import TicketButton from '../TicketButton/'
-import Helmet from 'react-helmet'
-// , styles.nav__open
 
 const Navigation = props => {
   const { open } = props
@@ -36,6 +34,7 @@ const Navigation = props => {
             className={styles.link}
             href="http://eepurl.com/dMgAr-/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Get Updates
           </a>

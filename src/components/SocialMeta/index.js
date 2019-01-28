@@ -19,10 +19,13 @@ const SocialMeta = props => (
       <Helmet
         meta={[
           { name: 'og:type', content: 'website' },
-          { name: 'og:title', content: data.site.siteMetadata.title },
+          {
+            name: 'og:title',
+            content: props.title || data.site.siteMetadata.title,
+          },
           {
             name: 'og:description',
-            content: data.site.siteMetadata.description,
+            content: props.description || data.site.siteMetadata.description,
           },
           { name: 'og:site_name', content: data.site.siteMetadata.title },
           { name: 'og:url', content: 'https://jsconfbp.com/' },
@@ -34,10 +37,13 @@ const SocialMeta = props => (
           { name: 'twitter:card', content: 'summary_large_image' },
           { name: 'twitter:site', content: data.site.siteMetadata.twitter },
           { name: 'twitter:creator', content: data.site.siteMetadata.twitter },
-          { name: 'twitter:title', content: data.site.siteMetadata.title },
+          {
+            name: 'twitter:title',
+            content: props.title || data.site.siteMetadata.title,
+          },
           {
             name: 'twitter:description',
-            content: data.site.siteMetadata.description,
+            content: props.description || data.site.siteMetadata.description,
           },
           { name: 'twitter:url', content: 'https://jsconfbp.com/' },
           {

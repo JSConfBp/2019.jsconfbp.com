@@ -15,10 +15,7 @@ const Contact = () => (
       <div className={styles.contacts}>
         <div className={styles.team_member}>
           <div className={styles.photo}>
-            <img
-              src="https://nec.is/assets/nec-square.png"
-              alt="Image of Szabolcs"
-            />
+            <img src="https://nec.is/assets/nec-square.png" alt="Szabolcs" />
           </div>
           Szabolcs Szabolcsi-Toth
         </div>
@@ -27,7 +24,7 @@ const Contact = () => (
           <div className={styles.photo}>
             <img
               src="https://pbs.twimg.com/profile_images/867028857441931265/HJdtCgrz_400x400.jpg"
-              alt="Image of Daniel"
+              alt="Daniel"
             />
           </div>
           Daniel Liptak

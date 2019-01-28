@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import VenueMap from '../components/VenueMap/index'
 import MainLayout from '../components/MainLayout/index'
 import styles from './venue.module.scss'
@@ -45,6 +44,7 @@ const VenuePage = () => (
 
         <div className={styles.venue_google_map}>
           <iframe
+            title="Venue area map"
             style={{ pointerEvents: 'none' }}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.565701968758!2d19.052097751378795!3d47.49837330333867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc402a04eee3%3A0x6869564cd433693c!2sAkv%C3%A1rium+Klub!5e0!3m2!1sen!2sus!4v1448264513121"
             width="100%"
