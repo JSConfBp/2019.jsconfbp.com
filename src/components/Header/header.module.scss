@@ -22,6 +22,7 @@
     @media screen and (max-width: $breakpoint-sm) {
         background-image: none;
         height: 68px;
+        position: absolute;
     }
 
     @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
