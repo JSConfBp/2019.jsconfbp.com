@@ -23,3 +23,8 @@ Just hit `Ctrl+C` to stop the server process.
 ## Deploy
 
 Merge all the required changes to the `live` branch and push.
+
+
+## Notes
+
+https://codepen.io/inegoita/pen/xOgKRM

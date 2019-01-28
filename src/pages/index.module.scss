@@ -7,15 +7,17 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     text-align: center;
 
-
-    @media screen and (max-width: 380px) {
-        padding: 0 $size-lg;
+    @media screen and (min-width: 380px) {
+        align-items: flex-start;
     }
 
-    
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: $size-lg;
+        padding-top: 6rem;
+    }
+
     & .homeContent {
         position: relative;
     }
@@ -24,6 +26,7 @@
         color: #fff;
         font-size: $size-xxl;
         line-height: 1.2;
+
         @media screen and (min-width: $breakpoint-lg) {
             font-size: $size-xxxl;
         }
@@ -70,26 +73,108 @@
     }
 
     & p {
-        padding: 0 $size-xxl;
-        font-size: $size-l;
-        color: $color-white;
-        font-weight: 200;
         display: block;
-        margin-bottom:$size-xl;
-
-        @media screen and (min-width: $breakpoint-lg) {
-            padding: 0 $size-xxl;
-            line-height: 1.8rem;
-        }
-
+        color: $color-white;
+        font-size: $size-l;
+        line-height: 2rem;
+        margin-bottom: $size-xl;
+        padding: 0 $size-xxl;
         @media screen and (max-width: 380px) {
             padding: 0 $size-md;
             font-size: $size-md;
-            line-height: 1.4rem;
         }
-
+        @media screen and (min-width: $breakpoint-lg) {
+            padding: 0 $size-xxl;
+        }
         a {
             color: $color-yellow;
         }
     }
 }
+
+.updates {
+
+    @media screen and (max-width: $breakpoint-lg) {
+        padding: 3rem;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 3rem 1rem;
+    }
+    &_content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        > * {
+            margin-bottom: $size-md;
+        }
+
+    }
+
+    background-color: $color-content-background;
+    line-height: 1.35;
+
+    margin: {
+        top: 1rem;
+        right: auto;
+        left: auto;
+    }
+    padding: 3rem 0;
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-md) {
+        margin-top: 3rem;
+    }
+
+    &_list {
+        margin-bottom: 0;
+
+        &_item:not(:last-child) {
+            border-bottom: 1px dashed $gray-500;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+
+    & h1 {
+        font-size: $title-md;
+        margin-bottom: $size-md;
+    }
+    & h2, & h3, & h4 {
+        font-size: $title-sm;
+        margin: {
+            top: $size-md;
+            bottom: $size-md;
+        }
+    }
+    & a {
+        color: $jsconfred;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+    & .date {
+        color: $gray-800;
+        display: block;
+        font: {
+            size: $text-sm;
+            style: italic;
+        }
+    }
+    & .title {
+        display: inline-block;
+        font: {
+            size: $title-sm;
+            weight: 700;
+        }
+        margin: {
+            top: $size-sm;
+            bottom: $size-sm;
+        }
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+            color: darken($jsconfred, 10%);
+        }
+    }
+}
+

@@ -1,12 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import styles from './mainlayout.module.scss'
 import Footer from '../Footer/'
-import Logo from '../Logo/'
-import TicketButton from '../TicketButton/'
-import Navigation from '../Navigation/'
 
 import Header from '../Header/'
 
@@ -37,7 +34,7 @@ const MainLayout = props => (
         >
           <html lang="en" />
         </Helmet>
-        <Header />
+        <Header transparent={true} classNames={props.headerClassNames} />
         <main className={[styles.main, ...props.mainClassNames].join(' ')}>
           {props.children}
         </main>

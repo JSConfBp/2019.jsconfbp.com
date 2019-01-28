@@ -1,3 +1,4 @@
+@import '../mixins.scss';
 @import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
@@ -6,29 +7,42 @@
 
 .logo {
     display: block;
-    height: 50px;
-    left: 0;
+
+    @media screen and (min-width: $menu-breakpoint) {
+        @include valueByHeaderScroll('bottom', 10px, 64px);
+        @include valueByHeaderScroll('height', 64px, 128px);
+        @include valueByHeaderScroll('width', 64px, 128px);
+    }
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        height: 128px;
+        width: 128px;
+        top: 96px;
+
+        &_menu_open {
+            height: 48px;
+            width: 48px;
+            z-index: 22;
+            top: 10px;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 48px;
+        width: 48px;
+        z-index: 22;
+    }
+
     margin: {
         left: auto;
         right: auto;
     }
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
-    z-index: 15;
-    @media screen and (min-width: $breakpoint-lg) {
-        border: 5px solid #fff;
-        box-shadow: -2px 2px 2px $gray-900;
-        height: 100px;
-        margin: {
-            top: $size-xl;
-            bottom: $size-md;
-        }
-        position: static;
-        width: 100px;
 
-    }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+
     & .inner {
         width: 100%;
     }

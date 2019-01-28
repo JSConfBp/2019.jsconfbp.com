@@ -4,8 +4,12 @@
 @import '../components/font-face.scss';
 @import '../components/sizes.scss';
 
+.page_updates {
+    min-height: 100vh;
+}
+
 .updates {
-    background-color: rgba(255, 255, 255, .85);
+    background-color: $color-content-background;
     line-height: 1.35;
     max-width: 800px;
     margin: {
@@ -14,55 +18,4 @@
     }
     padding: $size-lg;
     position: relative;
-    > * {
-        margin-bottom: $size-md;
-    }
-
-    & h1 {
-        font-size: $title-md;
-    }
-    & h2, & h3, & h4 {
-        font-size: $title-sm;
-        margin: {
-            top: $size-md;
-            bottom: $size-md;
-        }
-    }
-    & a {
-        color: $jsconfred;
-        &:hover, &:active, &:focus {
-            text-decoration: none;
-        }
-    }
-    & .date {
-        color: $gray-800;
-        display: block;
-        font: {
-            size: $text-sm;
-            style: italic;
-        }
-    }
-    & .title {
-        display: inline-block;
-        font: {
-            size: $title-sm;
-            weight: 700;
-        }
-        margin: {
-            top: $size-sm;
-            bottom: $size-sm;
-        }
-        text-decoration: none;
-        &:hover, &:focus, &:active {
-            color: darken($jsconfred, 10%);
-        }
-    }
-}
-
-.updates_list {
-    &_item:not(:last-child) {
-        border-bottom: 1px dashed $gray-500;
-        margin-bottom: $size-lg;
-        padding-bottom: $size-lg;
-    }
 }

@@ -5,29 +5,36 @@
 @import '../components/sizes.scss';
 
 .simpleText {
-    background-color: rgba(255, 255, 255, .85);
-    line-height: 1.35;
+    background-color: #f9f9f9;
+    line-height: 1.48rem;
     max-width: 800px;
+
+    min-height: 100vh;
+
     margin: {
         right: auto;
         left: auto;
     }
-    padding: $size-md;
-    position: relative;
-    @media screen and (min-width: $breakpoint-lg) {
-        padding: $size-lg;
 
+    padding: $size-md;
+
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-sm) {
+        padding: 3rem 0 $size-lg;
     }
-    > * {
-        margin-bottom: $size-md;
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding: 3rem  $size-lg $size-lg;
+    }
+
+    * {
+        margin-bottom: 1.2rem;
     }
 
     & h1 {
         font-size: $size-xxl;
-
-        @media screen and (min-width: $breakpoint-lg) {
-            font-size: $size-xxl;
-        }
+        line-height: 1.2;
     }
 
     & h2, & h3, & h4 {
@@ -35,7 +42,7 @@
             top: $size-md;
             bottom: $size-md;
         }
-        line-height: 1.35;   
+        line-height: 1.2;
     }
 
     & h2 {
@@ -61,13 +68,18 @@
         }
     }
 
+    & p,
+    & li {
+        font-weight: 200;
+    }
+
     & ul li {
         list-style-type: disc;
         margin: {
             left: $size-lg;
             bottom: $size-md;
-        } 
-        
+        }
+
         &:last-child {
             margin-bottom: 0;
         }

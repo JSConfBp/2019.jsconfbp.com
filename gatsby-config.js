@@ -1,11 +1,22 @@
+const mdxFeed = require("gatsby-mdx/feed");
+
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://jsconfbp.com',
     title: 'JSConf Budapest 2019',
     description: 'JSConf Budapest returns! September 26-27. 2019, Budapest, Hungary',
     keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest',
     twitter: '@jsconfbp'
   },
   plugins: [
+    `gatsby-mdx`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "updates",
+        path: `${__dirname}/src/updates`
+      }
+    },
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
     {

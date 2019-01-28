@@ -1,55 +1,38 @@
-@import '../reset.css';
+@import '../mixins.scss';
+@import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
 
-* {
-    box-sizing: border-box;
-}
+.main {
 
-html {
-    height: 100%;
-}
-
-body {
-    color: $main-color;
-    font: {
-        family: $base-font;
-        size: 18px;
+    @media screen and (min-width: $menu-breakpoint) {
+        @include valueByHeaderScroll('padding-top', 84px, 364px);
     }
-    height: 100%;
-    line-height: 1.5;
-}
 
-.bg {
     background: {
+        color: $color-content-background;
         attachment: fixed;
-        color: #f1f1f1;
-        image: url(./bg.jpg);
-        size: cover;
         repeat: no-repeat;
+        size: cover;
     }
+
+    padding-top: 68px;
+    
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding-top: 320px;
+    }
+
+    position: relative;
+
 }
 
-.inner {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 0 1.0875rem 1.45rem;
-    padding-top: 0;
-}
-
-.content {
-
-    background-color: rgba(255, 255, 255, .6);
-    margin: {
-        left: auto;
-        right: auto;
-    }
-    max-width: 768px;
-    padding: 20px;
-    @media screen and (min-width: 800px) {
-        margin: {
-            top: 15px;
-            bottom: 15px;
-        }
-    }
+.footer {
+    background: $gray-900;
+    color: $gray-100;
+    font-family: $secondary-font;
+    padding: $size-lg;
+    text-align: center;
 }

@@ -14,6 +14,16 @@
         repeat: no-repeat;
         size: cover;
     }
+
+
+    @media screen and (min-width: 380px) {
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: $size-lg;
+        padding-top: 6rem;
+    }
 }
 
 .venue {
@@ -22,6 +32,16 @@
     justify-content: center;
     min-height: 150vh;
     text-align: center;
+
+    &_header {
+        background-image: url('./images/akvarium.jpg') !important;
+
+        @media screen and (max-width: $menu-breakpoint) {
+            background-image: none !important;
+        }
+
+
+    }
 
     @media screen and (max-width: 380px) {
         padding: 0 $size-lg;
@@ -68,6 +88,7 @@
             height: 70vw;
         }
     }
+
 
     & .updates {
         border: 1px solid #fff;

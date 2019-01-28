@@ -4,17 +4,20 @@
 @import '../font-face.scss';
 @import '../sizes.scss';
 
-.buy {
+.buy {   
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    text-align: center;
+
     @media screen and (min-width: $breakpoint-lg) {
-        bottom: $size-lg;
-        left: 0;
-        margin: {
-            left: auto;
-            right: auto;
-        }
         position: absolute;
-        right: 0;
-        text-align: center;
+    }
+
+    @media screen and (max-width: $breakpoint-lg) {
+        margin: 0 auto;
     }
 }
 
@@ -29,23 +32,30 @@
         right: $size-md;
         left: $size-md;
     }
+
     position: relative;
     text-decoration: none;
-    @media screen and (min-width: $breakpoint-lg) {
-        margin: {
-            left: auto;
-            right: auto;
-            top: $size-sm;
-        }
-        padding: 0;
-        height: 60px;
-        width: (500px / 3);
+
+    margin: {
+        left: auto;
+        right: auto;
     }
+
+    padding: 0;
+    height: 60px;
+    width: (500px / 3);
+
+    @media screen and (min-width: $breakpoint-lg) {
+        height: 52px;
+        width: (400px / 3);
+    }
+
     &:hover, &:focus, &:active {
         opacity: .9;
     }
+
     &::before, &::after {
-        background-color: $jsconfred;
+        background-color: rgba(0,0,0,0);
         border-radius: 50%;
         content: "";
         height: 12px;
@@ -53,35 +63,68 @@
         top: 10px;
         width: 12px;
     }
-    &::before {
-        left: -6px;
-        @media screen and (min-width: $breakpoint-lg) {
-            box-shadow: 
-                (500px / 3) 0 0 0 $jsconfred, 
-                0 60px 0 0 $jsconfred, 
-                (500px / 3) 60px 0 0 $jsconfred,
-                0 15px 0 -5px $jsconfred,
-                0 25px 0 -5px $jsconfred,
-                0 35px 0 -5px $jsconfred,
-                0 45px 0 -5px $jsconfred,
-                0 55px 0 -5px $jsconfred,
-                (500px / 3) 15px 0 -5px $jsconfred,
-                (500px / 3) 25px 0 -5px $jsconfred,
-                (500px / 3) 35px 0 -5px $jsconfred,
-                (500px / 3) 45px 0 -5px $jsconfred,
-                (500px / 3) 55px 0 -5px $jsconfred;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        &::before {
+            border-radius: 0;
+            $darkred: darken($jsconfred, 20%);
+
+            left: -6px;
+
+            box-shadow:
+                0 12px 0 -5px #f5eea6,
+                0 22px 0 -5px #f5eea6,
+                0 32px 0 -5px #f5eea6,
+                0 42px 0 -5px #f5eea6,
+                (400px / 3) 12px 0 -5px #f5eea6,
+                (400px / 3) 22px 0 -5px #f5eea6,
+                (400px / 3) 32px 0 -5px #f5eea6,
+                (400px / 3) 42px 0 -5px #f5eea6;
+
+
             height: (50px / 3);
             left: (-25px / 3);
             top: (-25px / 3);
             width: (50px / 3);
         }
-    }
-    &::after {
-        right: -6px;
-        @media screen and (min-width: $breakpoint-lg) {
+        &::after {
+            right: -6px;
             content: none;
         }
     }
+
+    @media screen and (max-width: $breakpoint-lg) {
+        &::before {
+            $darkred: darken($jsconfred, 20%);
+
+            left: -6px;
+            background-color: $darkred;
+            box-shadow: 
+                (500px / 3) 0 0 0 $darkred, 
+                0 60px 0 0 $darkred, 
+                (500px / 3) 60px 0 0 $darkred,
+                0 15px 0 -5px $darkred,
+                0 25px 0 -5px $darkred,
+                0 35px 0 -5px $darkred,
+                0 45px 0 -5px $darkred,
+                0 55px 0 -5px $darkred,
+                (500px / 3) 15px 0 -5px $darkred,
+                (500px / 3) 25px 0 -5px $darkred,
+                (500px / 3) 35px 0 -5px $darkred,
+                (500px / 3) 45px 0 -5px $darkred,
+                (500px / 3) 55px 0 -5px $darkred;
+
+            height: (50px / 3);
+            left: (-25px / 3);
+            top: (-25px / 3);
+            width: (50px / 3);
+        }
+        &::after {
+            right: -6px;
+            content: none;
+        }
+    }
+
     & .inner {
         border-right: 3px dotted #5e400b;
         padding: {
@@ -89,57 +132,62 @@
             right: $size-sm;
             bottom: 3px;
         }
-        @media screen and (min-width: $breakpoint-lg) {
-            align-items: center;
-            bottom: 10px;
-            border: 2px solid #5e400b;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            left: 10px;
-            padding: 0;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
+
+        align-items: center;
+        bottom: 10px;
+        border: 2px solid #5e400b;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        left: 10px;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
         & .label {
             font: {
                 family: $secondary-font;
                 size: 15px;
                 weight: 600;
             }
+
+            @media screen and (min-width: $breakpoint-lg) {
+                font-size: 14px;
+            }
+
             letter-spacing: 1px;
             text-transform: uppercase;
-            @media screen and (min-width: $breakpoint-lg) {
-                font-size: 20px;
-                position: relative;
-            }
+            font-size: 20px;
+            position: relative;
+
             &:before, &:after {
+                background-color: #f5eea6;
+                content: '★ ★ ★ ★ ★';
+
                 @media screen and (min-width: $breakpoint-lg) {
-                    background-color: #f5eea6;
-                    content: '★ ★ ★ ★ ★';
-                    font: {
+                    content: '★ ★ ★ ★';
+                    width: 65px;
+                }
+
+                font: {
                     family: auto;
                     size: 12px;
-                    }
-                    letter-spacing: 0;
-                    left: 0;
-                    margin: 0 auto;
-                    position: absolute;
-                    right: 0;
-                    text-align: center;
-                    width: 75px;
                 }
+
+                letter-spacing: 0;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                width: 75px;
             }
             &:before {
-                @media screen and (min-width: $breakpoint-lg) {
-                    top: -15px;
-                }
+                top: -15px;
             }
             &:after {
-                @media screen and (min-width: $breakpoint-lg) {
-                    bottom: -15px;
-                }
+                bottom: -15px;
             }
         }
     }

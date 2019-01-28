@@ -72,28 +72,34 @@ h1, h2, h3, h4, h5 {
     font-family: $secondary-font;
 }
 
-//todo
-$sidebar: 250px;
-
 .main {
+    box-sizing: border-box;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        min-height: 98vh;
+        height: auto;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        padding: {
+            top: 364px;
+        }
+        min-height: calc(136vh - 364px);
+    }
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding: {
+            top: 320px;
+        }
+    }
     background: {
         attachment: fixed;
-        image: url('./budapest.jpg');
+        image: url('../budapest.jpg');
         repeat: no-repeat;
         size: cover;
     }
-    padding: {
-        top: 45px;
-    }
+
     position: relative;
-    @media screen and (min-width: $breakpoint-lg) {
-        margin-left: $sidebar;
-        min-height: 100vh;
-        padding: {
-            top: $size-xxl;
-            bottom: $size-xxl;
-        }
-    }
+
     &::before {
         background: rgba(0, 0, 0, .6);
         bottom: 0;
@@ -110,9 +116,5 @@ $sidebar: 250px;
     color: $gray-100;
     font-family: $secondary-font;
     padding: $size-lg;
-    text-align: center;
-    @media (min-width: $breakpoint-lg) {
-        border-top: 1px dashed $gray-800;
-        margin-left: $sidebar;
-    }
+    text-align: center; 
 }

@@ -1,54 +1,97 @@
+@import '../mixins.scss';
 @import '../breakpoints.scss';
 @import '../colors.scss';
 @import '../fonts.scss';
 @import '../font-face.scss';
 @import '../sizes.scss';
 
-$sidebar: 250px;
-
-
 .header {
     align-items: center;
-    background-color: $jsconfred;
     color: #fff;
     display: flex;
-    height: 45px;
+
+    background: {
+        attachment: fixed;
+        image: url('../budapest.jpg');
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    @include valueByHeaderScroll('height', 84px, 364px);
+
+    @media screen and (max-width: $breakpoint-sm) {
+        background-image: none;
+        height: 68px;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        //
+        height: 320px;
+        position: absolute;
+
+        &__nav__open {
+            position: fixed;
+        }
+    }
+
     justify-content: space-between;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     z-index: 5;
-    
-    @media screen and (min-width: $breakpoint-lg) {
-        bottom: 0;
-        display: block;
-        height: auto;
-        right: auto;
-        width: $sidebar;
+
+    @media screen and (min-width: $breakpoint-sm)  {
+        &::before {
+            background: rgba(0, 0, 0, .6);
+            bottom: 0;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            position: absolute;
+        }
     }
+
     & .menu_button {
-        border: 1px solid #fff;
-        fill: #fff;
+        fill: darken($jsconfred, 20%);
+        border: 1px solid darken($jsconfred, 20%);
+
         height: 30px;
-        margin-left: $size-sm;
+        margin-left: $size-md;
+
         padding: {
             left: 5px;
             right: 5px;
         }
+
         width: 32px;
-        @media screen and (min-width: $breakpoint-lg) {
+        position: absolute;
+        top: 19px;
+        left: 0;
+        z-index: 21;
+
+        @media screen and (min-width: $menu-breakpoint) {
             display: none;
         }
+
+        @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+            fill: $color-white;
+            border-color: $color-white;
+        }
+
+        &_transparent {
+            fill: $color-white;
+            border-color: $color-white;
+        }
+
+        &_open {
+            fill: $color-white;
+            border-color: $color-white;
+        }
     }
+
     & .date {
         display: none;
-        @media screen and (min-width: $breakpoint-lg) {
-            display: block;
-            margin: {
-                bottom: $size-xl;
-            }
-            text-align: center;
-        }
     }
 }

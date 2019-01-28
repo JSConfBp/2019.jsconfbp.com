@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styles from './navigation.module.scss'
-import Helmet from 'react-helmet'
-// , styles.nav__open
+import TicketButton from '../TicketButton/'
 
 const Navigation = props => {
   const { open } = props
@@ -30,6 +29,25 @@ const Navigation = props => {
             Venue
           </Link>
         </li>
+        <li className={styles.item}>
+          <a
+            className={styles.link}
+            href="http://eepurl.com/dMgAr-/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Updates
+          </a>
+        </li>
+        <li className={styles.item}>
+          <Link className={styles.link} to="/code-of-conduct">
+            Code of Conduct
+          </Link>
+        </li>
+        <li className={[styles.item, styles.item_ticketButton].join(' ')}>
+          <TicketButton />
+        </li>
+
         {/*
             <li className={styles.item}>
               <Link className={styles.link} to="/code-of-conduct">
@@ -51,21 +69,8 @@ const Navigation = props => {
             <li className={styles.item}>
                 <Link className={styles.link} to="/updates">Updates</Link>
             </li>
-      */}
-        <li className={styles.item}>
-          <Link className={styles.link} to="/code-of-conduct">
-            Code of Conduct
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <a
-            className={styles.link}
-            href="http://eepurl.com/dMgAr-/"
-            target="_blank"
-          >
-            Get Updates
-          </a>
-        </li>
+      
+        
         <li className={styles.item}>
           <a
             className={styles.link}
@@ -93,6 +98,7 @@ const Navigation = props => {
             2015
           </a>
         </li>
+        */}
       </ul>
     </nav>
   )
