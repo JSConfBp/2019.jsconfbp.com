@@ -1,8 +1,9 @@
 import React from 'react'
 import VenueMap from '../components/VenueMap/index'
 import MainLayout from '../components/MainLayout/index'
-import styles from './venue.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
+
+import styles from './venue.module.scss'
 
 const VenuePage = () => (
   <MainLayout
