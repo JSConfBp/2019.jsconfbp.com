@@ -1,10 +1,10 @@
 import React from 'react'
-import MainLayout from '../components/MainLayout/index'
+import Layout from '../components/Layout/index'
 import YoutubeVideo from '../components/YoutubeVideo/index'
 import styles from './simpletext.module.scss'
 
 const About = () => (
-  <MainLayout>
+  <Layout>
     <div className={styles.simpleText}>
       <h1>
         SZIA! ПРИВІТ! CZEŚĆ! SALUT! ЋАО! AHOJ! DOBRÝ DEN! ΓΕΙΆ ΣΟΥ! HOI! BUNĂ!
@@ -179,7 +179,7 @@ const About = () => (
         </li>
       </ul>
     </div>
-  </MainLayout>
+  </Layout>
 )
 
 export default About
