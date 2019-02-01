@@ -8,50 +8,8 @@ html, body {
     //font-size: 18px;
 }
 
-a {
-    color: $link-color;
-    text-decoration: underline;
-    &:hover, &:focus {
-        color: $link-hover-color;
-        outline: 0;
-        text-decoration: none;
-    }
-    &:visited {
-        color: $link-visited-color;
-    }
-}
 
 h1, h2, h3, h4, h5 {
+    font-weight: 400;
     font-variant-ligatures: no-common-ligatures;
 }
-
-h1, h2, h3 {
-    font-weight: 400;
-    font-family: $heading-font;
-    color: $secondary-color;
-    margin-top: 1em;
-
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-h1 {
-    font-size: 2.5em;
-    //line-height: 4em;
-}
-h2 {
-    font-size: 2em;
-    line-height: 4em;
-}
-h3 {
-    font-size: 1.5em;
-}
-
-em {
-    font-style: italic;
-}
-strong {
-    font-weight: bold;
-}
-
