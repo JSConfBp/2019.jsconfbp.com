@@ -26,7 +26,7 @@ const CallForSpeakers = () => (
 
       <p>You can apply right now using the form below</p>
 
-	  <AmbassadorForm />
+      <AmbassadorForm />
 
       <p>
         Discounts are valid on Regular Tickets or Regular Combo tickets only.
