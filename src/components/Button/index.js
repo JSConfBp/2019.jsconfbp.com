@@ -31,7 +31,7 @@ export default class Button extends React.Component {
   }
 
   render() {
-    const { to, href, children , onClick} = this.props
+    const { to, href, children , onClick, disabled} = this.props
 
     const useButton = !!onClick
     const useLink = !useButton && !!to
@@ -39,7 +39,7 @@ export default class Button extends React.Component {
     const className = this.getButtonClass()
 
     if (useButton) {
-      return <button className={className} onClick={e => onClick(e)}>
+      return <button className={className} onClick={e => onClick(e)} disabled={disabled}>
         {children}
       </button>
     }
