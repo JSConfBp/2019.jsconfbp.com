@@ -31,11 +31,18 @@ export default class Button extends React.Component {
   }
 
   render() {
-    const { to, href, children } = this.props
+    const { to, href, children , onClick} = this.props
 
-    const useLink = !!to
+    const useButton = !!onClick
+    const useLink = !useButton && !!to
 
     const className = this.getButtonClass()
+
+    if (useButton) {
+      return <button className={className} onClick={e => onClick(e)}>
+        {children}
+      </button>
+    }
 
     return useLink ? (
       <Link to={to} className={className}>

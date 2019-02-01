@@ -16,6 +16,7 @@
     "gdpr": "node scripts/gdpr-generate.js"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.1",
     "@mdx-js/mdx": "^0.16.8",
     "@mdx-js/tag": "^0.16.8",
     "gatsby": "^2.0.40",

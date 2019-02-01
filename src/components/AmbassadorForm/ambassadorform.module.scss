@@ -1,0 +1,27 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+
+
+.ambassador_form {
+    display: block;
+    margin-bottom: 2.4rem;
+}
+
+.ambassador_textfield {
+    width: 100%;
+    margin-bottom: 0;
+}
+.ambassador_textarea {
+    width: 100%;
+
+}
+
+.ambassador_button {
+    border-radius: 0;
+    margin: 1.2rem 0;
+    display: inline-flex;
+}
