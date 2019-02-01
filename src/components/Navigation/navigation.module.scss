@@ -86,6 +86,7 @@
     font-size: $text-lg;
     line-height: 1.25;
 
+
     &:last-child {
         border-bottom: none;
     }
@@ -123,6 +124,8 @@
 
     @media screen and (min-width: $breakpoint-sm) {
         &:hover, &:active, &:focus {
+            color: $color-white;
+            
             &::after {
                 content: '';
 
