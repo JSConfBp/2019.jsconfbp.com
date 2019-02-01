@@ -3,6 +3,10 @@
 @import './font-face.scss';
 @import './sizes.scss';
 
+html, body {
+    font-family: $primray-font;
+}
+
 a {
     color: $link-color;
     text-decoration: underline;
