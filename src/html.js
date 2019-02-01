@@ -12,6 +12,10 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin></link>
+          <link href='https://fonts.googleapis.com' rel='preconnect' crossorigin></link>
+
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i|Space+Mono:400,700" rel="stylesheet"></link>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
