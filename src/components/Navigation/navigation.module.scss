@@ -95,6 +95,7 @@
         position: relative;
         vertical-align: middle;
         height: 64px;
+        box-sizing: border-box;
 
         @media screen and (min-width: $breakpoint-lg) {
             width: (450px / 3);
