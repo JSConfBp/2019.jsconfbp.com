@@ -127,7 +127,7 @@ const About = () => (
             <span>
               <img
                 alt="Stefi"
-                src="https://pbs.twimg.com/profile_images/1049395515375439873/RsnfGuSC_400x400.jpg"
+                src="https://pbs.twimg.com/profile_images/1075052272269312006/KAE_IJbm_400x400.jpg"
               />
             </span>
             Stefania Peter
@@ -175,6 +175,17 @@ const About = () => (
               />
             </span>
             Daniel Liptak
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/_puffancs">
+            <span>
+              <img
+                alt="Gergő"
+                src="https://pbs.twimg.com/profile_images/477984724741148672/4aHVf43A_400x400.png"
+              />
+            </span>
+            Gergő Nagy
           </a>
         </li>
       </ul>
