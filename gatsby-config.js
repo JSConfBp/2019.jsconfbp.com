@@ -14,7 +14,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "updates",
-        path: `${__dirname}/src/updates`
+        path: `${__dirname}/updates`
       }
     },
     'gatsby-plugin-force-trailing-slashes',
