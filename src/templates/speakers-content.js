@@ -15,6 +15,19 @@ function SpeakersContentTemplate({ data: { mdx } }) {
       />
       <div className={styles.simpleText}>
         <MDXRenderer>{mdx.code.body}</MDXRenderer>
+
+		title
+		abstract
+
+		name
+		pic
+		bio
+		twitter
+		github
+		link
+
+		socialCard
+
       </div>
     </Layout>
   )
