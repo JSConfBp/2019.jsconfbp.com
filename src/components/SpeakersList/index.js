@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './updateslist.module.scss'
+import styles from './speakerslist.module.scss'
 
-const UpdatesList = props => (
+const SpeakersList = props => (
   <ul className={styles.updates_list}>
     {props.data.allMdx.edges
-      .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
+      .filter(({ node }) => node.parent.sourceInstanceName === 'speakers')
       .map(({ node }) => (
         <li key={node.id} className={styles.updates_list_item}>
           <span className={styles.date}>{node.frontmatter.date}</span>
@@ -24,4 +24,4 @@ const UpdatesList = props => (
   </ul>
 )
 
-export default UpdatesList
+export default SpeakersList

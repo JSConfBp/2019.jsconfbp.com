@@ -13,6 +13,13 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "speakers",
+        path: `${__dirname}/speakers`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "updates",
         path: `${__dirname}/updates`
       }

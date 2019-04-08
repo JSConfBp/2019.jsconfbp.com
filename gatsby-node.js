@@ -39,9 +39,11 @@ exports.createPages = ({ graphql, actions }) => {
         }
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
+          const { sourceInstanceName } = node.parent
+
           createPage({
-            path: `/${node.parent.sourceInstanceName}/${node.parent.name}`,
-            component: path.resolve("./src/templates/update-post.js"),
+            path: `/${sourceInstanceName}/${node.parent.name}`,
+            component: path.resolve(`./src/templates/${sourceInstanceName}-content.js`),
             context: { id: node.id }
           });
         });

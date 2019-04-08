@@ -3,9 +3,10 @@ import { graphql } from 'gatsby'
 
 import Button from '../components/Button/index'
 import MainLayout from '../components/MainLayout/index'
-import UpdatesList from '../components/UpdatesList/index'
-import styles from './index.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
+import UpdatesList from '../components/UpdatesList/index'
+import SpeakersList from '../components/SpeakersList/index'
+import styles from './index.module.scss'
 
 const IndexPage = props => (
   <MainLayout>
@@ -41,8 +42,19 @@ const IndexPage = props => (
 
       <div className={styles.updates}>
         <div className={styles.updates_content}>
+          <h1>Speakers</h1>
+
+          // TODO : kozepre rendezett flexbox oszlopokba
+          <SpeakersList data={props.data} />
+
+        </div>
+      </div>
+
+      <div className={styles.updates}>
+        <div className={styles.updates_content}>
           <h1>Updates</h1>
 
+          // TODO : kozepre rendezett flexbox oszlopokba
           <UpdatesList data={props.data} />
         </div>
       </div>
