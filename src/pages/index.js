@@ -43,17 +43,14 @@ const IndexPage = props => (
       <div className={styles.updates}>
         <div className={styles.updates_content}>
           <h1>Speakers</h1>
-
           // TODO : kozepre rendezett flexbox oszlopokba
           <SpeakersList data={props.data} />
-
         </div>
       </div>
 
       <div className={styles.updates}>
         <div className={styles.updates_content}>
           <h1>Updates</h1>
-
           // TODO : kozepre rendezett flexbox oszlopokba
           <UpdatesList data={props.data} />
         </div>
