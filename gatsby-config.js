@@ -11,10 +11,19 @@ module.exports = {
   plugins: [
     `gatsby-mdx`,
     {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`speaker-images`,
+        path: `${__dirname}/speakers/images`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "speakers",
-        path: `${__dirname}/speakers`
+        path: `${__dirname}/speakers`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       }
     },
     {
@@ -22,13 +31,6 @@ module.exports = {
       options: {
         name: "updates",
         path: `${__dirname}/updates`
-      }
-    },
-    {
-      resolve:`gatsby-source-filesystem`,
-      options:{
-        name:`speaker-images`,
-        path: `${__dirname}/src/images/speakers`
       }
     },
     'gatsby-plugin-force-trailing-slashes',

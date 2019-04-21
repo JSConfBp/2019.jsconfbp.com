@@ -12,7 +12,7 @@ const SpeakerImage = ({ image, color, className = '' }) => (
     query={graphql`
       query allimgQuery {
         source: allFile(
-          filter: { absolutePath: { regex: "/images/speakers/" } }
+          filter: { absolutePath: { regex: "/speakers/images/" } }
         ) {
           edges {
             node {
