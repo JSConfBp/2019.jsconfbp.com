@@ -26,10 +26,6 @@ const IndexPage = props => (
             <a href="http://2015.jsconfbp.com">2015</a>!
           </p>
 
-          <Button block={true} to="/call-for-speakers">
-            Submit your Talk!
-          </Button>
-
           <Button
             block={true}
             fill={true}
@@ -42,15 +38,15 @@ const IndexPage = props => (
 
       <div className={styles.updates}>
         <div className={styles.updates_content}>
-          <h1>Speakers</h1>
-          // TODO : kozepre rendezett flexbox oszlopokba
+          <h1 className={styles.home_heading}>Speakers</h1>
+          
           <SpeakersList data={props.data} />
         </div>
       </div>
 
       <div className={styles.updates}>
         <div className={styles.updates_content}>
-          <h1>Updates</h1>
+          <h1 className={styles.home_heading}>Updates</h1>
           // TODO : kozepre rendezett flexbox oszlopokba
           <UpdatesList data={props.data} />
         </div>
@@ -74,6 +70,8 @@ export const query = graphql`
             }
           }
           frontmatter {
+            name
+            image
             title
             date
             lead

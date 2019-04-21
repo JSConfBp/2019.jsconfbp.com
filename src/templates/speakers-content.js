@@ -50,7 +50,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
           </div>
           <div className={speakerStyles.speaker_column}>
 
-            <SpeakerImage src={ image } />
+            <SpeakerImage image={ image } />
 
             <ul className={speakerStyles.links}>
               { link && (<li className={speakerStyles.link_blog}>

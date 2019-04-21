@@ -10,16 +10,43 @@
 }
 
 
-@mixin triangle() {
+@mixin triangle_1() {
+	display: block;
 	position: absolute;
 	z-index: 10;
-	transform-origin: right bottom;
+	transform-origin: 150% 150%;
 	width: 33%;
+	height: 33%;
 }
 
-@for $i from 1 through 4 {
-	.triangle_#{$i} {
-		@include triangle();
-		transform: rotate(#{ -1 * $i*20 }deg);
+@mixin triangle_2() {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	transform-origin: -150% -150%;
+
+	right: 0;
+	bottom: 0;
+
+	width: 24%;
+	height: 24%;
+}
+
+@for $i from 1 through 6 {
+	.triangle_1_#{$i} {
+		@include triangle_1();
+		transform: rotate(#{ -1 * (($i * 20) - 34) }deg);
+	}
+}
+
+@for $i from 1 through 6 {
+	.triangle_2_#{$i} {
+		@include triangle_2();
+		transform: rotate(#{ -1 * (($i * 10) - 35 ) }deg);
+
+		use {
+			transform: rotate(0deg);
+			transform-origin: center center;
+		}
 	}
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import SpeakerImage from '../SpeakerImage'
 import styles from './speakerslist.module.scss'
 
 const SpeakersList = props => (
-  <ul className={styles.updates_list}>
+  <ul className={styles.speaker_list}>
     {props.data.allMdx.edges
       .filter(({ node }) => node.parent.sourceInstanceName === 'speakers')
       .map(({ node }) => (
@@ -13,11 +14,8 @@ const SpeakersList = props => (
             className={styles.title}
             to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
           >
-            {node.frontmatter.title}
-          </Link>
-          <p className={styles.lead}>{node.frontmatter.lead} </p>
-          <Link to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}>
-            Read more →
+            <SpeakerImage className={styles.speaker_list_image} image={ node.frontmatter.image } />
+            {node.frontmatter.name}
           </Link>
         </li>
       ))}
