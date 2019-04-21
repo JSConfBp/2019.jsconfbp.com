@@ -5,6 +5,14 @@
 
 .updates_list {
     font-weight: 200;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+        width: 30%;
+    }
 
     > * {
         margin-bottom: $size-md;
@@ -53,7 +61,7 @@
 
 .updates_list {
     &_item:not(:last-child) {
-        border-bottom: 1px dashed $gray-500;
+ //       border-bottom: 1px dashed $gray-500;
         margin-bottom: $size-lg;
         padding-bottom: $size-lg;
     }
