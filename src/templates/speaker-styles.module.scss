@@ -11,9 +11,27 @@
 	grid-gap: 2rem;
 	min-height: 0;
 
+
+    @media screen and (max-width: $breakpoint-lg) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 0rem;
+    }
+
+
 	.title_column {
 		grid-column: 1 / span 2;
 		min-height: 0;
+
+		@media screen and (max-width: $breakpoint-lg) {
+			grid-column: 1;
+		}
+	}
+
+	@media screen and (max-width: $breakpoint-lg) {
+		.speaker_column {
+			padding: 10%;
+		}
 	}
 
 	.speaker_name {
@@ -25,6 +43,10 @@
 	.links {
 		margin: 0;
 		margin-top: 4rem;
+
+		@media screen and (max-width: $breakpoint-lg) {
+			margin-top: 2rem;
+		}
 
 		li {
 			list-style-type: none;

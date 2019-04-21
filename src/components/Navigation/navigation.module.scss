@@ -25,7 +25,7 @@
     }
 
     ul {
-        transform: translateX(calc(28px - calc(var(--scroll-ratio) * 28px)))
+        transform: translateX(calc(48px - calc(var(--scroll-ratio) * 48px)))
     }
 
     li:nth-child(3) {

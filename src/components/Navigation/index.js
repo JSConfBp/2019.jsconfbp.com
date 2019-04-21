@@ -22,6 +22,11 @@ const Navigation = props => {
         </li>
         */}
         <li className={styles.item}>
+          <Link className={styles.link} to="/call-for-speakers">
+            Scholarship
+          </Link>
+        </li>
+        <li className={styles.item}>
           <a className={styles.link} href="/sponsoration">
             Sponsoration
           </a>
