@@ -17,6 +17,7 @@ const SpeakersList = props => (
             <SpeakerImage
               className={styles.speaker_list_image}
               image={node.frontmatter.image}
+              color={node.frontmatter.color}
             />
             {node.frontmatter.name}
           </Link>

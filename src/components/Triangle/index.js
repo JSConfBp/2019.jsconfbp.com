@@ -19,10 +19,10 @@ export default ({ className = '' }) => (
             <use
               href="#abGGcqTl"
               opacity="1"
-              fill-opacity="0"
+              fillOpacity="0"
               stroke="#db3127"
-              stroke-width="1"
-              stroke-opacity="1"
+              strokeWidth="1"
+              strokeOpacity="1"
             />
           </g>
         </g>

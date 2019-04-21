@@ -1,3 +1,5 @@
+@import '../colors';
+
 .speaker {
 	width: 100%;
 	position: relative;
@@ -50,3 +52,9 @@
 		}
 	}
 }
+
+.triangle_red { use { stroke: $color-red; } }
+.triangle_white { use { stroke: $color-red; } }
+.triangle_blue { use { stroke: $color-blue; } }
+.triangle_green { use { stroke: $color-green; } }
+.triangle_yellow { use { stroke: $color-yellow; } }

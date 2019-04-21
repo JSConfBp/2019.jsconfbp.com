@@ -72,6 +72,7 @@ export const query = graphql`
           frontmatter {
             name
             image
+            color
             title
             date
             lead

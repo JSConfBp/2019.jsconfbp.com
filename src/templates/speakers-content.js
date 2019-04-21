@@ -19,13 +19,12 @@ const Link = props => {
   )
 }
 function SpeakersContentTemplate({ data: { mdx } }) {
-  console.log(mdx.frontmatter)
-
   const {
     title,
     name,
     bio,
     image,
+    color,
     from,
     link,
     twitter,
@@ -47,7 +46,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             <h2>{title}</h2>
           </div>
           <div className={speakerStyles.speaker_column}>
-            <SpeakerImage image={image} />
+            <SpeakerImage image={image} color={color} />
 
             <ul className={speakerStyles.links}>
               <li className={speakerStyles.link_from}>
@@ -107,6 +106,7 @@ export const pageQuery = graphql`
         name
         title
         image
+        color
         bio
         from
         twitter
