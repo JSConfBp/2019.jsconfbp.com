@@ -24,6 +24,13 @@ module.exports = {
         path: `${__dirname}/updates`
       }
     },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`speaker-images`,
+        path: `${__dirname}/src/images/speakers`
+      }
+    },
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
     {

@@ -1,0 +1,43 @@
+@import '../components/mixins.scss';
+@import '../components/breakpoints.scss';
+@import '../components/colors.scss';
+@import '../components/font-face.scss';
+@import '../components/sizes.scss';
+
+.speakerpage {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(2, minmax(3rem, auto));
+	grid-gap: 2rem;
+	min-height: 0;
+
+	.title_column {
+		grid-column: 1 / span 2;
+		min-height: 0;
+	}
+
+	.speaker_name {
+		font-family: $primray-font;
+		font-weight: 700;
+		color: $color-black;
+	}
+
+	.links {
+		margin: 0;
+		margin-top: 2rem;
+
+		li {
+			list-style-type: none;
+			padding-left: 2rem;
+			margin: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	hr {
+		margin: 2rem 0;
+		height: 0px;
+		border: none;
+		border-bottom: 1px solid lighten($color-black, 80%);
+	}
+}

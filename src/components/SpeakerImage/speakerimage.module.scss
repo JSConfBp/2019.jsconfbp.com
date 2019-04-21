@@ -1,0 +1,25 @@
+.speaker {
+	width: 100%;
+	position: relative;
+}
+
+.image {
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+
+@mixin triangle() {
+	position: absolute;
+	z-index: 10;
+	transform-origin: right bottom;
+	width: 33%;
+}
+
+@for $i from 1 through 4 {
+	.triangle_#{$i} {
+		@include triangle();
+		transform: rotate(#{ -1 * $i*20 }deg);
+	}
+}
