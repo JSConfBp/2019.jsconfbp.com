@@ -94,6 +94,7 @@
 
 .home_heading {
     text-align: center;
+
 }
 
 .updates {
@@ -141,8 +142,9 @@
 
 
     & h1 {
+        text-align: center;
         font-size: $title-md;
-        margin-bottom: $size-md;
+        margin-bottom: 4rem;
     }
     & h2, & h3, & h4 {
         font-size: $title-sm;
