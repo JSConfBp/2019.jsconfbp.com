@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Triangle from '../Triangle'
 import styles from './speakerimage.module.scss'
 
-const randomTriangle = () => (Math.floor(Math.random() * 6) + 1)
+const randomTriangle = () => Math.floor(Math.random() * 6) + 1
 
 const SpeakerImage = ({ image, color, className = '' }) => (
   <StaticQuery
@@ -28,14 +28,12 @@ const SpeakerImage = ({ image, color, className = '' }) => (
     `}
     render={data => (
       <div className={classnames(styles.speaker, className)}>
+        <Triangle className={styles[`triangle_1_${randomTriangle()}`]} />
         <Triangle
-          className={ styles[`triangle_1_${randomTriangle()}`] }
-        />
-        <Triangle
-          className={ classnames(
+          className={classnames(
             styles[`triangle_2_${randomTriangle()}`],
             styles[`triangle_${color}`]
-          ) }
+          )}
         />
         {data.source.edges
           .filter(({ node }) => {
