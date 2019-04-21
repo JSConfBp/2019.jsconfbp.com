@@ -39,7 +39,7 @@ const IndexPage = props => (
       <div className={styles.updates}>
         <div className={styles.updates_content}>
           <h1 className={styles.home_heading}>Speakers</h1>
-          
+
           <SpeakersList data={props.data} />
         </div>
       </div>

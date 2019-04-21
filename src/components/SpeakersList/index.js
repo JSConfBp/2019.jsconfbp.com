@@ -14,7 +14,10 @@ const SpeakersList = props => (
             className={styles.title}
             to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
           >
-            <SpeakerImage className={styles.speaker_list_image} image={ node.frontmatter.image } />
+            <SpeakerImage
+              className={styles.speaker_list_image}
+              image={node.frontmatter.image}
+            />
             {node.frontmatter.name}
           </Link>
         </li>

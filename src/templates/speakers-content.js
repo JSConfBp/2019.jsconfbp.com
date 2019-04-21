@@ -25,6 +25,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     name,
     bio,
     image,
+    from,
     link,
     twitter,
     github,
@@ -53,6 +54,9 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             <SpeakerImage image={ image } />
 
             <ul className={speakerStyles.links}>
+              <li className={speakerStyles.link_from}>
+                { from }
+              </li>
               { link && (<li className={speakerStyles.link_blog}>
                 <Link url={link} text="Website" />
               </li>)}
@@ -94,6 +98,7 @@ export const pageQuery = graphql`
         title
         image
         bio
+        from
         twitter
         github
         company

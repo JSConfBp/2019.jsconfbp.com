@@ -24,13 +24,42 @@
 
 	.links {
 		margin: 0;
-		margin-top: 2rem;
+		margin-top: 4rem;
 
 		li {
 			list-style-type: none;
 			padding-left: 2rem;
 			margin: 0;
-			margin-bottom: 1rem;
+			margin-bottom: .5rem;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				background-size: contain;
+				background-position: center center;
+				position: absolute;
+				left: 8px;
+				top: 3px;
+			}
+
+			&.link_from::before {
+				background-image: url('./icon-location.png')
+			}
+			&.link_blog::before {
+				background-image: url('./icon-link.png')
+			}
+			&.link_twitter::before {
+				background-image: url('./icon-twitter.png')
+			}
+			&.link_github::before {
+				background-image: url('./icon-github.png')
+			}
+			&.link_company::before {
+				background-image: url('./icon-office.png')
+			}
 		}
 	}
 
