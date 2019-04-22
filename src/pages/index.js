@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Button from '../components/Button/index'
-import MainLayout from '../components/MainLayout/index'
-import SocialMeta from '../components/SocialMeta/index'
-import UpdatesList from '../components/UpdatesList/index'
-import SpeakersList from '../components/SpeakersList/index'
+import Button from '../components/Button'
+import MainLayout from '../components/MainLayout'
+import SocialMeta from '../components/SocialMeta'
+import UpdatesList from '../components/UpdatesList'
+import SpeakersList from '../components/SpeakersList'
+import TeamProfileImage from '../components/TeamProfileImage'
 import styles from './index.module.scss'
 
 const IndexPage = props => (
@@ -41,6 +42,15 @@ const IndexPage = props => (
           <h1 className={styles.home_heading}>Speakers</h1>
 
           <SpeakersList data={props.data} />
+
+          <h1 className={styles.home_heading}>Master of Ceremony</h1>
+
+          <div className={styles.mc_container}>
+            <div className={styles.mc_profile}>
+              <TeamProfileImage image={'paul_vm'} className={styles.mc_image} />
+              <a href="https://twitter.com/paul_v_m">Paul Verbeek-Mast</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -71,6 +81,7 @@ export const query = graphql`
           }
           frontmatter {
             name
+            order
             image
             color
             title

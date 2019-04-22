@@ -184,3 +184,18 @@
     }
 }
 
+.mc_container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .mc_profile {
+        width: 28%;
+        text-align: center;
+
+        .mc_image {
+            margin-bottom: 2rem;
+        }
+    }
+}

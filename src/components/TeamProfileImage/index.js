@@ -10,10 +10,8 @@ const randomTriangle = () => Math.floor(Math.random() * 6) + 1
 const SpeakerImage = ({ image, color, className = '' }) => (
   <StaticQuery
     query={graphql`
-      query speakerImgQuery {
-        source: allFile(
-          filter: { absolutePath: { regex: "/speakers/images/" } }
-        ) {
+      query teamImgQuery {
+        source: allFile(filter: { absolutePath: { regex: "/images/team/" } }) {
           edges {
             node {
               childImageSharp {

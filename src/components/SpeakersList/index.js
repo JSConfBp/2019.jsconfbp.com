@@ -7,6 +7,15 @@ const SpeakersList = props => (
   <ul className={styles.speaker_list}>
     {props.data.allMdx.edges
       .filter(({ node }) => node.parent.sourceInstanceName === 'speakers')
+      .sort((prev, next) => {
+        const a = prev.node.frontmatter.order
+        const b = next.node.frontmatter.order
+
+        if (!a) return 1
+        if (!b) return -1
+
+        return a - b
+      })
       .map(({ node }) => (
         <li key={node.id} className={styles.updates_list_item}>
           <span className={styles.date}>{node.frontmatter.date}</span>
