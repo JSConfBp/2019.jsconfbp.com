@@ -23,11 +23,11 @@ const Scholarship = () => (
   <Layout>
     <SocialMeta image="social_card_cfp.jpg" />
     <div className={styles.simpleText}>
-      <h1>Diversity Scholarship</h1>
+      <h1>Scholarship Program</h1>
 
       <p>
-        2019 will be the 4th time, when we're running our Diversity Scholarship
-        Program! As every year so far, we'll provide a limited number of free,
+        2019 will be the 4th time, when we're running our Scholarship Program!
+        As every year so far, we'll provide a limited number of free,
         Scholarship tickets to help underrepresented groups in tech to attend
         the conference.
       </p>
@@ -47,8 +47,8 @@ const Scholarship = () => (
       <h2>Why is this good?</h2>
 
       <p>
-        Diversity Scholarship is not money for a party, nor for fancy catering,
-        or a nice booth.
+        Scholarship Support is not money for a party, nor for fancy catering, or
+        a nice booth.
       </p>
       <p>It is a chance for someone.</p>
 
@@ -80,8 +80,8 @@ const Scholarship = () => (
       <h2>How does the scholarship awarding works?</h2>
 
       <p>
-        All applicants for the Diversity Scholarship Program has to go through
-        an application procedure. Along with personal details for the tickets
+        All applicants for the Scholarship Program has to go through an
+        application procedure. Along with personal details for the tickets
         itself, we ask applicants a few questions about what they do in tech, or
         what they wish to learn on the event. These answers are helpful for the
         jury, who will evaluate the applications and award the tickets.
@@ -90,8 +90,8 @@ const Scholarship = () => (
       <p>
         We, the organizers, do not take part in the jury process. Last years we
         asked Green Fox Academy in Budapest to help us evaluate the applications
-        and select the awardees. To manage the diversity fund, we turned to the
-        Asimov Foundation in Budapest, who helped the selected people with
+        and select the awardees. To manage the scholarship fund, we turned to
+        the Asimov Foundation in Budapest, who helped the selected people with
         travel arrangements if necessary.
       </p>
 
@@ -138,16 +138,16 @@ const Scholarship = () => (
       </p>
 
       <p>
-        Attendees can sponsor the program with buying Diversity Supported
-        tickets. Both Early Bird and Regular tickets are available in a
-        Diversity Supporting variant. This means, that the ticket price includes
-        a percent of a supported ticket, that will be given to someone in need.
+        Attendees can sponsor the program with buying Supported tickets. Both
+        Early Bird and Regular tickets are available in a Scholarship Supporting
+        variant. This means, that the ticket price includes a percent of a
+        supported ticket, that will be given to someone in need.
       </p>
 
       <p>Let's see this ticket for example:</p>
 
       <p>
-        Regular JS Ticket + 50% Diversity Support = €466
+        Regular JS Ticket + 50% Scholarship Support = €466
         <br />
         235 EUR + 117 EUR + VAT + Fees
       </p>
@@ -160,8 +160,8 @@ const Scholarship = () => (
       <p>We've set several levels of sponsorship: 25%, 50% and 75%.</p>
 
       <p>
-        10% of every Sponsor package goes directly into the Diversity Budget. So
-        all of our sponsors become donors to the Program. If your company is
+        10% of every Sponsor package goes directly into the Scholarship Budget.
+        So all of our sponsors become donors to the Program. If your company is
         interested in participating, check out our{' '}
         <a href="/sponsoration/">Sponsorship opportunities</a>.
       </p>

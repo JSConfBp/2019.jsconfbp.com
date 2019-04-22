@@ -22,7 +22,7 @@ const Navigation = props => {
         </li>
         */}
         <li className={styles.item}>
-          <Link className={styles.link} to="/call-for-speakers">
+          <Link className={styles.link} to="/scholarship-program">
             Scholarship
           </Link>
         </li>
