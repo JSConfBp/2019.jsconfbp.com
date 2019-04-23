@@ -11,6 +11,22 @@ module.exports = {
   plugins: [
     `gatsby-mdx`,
     {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`speaker-images`,
+        path: `${__dirname}/speakers/images`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "speakers",
+        path: `${__dirname}/speakers`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "updates",
@@ -20,12 +36,21 @@ module.exports = {
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "team",
+        path: `${__dirname}/src/images/team`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

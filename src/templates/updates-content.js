@@ -5,7 +5,7 @@ import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import styles from '../pages/simpletext.module.scss'
 
-function PostPageTemplate({ data: { mdx } }) {
+function UpdatesContentTemplate({ data: { mdx } }) {
   return (
     <Layout>
       <SocialMeta
@@ -20,7 +20,7 @@ function PostPageTemplate({ data: { mdx } }) {
   )
 }
 
-export default PostPageTemplate
+export default UpdatesContentTemplate
 
 export const pageQuery = graphql`
   query($id: String!) {

@@ -27,8 +27,7 @@ $menu-offset: -10;
     }
 
     ul {
-        --menu-offset: -18px;
-        transform: translateX(calc( var(--menu-offset) - calc(var(--scroll-ratio) *  var(--menu-offset) )))
+        transform: translateX(calc(48px - calc(var(--scroll-ratio) * 48px)));
     }
 
     li:nth-child(3) {

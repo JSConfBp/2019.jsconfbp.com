@@ -89,6 +89,12 @@
             color: $color-yellow;
         }
     }
+
+}
+
+.home_heading {
+    text-align: center;
+
 }
 
 .updates {
@@ -136,8 +142,9 @@
 
 
     & h1 {
+        text-align: center;
         font-size: $title-md;
-        margin-bottom: $size-md;
+        margin-bottom: 4rem;
     }
     & h2, & h3, & h4 {
         font-size: $title-sm;
@@ -177,3 +184,18 @@
     }
 }
 
+.mc_container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .mc_profile {
+        width: 28%;
+        text-align: center;
+
+        .mc_image {
+            margin-bottom: 2rem;
+        }
+    }
+}

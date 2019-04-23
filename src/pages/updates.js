@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout/index'
 import UpdatesList from '../components/UpdatesList/index'
 import styles from './updates.module.scss'

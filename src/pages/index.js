@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Button from '../components/Button/index'
-import MainLayout from '../components/MainLayout/index'
-import UpdatesList from '../components/UpdatesList/index'
+import Button from '../components/Button'
+import MainLayout from '../components/MainLayout'
+import SocialMeta from '../components/SocialMeta'
+import UpdatesList from '../components/UpdatesList'
+import SpeakersList from '../components/SpeakersList'
+import TeamProfileImage from '../components/TeamProfileImage'
 import styles from './index.module.scss'
-import SocialMeta from '../components/SocialMeta/index'
 
 const IndexPage = props => (
   <MainLayout>
@@ -37,7 +39,24 @@ const IndexPage = props => (
 
       <div className={styles.updates}>
         <div className={styles.updates_content}>
-          <h1>Updates</h1>
+          <h1 className={styles.home_heading}>Speakers</h1>
+
+          <SpeakersList data={props.data} />
+
+          <h1 className={styles.home_heading}>Master of Ceremony</h1>
+
+          <div className={styles.mc_container}>
+            <div className={styles.mc_profile}>
+              <TeamProfileImage image={'paul_vm'} className={styles.mc_image} />
+              <a href="https://twitter.com/paul_v_m">Paul Verbeek-Mast</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.updates}>
+        <div className={styles.updates_content}>
+          <h1 className={styles.home_heading}>Updates</h1>
 
           <UpdatesList data={props.data} />
         </div>
@@ -61,6 +80,10 @@ export const query = graphql`
             }
           }
           frontmatter {
+            name
+            order
+            image
+            color
             title
             date
             lead
