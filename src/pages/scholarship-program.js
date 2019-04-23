@@ -21,7 +21,7 @@ const Scholarship_Button = () => (
 
 const Scholarship = () => (
   <Layout>
-    <SocialMeta image="social_card_cfp.jpg" />
+    <SocialMeta image="social_card_scholarship.jpg" />
     <div className={styles.simpleText}>
       <h1>Scholarship Program</h1>
 

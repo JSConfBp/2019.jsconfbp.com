@@ -9,7 +9,7 @@ import SocialMeta from '../components/SocialMeta/index'
 
 const IndexPage = props => (
   <MainLayout>
-    <SocialMeta image="social_card_earlybird.jpg" />
+    <SocialMeta image="social_card.jpg" />
     <div>
       <div className={styles.home}>
         <div className={styles.homeContent}>
