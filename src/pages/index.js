@@ -25,10 +25,6 @@ const IndexPage = props => (
             <a href="http://2015.jsconfbp.com">2015</a>!
           </p>
 
-          <Button block={true} to="/call-for-speakers">
-            Submit your Talk!
-          </Button>
-
           <Button
             block={true}
             fill={true}

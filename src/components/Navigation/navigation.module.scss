@@ -4,6 +4,8 @@
 @import '../font-face.scss';
 @import '../sizes.scss';
 
+$menu-offset: -10;
+
 .nav {
     background-color: rgba(255,255,255, calc(0.1 - calc(var(--scroll-ratio) * 0.1)));
     color: #fff;
@@ -25,7 +27,8 @@
     }
 
     ul {
-        transform: translateX(calc(28px - calc(var(--scroll-ratio) * 28px)))
+        --menu-offset: -18px;
+        transform: translateX(calc( var(--menu-offset) - calc(var(--scroll-ratio) *  var(--menu-offset) )))
     }
 
     li:nth-child(3) {
