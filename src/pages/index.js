@@ -43,7 +43,7 @@ const IndexPage = props => (
 
           <SpeakersList data={props.data} />
 
-          <h1 className={styles.home_heading}>Master of Ceremony</h1>
+          {/*<h1 className={styles.home_heading}>Master of Ceremony</h1>
 
           <div className={styles.mc_container}>
             <div className={styles.mc_profile}>
@@ -51,6 +51,7 @@ const IndexPage = props => (
               <a href="https://twitter.com/paul_v_m">Paul Verbeek-Mast</a>
             </div>
           </div>
+          */}
         </div>
       </div>
 

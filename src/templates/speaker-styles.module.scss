@@ -46,6 +46,7 @@
 
 		@media screen and (max-width: $breakpoint-lg) {
 			margin-top: 2rem;
+			margin-left: -2rem
 		}
 
 		li {
@@ -63,7 +64,7 @@
 				background-size: contain;
 				background-position: center center;
 				position: absolute;
-				left: 8px;
+				left: 5px;
 				top: 3px;
 			}
 
