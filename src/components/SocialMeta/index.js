@@ -8,6 +8,7 @@ const SocialMeta = props => (
       query SiteSocialMetaQuery {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             twitter
@@ -15,44 +16,56 @@ const SocialMeta = props => (
         }
       }
     `}
-    render={data => (
-      <Helmet
-        meta={[
-          { name: 'og:type', content: 'website' },
-          {
-            name: 'og:title',
-            content: props.title || data.site.siteMetadata.title,
-          },
-          {
-            name: 'og:description',
-            content: props.description || data.site.siteMetadata.description,
-          },
-          { name: 'og:site_name', content: data.site.siteMetadata.title },
-          { name: 'og:url', content: 'https://jsconfbp.com/' },
-          {
-            name: 'og:image',
-            content: `https://jsconfbp.com/social-cards/${props.image}`,
-          },
+    render={data => {
+      const {
+        title,
+        twitter,
+        siteUrl,
+        description
+      } = data.site.siteMetadata;
 
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: data.site.siteMetadata.twitter },
-          { name: 'twitter:creator', content: data.site.siteMetadata.twitter },
-          {
-            name: 'twitter:title',
-            content: props.title || data.site.siteMetadata.title,
-          },
-          {
-            name: 'twitter:description',
-            content: props.description || data.site.siteMetadata.description,
-          },
-          { name: 'twitter:url', content: 'https://jsconfbp.com/' },
-          {
-            name: 'twitter:image',
-            content: `https://jsconfbp.com/social-cards/${props.image}`,
-          },
-        ]}
-      />
-    )}
+      return (
+        <Helmet
+          meta={[
+            { name: 'og:type', content: 'website' },
+            {
+              name: 'og:title',
+              content: props.title || title,
+            },
+            {
+              name: 'og:description',
+              content: props.description || description,
+            },
+            { name: 'og:site_name', content: title },
+            { name: 'og:url', content: siteUrl },
+            {
+              name: 'og:image',
+              content: `${siteUrl}/social-cards/${props.image}`,
+            },
+
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: twitter },
+            { name: 'twitter:creator', content: twitter },
+            {
+              name: 'twitter:title',
+              content: props.title || title,
+            },
+            {
+              name: 'twitter:description',
+              content: props.description || description,
+            },
+            {
+              name: 'twitter:url',
+              content: siteUrl
+            },
+            {
+              name: 'twitter:image',
+              content: `${siteUrl}/social-cards/${props.image}`,
+            },
+          ]}
+        />
+      )}
+    }
   />
 )
 
