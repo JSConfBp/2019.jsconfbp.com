@@ -19,6 +19,12 @@
 		color: $gray-900;
 	}
 }
+@mixin visited-white() {
+	&:visited {
+		color: $color-white;
+	}
+}
+
 .button {
 	font-size: 1rem;
 	padding: $size-md $size-lg;
@@ -53,7 +59,7 @@
 				border-color: $color-red;
 				background-color: $color-red;
 
-				@include visited-gray();
+				@include visited-white();
 				@include hover-red();
 			}
 			&__yellow {

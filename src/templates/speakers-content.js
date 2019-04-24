@@ -2,12 +2,25 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import classNames from 'classnames'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import Button from '../components/Button/index'
 import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage'
 
 import styles from '../pages/simpletext.module.scss'
 import speakerStyles from './speaker-styles.module.scss'
+
+const TicketButton = () => (
+  <Button
+    block={true}
+    fill={true}
+    color={'red'}
+    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
+    className={styles.ticket_button}
+  >
+    Buy Your Ticket
+  </Button>
+)
 
 const Link = props => {
   const { url, text } = props
@@ -86,6 +99,10 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             <hr />
 
             {bio}
+
+            <hr />
+
+            <TicketButton />
           </div>
         </div>
       </div>
