@@ -7,7 +7,8 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // todo space-between
+    justify-content: space-around;
 
     li {
         width: 28%;
