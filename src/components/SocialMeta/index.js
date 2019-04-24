@@ -17,12 +17,7 @@ const SocialMeta = props => (
       }
     `}
     render={data => {
-      const {
-        title,
-        twitter,
-        siteUrl,
-        description
-      } = data.site.siteMetadata;
+      const { title, twitter, siteUrl, description } = data.site.siteMetadata
 
       return (
         <Helmet
@@ -56,7 +51,7 @@ const SocialMeta = props => (
             },
             {
               name: 'twitter:url',
-              content: siteUrl
+              content: siteUrl,
             },
             {
               name: 'twitter:image',
@@ -64,8 +59,8 @@ const SocialMeta = props => (
             },
           ]}
         />
-      )}
-    }
+      )
+    }}
   />
 )
 

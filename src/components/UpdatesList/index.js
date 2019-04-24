@@ -7,14 +7,14 @@ const UpdatesList = props => (
     {props.data.allMdx.edges
       .filter(({ node }) => node.parent.sourceInstanceName === 'updates')
       .sort((prev, next) => {
-        const prevDate = new Date(prev.node.frontmatter.date);
-        const nextDate = new Date(next.node.frontmatter.date);
+        const prevDate = new Date(prev.node.frontmatter.date)
+        const nextDate = new Date(next.node.frontmatter.date)
 
-        if (prevDate > nextDate) return -1;
+        if (prevDate > nextDate) return -1
 
-        if (prevDate < nextDate) return 1;
+        if (prevDate < nextDate) return 1
 
-        return 0;
+        return 0
       })
       .map(({ node }) => (
         <li key={node.id} className={styles.updates_list_item}>
