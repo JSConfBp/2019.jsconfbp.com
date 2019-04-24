@@ -1,11 +1,6 @@
 import React from 'react'
-import classnames from 'classnames'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import Triangle from '../Triangle'
 import ProfileImage from '../ProfileImage'
-
-const randomTriangle = () => Math.floor(Math.random() * 6) + 1
 
 const SpeakerImage = ({ image, color, className = '' }) => (
   <StaticQuery
@@ -36,6 +31,7 @@ const SpeakerImage = ({ image, color, className = '' }) => (
           <ProfileImage
             imageData={node.childImageSharp.fluid}
             className={className}
+            color={color}
             key={`speaker-image-${i}`}
           />
         ))
