@@ -21,7 +21,7 @@
 }
 @mixin visited-white() {
 	&:visited {
-		color: $color-white;
+		color: $color-white !important;
 	}
 }
 
@@ -40,7 +40,7 @@
 	&:hover, &:focus, &:active {
 		border-color: $color-white;
 		background-color: $color-white;
-		color: $gray-900;
+		color: $gray-900 !important;
 	}
 	&__block {
 		display: block;
@@ -55,7 +55,7 @@
 
 		&__color {
 			&__red {
-				color: $color-white;
+				color: $color-white !important;
 				border-color: $color-red;
 				background-color: $color-red;
 
@@ -64,7 +64,7 @@
 			}
 			&__yellow {
 				background-color: $color-yellow;
-				color: $gray-900;
+				color: $gray-900 !important;
 				@include visited-gray();
 			}
 		}

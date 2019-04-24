@@ -22,6 +22,10 @@
         background-image: none;
         height: 68px;
         position: absolute;
+
+        &__nav__open {
+            position: fixed;
+        }
     }
 
     @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {

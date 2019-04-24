@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5 {
             top: 320px;
         }
     }
+
     background: {
         attachment: fixed;
         image: url('../budapest.jpg');
@@ -41,8 +42,8 @@ h1, h2, h3, h4, h5 {
         size: cover;
     }
 
-    position: relative;
     z-index: 1;
+    position: relative;
 
     &::before {
         background: rgba(0, 0, 0, .6);
