@@ -14,12 +14,13 @@ const Navigation = props => {
   return (
     <nav className={className.join(' ')}>
       <ul>
-        {/*
+
         <li className={styles.item}>
-          <Link className={styles.link} to="/call-for-speakers">
-            Call for Speakers
+          <Link className={styles.link} to="/schedule">
+            Schedule
           </Link>
         </li>
+        {/*
         <li className={styles.item}>
           <Link className={styles.link} to="/scholarship-program">
             Scholarship
