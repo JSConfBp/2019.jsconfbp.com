@@ -24,7 +24,7 @@ const Schedule = () => (
 		<h3>Wednesday, 25th September, 2019</h3>
 
 		<p>
-			<strong>CSSConf Budapest 2019</strong>
+			<strong><a href="http://cssconfbp.rocks/">CSSConf Budapest 2019</a></strong>
 		</p>
 
 		<ul>
