@@ -23,14 +23,33 @@
 		grid-column: 1 / span 2;
 		min-height: 0;
 
-		@media screen and (max-width: $breakpoint-lg) {
+		@media screen and (max-width: $breakpoint-md) {
 			grid-column: 1;
+		}
+		@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+			grid-column: 1 / span 2;
 		}
 	}
 
-	@media screen and (max-width: $breakpoint-lg) {
+	@media screen and (max-width: $breakpoint-md) {
 		.speaker_column {
 			padding: 10%;
+		}
+	}
+
+	@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+		.speaker_column {
+			padding: 1rem 4rem 4rem;
+			grid-column: 1 / span 2;
+
+			display: flex;
+			align-items: flex-start;
+    	flex-wrap: wrap;
+    	justify-content: center;
+		}
+
+		.speaker_profile {
+			width: 50%;
 		}
 	}
 
@@ -48,7 +67,9 @@
 			margin-top: 2rem;
 			margin-left: -2rem
 		}
-
+		@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+			margin-left: 2rem
+		}
 		li {
 			list-style-type: none;
 			padding-left: 2rem;

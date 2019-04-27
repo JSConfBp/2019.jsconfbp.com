@@ -16,11 +16,21 @@
         padding: 0 1rem;
     }
 
-    @media screen and (max-width: $breakpoint-lg) {
+    @media screen and (max-width: $breakpoint-md) {
         justify-content: space-around;
 
         li {
             width: 60%;
+            //text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+        justify-content: space-around;
+
+        li {
+            width: 48%;
             //text-align: center;
             margin-bottom: 4rem;
         }
