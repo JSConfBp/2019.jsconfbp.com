@@ -94,9 +94,10 @@ const Scholarship = () => (
         asked Green Fox Academy in Budapest to help us evaluate the applications
         and select the awardees. To manage the scholarship fund, we turned to
         the Asimov Foundation in Budapest, who helped the selected people with
-        travel arrangements if necessary.
+        travel arrangements if necessary. This year, we plan to cooperate with
+        these organisations again.
       </p>
-
+{/*
       <h3>Green Fox Academy</h3>
 
       <p>
@@ -131,7 +132,7 @@ const Scholarship = () => (
           http://asimov-foundation.org/english/
         </a>
       </p>
-
+*/}
       <h2>Where is the Scholarship Budget coming from?</h2>
 
       <p>
