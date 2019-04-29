@@ -11,7 +11,7 @@
 @mixin hover-red() {
 	&:hover, &:focus, &:active {
 		border-color: $color-red;
-		color: $color-red;
+		color: $color-red !important;
 	}
 }
 @mixin visited-gray() {
