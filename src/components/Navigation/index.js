@@ -15,17 +15,18 @@ const Navigation = props => {
     <nav className={className.join(' ')}>
       <ul>
         <li className={styles.item}>
-          <Link className={styles.link} to="/schedule">
-            Schedule
-          </Link>
-        </li>
-        {/*
-        <li className={styles.item}>
           <Link className={styles.link} to="/scholarship-program">
             Scholarship
           </Link>
         </li>
-        */}
+
+        <li className={styles.item}>
+          <Link className={styles.link} to="/schedule">
+            Schedule
+          </Link>
+        </li>
+
+
         <li className={styles.item}>
           <a className={styles.link} href="/sponsoration">
             Sponsoration
@@ -36,7 +37,7 @@ const Navigation = props => {
             Venue
           </Link>
         </li>
-        <li className={styles.item}>
+        {/*<li className={styles.item}>
           <a
             className={styles.link}
             href="http://eepurl.com/dMgAr-/"
@@ -46,6 +47,7 @@ const Navigation = props => {
             Get Updates
           </a>
         </li>
+  */}
         <li className={styles.item}>
           <Link className={styles.link} to="/code-of-conduct">
             Code of Conduct
