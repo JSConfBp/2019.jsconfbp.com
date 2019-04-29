@@ -97,7 +97,7 @@ const Scholarship = () => (
         travel arrangements if necessary. This year, we plan to cooperate with
         these organisations again.
       </p>
-{/*
+      {/*
       <h3>Green Fox Academy</h3>
 
       <p>
