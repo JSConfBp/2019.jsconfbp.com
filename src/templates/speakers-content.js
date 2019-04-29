@@ -59,8 +59,11 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             <h2>{title}</h2>
           </div>
           <div className={speakerStyles.speaker_column}>
-
-            <SpeakerImage className={speakerStyles.speaker_profile} image={image} color={color} />
+            <SpeakerImage
+              className={speakerStyles.speaker_profile}
+              image={image}
+              color={color}
+            />
 
             <ul className={speakerStyles.links}>
               <li className={speakerStyles.link_from}>

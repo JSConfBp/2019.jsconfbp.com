@@ -14,7 +14,6 @@ const Navigation = props => {
   return (
     <nav className={className.join(' ')}>
       <ul>
-
         <li className={styles.item}>
           <Link className={styles.link} to="/schedule">
             Schedule
