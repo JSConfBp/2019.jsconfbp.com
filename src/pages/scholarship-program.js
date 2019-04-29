@@ -72,7 +72,7 @@ const Scholarship = () => (
       </p>
 
       <p>
-        The the past years, after we started this program, we've{' '}
+        The past years, after we started this program, we've{' '}
         <a href="https://medium.com/@_nec/how-can-a-conference-help-someone-5a4fff2623af#.gw1ni84hj">
           actually changed someone's life for good
         </a>
