@@ -20,7 +20,7 @@ const NextYear = () => (
             <ul>
               <li>Single track</li>
               <li>450+ attendees</li>
-              <li>16 speakers</li>
+              <li>19 speakers</li>
             </ul>
           </div>
 
@@ -29,7 +29,7 @@ const NextYear = () => (
             <ul>
               <li>Single track</li>
               <li>250+ attendees</li>
-              <li>8 speakers</li>
+              <li>9 speakers</li>
             </ul>
           </div>
         </div>

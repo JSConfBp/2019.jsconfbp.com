@@ -48,3 +48,32 @@
 	transform: translateX(20%);
 	background-image: url('./cssconf_red.png');
 }
+
+.nav {
+	margin: 3rem 0 0;
+	text-align: center;
+
+	&_list {
+		display: inline;
+	}
+
+	&_item {
+		display: inline-block;
+
+		@media screen and (max-width: 767px) {
+			display: block;
+			padding: .3rem 1rem;
+		}
+
+		padding: 0 1rem;
+		font-weight: 200;
+
+		a, a:visited {
+            color: $color-red;
+
+            &:hover, &:active {
+                text-decoration: none;
+            }
+        }
+	}
+}

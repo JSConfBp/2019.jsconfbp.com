@@ -27,6 +27,7 @@ const Perks = () => (
   <>
     <div className={styles.perks}>
       <div className={styles.block_inner}>
+        <a name="perks" />
         <h2 className={styles.title}>A’la Carte Sponsorship</h2>
 
         <p>

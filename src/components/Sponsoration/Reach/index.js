@@ -5,6 +5,7 @@ const Reach = () => (
   <>
     <div className={styles.reach}>
       <div className={styles.block_inner}>
+        <a name="reach" />
         <h2>Reach</h2>
 
         <h3>100% relevance in the JavaScript community</h3>
@@ -12,21 +13,21 @@ const Reach = () => (
         <div className={styles.numbers}>
           <div className={styles.twitter} title="Twitter">
             <h4>
-              <span className={styles.followers}>1.5k</span>
+              <span className={styles.followers}>1.7k</span>
               Followers
             </h4>
           </div>
 
           <div className={styles.youtube} title="Youtube">
             <h4>
-              <span className={styles.subscribers}>106k</span>
+              <span className={styles.subscribers}>118k</span>
               Subscribers
             </h4>
           </div>
 
           <div className={styles.facebook} title="Facebook">
             <h4>
-              <span className={styles.reached}>20k</span>
+              <span className={styles.reached}>25k</span>
               People Reached
             </h4>
           </div>

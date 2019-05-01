@@ -82,7 +82,7 @@ const Price = props => (
     {typeof props.value === 'string' ? (
       <>{props.value}</>
     ) : (
-      <a href={props.value.url}>{props.value.text}</a>
+      <a href={props.value.href}>{props.value.text}</a>
     )}
   </>
 )
@@ -137,6 +137,7 @@ const Packages = () => (
   <>
     <div className={styles.packages}>
       <div className={styles.block_inner}>
+        <a name="packages" />
         <h2>Packages</h2>
 
         <h3>
@@ -145,8 +146,20 @@ const Packages = () => (
 
         <PackageTable />
 
+        <div className={styles.package_levels}>
+          <p className={styles.info_text}>
+            Package levels are determined by contribution level, summarized by the
+            base package you choose and optional additional perks.
+          </p>
+          <p className={styles.info_text}>
+            For example a Gold level contribution and a <a href="#perks">Party sponsoration perk</a>{' '}
+            together can raise your contribution over the Platinum package level, so you'll receive
+            the Platinum perk itself!
+          </p>
+        </div>
+
         <div className={styles.scholarships}>
-          <h4 className={styles.info_title}>10 % to Scholarships</h4>
+          <h4 className={styles.info_title__scholarships}>10 % to Scholarships</h4>
 
           <p className={styles.info_text}>
             From every package we put 10% directly to our Scholarship Fund -
@@ -166,12 +179,13 @@ const Packages = () => (
           backdrop, with your design, which we will provide for your exhibition
           booth - so you can travel light, if needed. If you need ideas on how
           to make your booth more appealing for the attendees,{' '}
-          <a href="mailto:team@jsconfbp.com?subject=Sponsoration with booth">
+          <a href="mailto:team@jsconfbp.com?subject=Lets talk about Sponsoring">
             let's talk
           </a>
           , we have tons of ideas!
         </p>
 
+        <a name="workshops" />
         <h4 className={styles.info_title}>Sponsor with Workshops!</h4>
 
         <p className={styles.info_text}>
@@ -184,10 +198,14 @@ const Packages = () => (
 
         <p className={styles.info_text}>
           We can help you find venue and catering for the workshop, but you need
-          to cover it's expenses - since it's still a sponsoration. In return we
-          give you a Gold level package, so you can be present at the conference
-          as well! For ideas and more information don't hesitate to{' '}
-          <a href="mailto:team@jsconfbp.com?subject=Workshops!">contact us</a>!
+          to cover it's expenses - since it's still a sponsoration. <strong>In return we
+          give you a Gold level package for FREE</strong>, so you can be present at the conference
+          as well!
+        </p>
+
+        <p className={styles.info_text}>
+          For ideas and more information don't hesitate to{' '}
+          <a href="mailto:team@jsconfbp.com?subject=We could bring you a Workshop!">contact us</a>!
         </p>
       </div>
     </div>
