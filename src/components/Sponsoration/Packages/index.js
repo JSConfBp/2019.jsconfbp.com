@@ -18,7 +18,7 @@ const packages = [
     price: '€3,000',
     content: {
       branding: true,
-      tickets: true,
+      tickets: '10',
       screen: false,
       booth: false,
       slide: false,
@@ -30,7 +30,7 @@ const packages = [
     price: '€7,000',
     content: {
       branding: true,
-      tickets: true,
+      tickets: '10',
       screen: true,
       booth: '3sqm',
       slide: false,
@@ -45,7 +45,7 @@ const packages = [
     },
     content: {
       branding: true,
-      tickets: true,
+      tickets: '10',
       screen: true,
       booth: '3sqm',
       slide: true,
@@ -57,7 +57,7 @@ const packages = [
     price: '€10,000',
     content: {
       branding: true,
-      tickets: true,
+      tickets: '15',
       screen: true,
       booth: '12sqm',
       slide: true,
