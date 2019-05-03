@@ -1,5 +1,7 @@
 # 2019.jsconfbp.com
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JSConfBp/2019.jsconfbp.com.svg)](https://greenkeeper.io/)
+
 Using React and Gatsby.
 
 ## Install
