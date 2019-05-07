@@ -20,7 +20,7 @@ const SpeakersList = props => (
         <li key={node.id} className={styles.updates_list_item}>
           <span className={styles.date}>{node.frontmatter.date}</span>
           <Link
-            className={styles.title}
+            className={styles.speaker_link}
             to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
           >
             <SpeakerImage
@@ -28,7 +28,12 @@ const SpeakersList = props => (
               image={node.frontmatter.image}
               color={node.frontmatter.color}
             />
-            {node.frontmatter.name}
+            <span className={styles.name}>
+              {node.frontmatter.name}
+            </span>
+            <span className={styles.title}>
+              {node.frontmatter.title}
+            </span>
           </Link>
         </li>
       ))}
