@@ -28,7 +28,7 @@ const Navigation = props => {
 
         <li className={styles.item}>
           <a className={styles.link} href="/sponsoration">
-            Sponsoration
+            Sponsorship
           </a>
         </li>
         <li className={styles.item}>

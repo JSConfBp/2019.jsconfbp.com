@@ -32,7 +32,7 @@ const Contact = () => (
       </div>
 
       <a
-        href="mailto:team@jsconfbp.com?subject=Sponsoration"
+        href="mailto:team@jsconfbp.com?subject=Sponsorship"
         className={styles.button}
       >
         Contact Us
