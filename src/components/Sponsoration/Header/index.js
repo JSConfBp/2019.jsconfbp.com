@@ -10,7 +10,7 @@ const Header = () => (
         <span className={styles.cssconf} />
         JSConf Budapest & CSSConf Budapest
         <br />
-        2019 Sponsoration
+        2019 Sponsorship
       </h1>
 
       <nav className={styles.nav}>

@@ -21,7 +21,7 @@ const SponsorationLayout = ({ className, contentBg = false, children }) => (
     render={data => (
       <main className={className}>
         <Helmet
-          title={`Sponsoration | ${data.site.siteMetadata.title}`}
+          title={`Sponsorship | ${data.site.siteMetadata.title}`}
           meta={[
             {
               name: 'description',

@@ -153,7 +153,7 @@ const Packages = () => (
           </p>
           <p className={styles.info_text}>
             For example a Gold level contribution and a{' '}
-            <a href="#perks">Party sponsoration perk</a> together can raise your
+            <a href="#perks">Party Sponsorship perk</a> together can raise your
             contribution over the Platinum package level, so you'll receive the
             Platinum perk itself!
           </p>
@@ -201,7 +201,7 @@ const Packages = () => (
 
         <p className={styles.info_text}>
           We can help you find venue and catering for the workshop, but you need
-          to cover it's expenses - since it's still a sponsoration.{' '}
+          to cover it's expenses - since it's still a sponsorship.{' '}
           <strong>In return we give you a Gold level package for FREE</strong>,
           so you can be present at the conference as well!
         </p>
