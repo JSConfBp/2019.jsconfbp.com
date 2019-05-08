@@ -99,15 +99,24 @@
 
 .updates {
 
+    @media screen and (min-width: $breakpoint-xl) {
+        padding: 5rem;
+    }
+
     @media screen and (max-width: $breakpoint-lg) {
         padding: 3rem;
     }
     @media screen and (max-width: $breakpoint-sm) {
         padding: 3rem 1rem;
     }
+
     &_content {
-        max-width: 800px;
         margin: 0 auto;
+        max-width: 800px;
+
+        @media screen and (min-width: $breakpoint-xl) {
+            max-width: 1200px;
+        }
 
         > * {
             margin-bottom: $size-md;

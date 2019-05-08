@@ -28,8 +28,21 @@
         }
     }
 
+    @media screen and (min-width: $breakpoint-xl) {
+        li {
+            width: 30%;
+            padding: 0 3rem;
+            margin-bottom: 6rem;
+        }
+    }
+
+
     .speaker_link {
         text-decoration: none;
+
+        @media screen and (min-width: $breakpoint-xl) {
+            font-size: 1.4rem;
+        }
 
         &:hover, &:active, &:focus {
             .name {
@@ -46,6 +59,10 @@
             display: block;
             font-weight: 200;
             font-size: 1rem;
+
+            @media screen and (min-width: $breakpoint-xl) {
+                font-size: 1.2rem;
+            }
         }
     }
 }
