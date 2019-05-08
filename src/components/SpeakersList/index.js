@@ -28,12 +28,8 @@ const SpeakersList = props => (
               image={node.frontmatter.image}
               color={node.frontmatter.color}
             />
-            <span className={styles.name}>
-              {node.frontmatter.name}
-            </span>
-            <span className={styles.title}>
-              {node.frontmatter.title}
-            </span>
+            <span className={styles.name}>{node.frontmatter.name}</span>
+            <span className={styles.title}>{node.frontmatter.title}</span>
           </Link>
         </li>
       ))}
