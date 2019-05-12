@@ -96,4 +96,15 @@
 			}
 		}
 	}
+
+	&__disabled {
+		background: $gray-400;
+		border-color: transparent;
+
+		&:hover, &:focus, &:active {
+			background: $gray-300;
+			color: $color-white !important;
+			border-color: transparent !important;
+		}
+	}
 }

@@ -8,6 +8,7 @@ export default class Button extends React.Component {
       color = 'yellow',
       block = false,
       fill = false,
+      disabled = false,
       className: propClasses = [],
     } = this.props
 
@@ -15,6 +16,10 @@ export default class Button extends React.Component {
 
     if (block) {
       className.push(styles.button__block)
+    }
+
+    if (disabled) {
+      className.push(styles.button__disabled)
     }
 
     if (fill) {
@@ -38,8 +43,10 @@ export default class Button extends React.Component {
 
     const className = this.getButtonClass()
 
+    let button = ''
+
     if (useButton) {
-      return (
+      button = (
         <button
           className={className}
           onClick={e => onClick(e)}
@@ -48,16 +55,26 @@ export default class Button extends React.Component {
           {children}
         </button>
       )
+    } else if (useLink) {
+      button = (
+        <Link to={to} className={className} disabled>
+          {children}
+        </Link>
+      )
+    } else if (disabled) {
+      button = (
+        <span className={className} disabled>
+          {children}
+        </span>
+      )
+    } else {
+      button = (
+        <a href={href} className={className} disabled>
+          {children}
+        </a>
+      )
     }
 
-    return useLink ? (
-      <Link to={to} className={className}>
-        {children}
-      </Link>
-    ) : (
-      <a href={href} className={className}>
-        {children}
-      </a>
-    )
+    return button
   }
 }

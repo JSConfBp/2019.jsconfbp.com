@@ -1,0 +1,96 @@
+@import '../components/breakpoints.scss';
+@import '../components/colors.scss';
+@import '../components/font-face.scss';
+@import '../components/sizes.scss';
+
+.workshops {
+	background-color: #f9f9f9;
+    line-height: 1.48rem;
+    max-width: 800px;
+
+    min-height: 100vh;
+
+    margin: {
+        right: auto;
+        left: auto;
+    }
+
+    padding: $size-md;
+
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-sm) {
+        padding: 3rem 0 $size-lg;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
+        padding: 3rem  $size-lg $size-lg;
+    }
+
+
+    p, ul, ol, dl, h1, h2, h3, h4, h5 {
+        &.typo {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+
+    & h1 {
+        font-size: $size-xxl;
+        line-height: 1.2;
+    }
+
+    & h2, & h3, & h4 {
+        margin: {
+            //top: $size-md;
+            //bottom: $size-md;
+        }
+        line-height: 1.2;
+    }
+
+    & h2 {
+        font-size: $size-xl;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-xl;
+        }
+    }
+
+    & h3 {
+        font-size: $size-lg;
+        @media screen and (min-width: $breakpoint-lg) {
+            font-size: $size-lg;
+        }
+    }
+
+    & p + h2,
+    & p + h3,
+    & ul + h2,
+    & ul + h3 {
+        margin: {
+            top: $size-xl;
+        }
+    }
+
+    & p,
+    & li {
+        font-weight: 200;
+	}
+
+
+    & a {
+        color: $jsconfred;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    & strong {
+        font-weight: 700;
+    }
+
+    & strikethrough {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+}

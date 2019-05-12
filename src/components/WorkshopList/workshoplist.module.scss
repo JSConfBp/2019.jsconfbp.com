@@ -1,0 +1,98 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.workshop_list,
+.workshop_list_item {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.workshop_list_item {
+	border-bottom: 1px solid $jsconfred;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	padding: $size-xl 0;
+
+	display: grid;
+	grid-template-columns: 1.4fr 1.4fr .3fr .9fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	  "title title title date"
+	  "description description . date"
+	  "description description . register"
+	  "link link . register";
+}
+
+
+.workshop_title {
+	grid-area: title;
+	margin-bottom: $size-md;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.workshop_date {
+	grid-area: date;
+	display: flex;
+	flex-direction: column;
+
+	&_day {
+		font-size: 2rem;
+		text-align: center;
+		text-indent: .7rem;
+		padding-bottom: .4rem;
+
+		sup {
+			font-size: 1rem;
+			vertical-align: super;
+		}
+	}
+
+	&_month {
+		text-align: center;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+	}
+
+	&_year {
+		font-size: 1rem;
+	}
+
+	&_time {
+		padding-top: .4rem;
+		font-size: 1.3rem;
+		text-align: center;
+	}
+}
+
+.workshop_lead {
+	grid-area: description;
+}
+
+.workshop_register {
+	grid-area: register;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding-top: $size-md;
+
+	a {
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.workshop_link {
+	grid-area: link;
+	display: flex;
+	align-items: flex-end;
+}
