@@ -20,9 +20,10 @@ const Schedule = () => (
         <strong>Workshop day</strong> - we'll annouce any details as soon as
         possible!
       </p>
-      
+
       <p>
-        <strong>Meetup night</strong> - We will coordinate with a couple of meetups to have a meetup night just before the
+        <strong>Meetup night</strong> - We will coordinate with a couple of
+        meetups to have a meetup night just before the
       </p>
 
       <h3>Wednesday, 25th September, 2019</h3>
