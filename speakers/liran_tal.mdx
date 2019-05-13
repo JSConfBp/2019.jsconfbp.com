@@ -15,10 +15,8 @@ company: "Snyk"
 company_url: "https://snyk.io/"
 ---
 
-Malicious packages have been making JavaScript 2018 headlines with several incidents and they’re
-not unique to just the NPM ecosystem. What makes a package malicious and how can we defend against it?
-How does the open source model and the human factor play a role in all of this? Let’s dissect the
-anatomy of a malicious package, the risks it carries and review a postmortem of the biggest incidents
-in the history of npm. We will also learn security best practices to avoid common pitfalls as a
-developer and a maintainer. You simply cannot afford to be a developer in 2019 without understanding
-the security risks involved in working with open source software, and how to mitigate against them.
+Open source modules on the NPM ecosystem are undoubtedly awesome. However, they also represent an undeniable and massive risk.
+You’re introducing someone else’s code into your system, often with little or no scrutiny. The wrong package can introduce
+severe vulnerabilities into your application, exposing your application and your user's data. This talk will use a sample
+application, Goof, which uses various vulnerable dependencies, which we will exploit as an attacker would. For each issue,
+we'll explain why it happened, show its impact, and – most importantly – see how to avoid or fix it.
