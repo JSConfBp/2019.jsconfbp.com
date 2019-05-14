@@ -1,0 +1,116 @@
+@import '../components/mixins.scss';
+@import '../components/breakpoints.scss';
+@import '../components/colors.scss';
+@import '../components/font-face.scss';
+@import '../components/sizes.scss';
+
+.workshop_page {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: repeat(2, minmax(3rem, auto));
+	grid-gap: 2rem;
+	min-height: 0;
+
+
+    @media screen and (max-width: $breakpoint-lg) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-gap: 0rem;
+    }
+
+
+	.main_column {
+		grid-column: span 2 / 1;
+		min-height: 0;
+
+		@media screen and (max-width: $breakpoint-md) {
+			grid-column: 1;
+		}
+		@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	@media screen and (max-width: $breakpoint-md) {
+		.side_column {
+			padding: 10%;
+		}
+	}
+
+	@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+		.side_column {
+			padding: 1rem 4rem 4rem;
+			grid-column: 1 / span 2;
+
+			display: flex;
+			align-items: flex-start;
+    	flex-wrap: wrap;
+    	justify-content: center;
+		}
+	}
+
+	.speaker_name {
+		font-family: $primray-font;
+		font-weight: 700;
+		color: $color-black;
+	}
+
+	.links {
+		margin: 0;
+		margin-top: 4rem;
+
+		@media screen and (max-width: $breakpoint-lg) {
+			margin-top: 2rem;
+			margin-left: -2rem
+		}
+		@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+			margin-left: 2rem
+		}
+		li {
+			list-style-type: none;
+			padding-left: 2rem;
+			margin: 0;
+			margin-bottom: .5rem;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				background-size: contain;
+				background-position: center center;
+				position: absolute;
+				left: 5px;
+				top: 3px;
+			}
+
+			&.link_from::before {
+				background-image: url('./icon-location.png')
+			}
+			&.link_blog::before {
+				background-image: url('./icon-link.png')
+			}
+			&.link_twitter::before {
+				background-image: url('./icon-twitter.png')
+			}
+			&.link_github::before {
+				background-image: url('./icon-github.png')
+			}
+			&.link_company::before {
+				background-image: url('./icon-office.png')
+			}
+		}
+	}
+
+	hr {
+		margin: 2rem 0;
+		height: 0px;
+		border: none;
+		border-bottom: 1px solid lighten($color-black, 80%);
+	}
+
+	.ticket_button {
+		color: white;
+	}
+}

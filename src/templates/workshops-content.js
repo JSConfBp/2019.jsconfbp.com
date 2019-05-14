@@ -8,7 +8,7 @@ import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage'
 
 import styles from '../pages/simpletext.module.scss'
-import speakerStyles from './speaker-styles.module.scss'
+import workshopStyles from './workshop-styles.module.scss'
 
 const TicketButton = () => (
   <Button
@@ -41,19 +41,18 @@ function SpeakersContentTemplate({ data: { mdx } }) {
         image={mdx.frontmatter.socialCard || 'social-card.png'}
       />
       <div className={classNames(styles.simpleText)}>
-        <div className={speakerStyles.speakerpage}>
-          <div className={speakerStyles.title_column}>
+        <div className={workshopStyles.workshop_page}>
+          <div className={workshopStyles.main_column}>
             <h2>{title}</h2>
-          </div>
-          <div className={speakerStyles.talk_column}>
-            <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
+            <MDXRenderer>{mdx.code.body}</MDXRenderer>
             <hr />
           </div>
-          <div className={speakerStyles.speaker_column}>
-            <ul className={speakerStyles.links}>
+
+          <div className={workshopStyles.side_column}>
+            <ul className={workshopStyles.links}>
               {company && (
-                <li className={speakerStyles.link_company}>
+                <li className={workshopStyles.link_company}>
                   <Link url={company_url} text={company} />
                 </li>
               )}
