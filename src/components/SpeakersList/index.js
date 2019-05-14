@@ -18,7 +18,7 @@ const SpeakersList = props => (
       })
       .map(({ node }) => (
         <li key={node.id} className={styles.updates_list_item}>
-          <span className={styles.date}>{node.frontmatter.date}</span>
+
           <Link
             className={styles.speaker_link}
             to={`/${node.parent.sourceInstanceName}/${node.parent.name}`}
@@ -33,6 +33,21 @@ const SpeakersList = props => (
           </Link>
         </li>
       ))}
+
+      <li key="the-mc" className={styles.updates_list_item}>
+          <a
+            className={styles.speaker_link}
+            href={`https://twitter.com/paul_v_m`}
+          >
+            <SpeakerImage
+              className={styles.speaker_list_image}
+              image={'paul_vm'}
+              color={'blue'}
+            />
+            <span className={styles.name}>{'Paul Verbeek-Mast'}</span>
+            <span className={styles.title}>{'Master of Ceremony'}</span>
+          </a>
+        </li>
   </ul>
 )
 
