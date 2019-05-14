@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Button from '../Button'
 
+import RegisterButton from '../RegisterButton'
 import styles from './workshoplist.module.scss'
 
 const filterWorkshops = ({ node }) =>
@@ -16,19 +16,6 @@ const sortWorkshops = (prev, next) => {
 
   return 0
 }
-
-const RegisterButton = ({ id, disabled = false }) => (
-  <Button
-    block={true}
-    fill={true}
-    color={'red'}
-    disabled
-    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
-    className={styles.ticket_button}
-  >
-    {disabled ? 'Open Soon' : 'Register Now'}
-  </Button>
-)
 
 const WorkshopList = props => (
   <ul className={styles.workshop_list}>
@@ -50,9 +37,11 @@ const WorkshopList = props => (
               24<sup>th</sup>
             </span>
             <span className={styles.workshop_date_month}>Sep</span>
+            {/*
             <span className={styles.workshop_date_time}>
               {node.frontmatter.start} - {node.frontmatter.end}
             </span>
+            */}
           </span>
 
           <p className={styles.workshop_lead}>

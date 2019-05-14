@@ -9,18 +9,8 @@ import SpeakerImage from '../components/SpeakerImage'
 
 import styles from '../pages/simpletext.module.scss'
 import workshopStyles from './workshop-styles.module.scss'
+import RegisterButton from '../components/RegisterButton'
 
-const TicketButton = () => (
-  <Button
-    block={true}
-    fill={true}
-    color={'red'}
-    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
-    className={styles.ticket_button}
-  >
-    Buy Your Ticket
-  </Button>
-)
 
 const Link = props => {
   const { url, text } = props
@@ -42,23 +32,34 @@ function SpeakersContentTemplate({ data: { mdx } }) {
       />
       <div className={classNames(styles.simpleText)}>
         <div className={workshopStyles.workshop_page}>
-          <div className={workshopStyles.main_column}>
-            <h2>{title}</h2>
+          <h2 className={workshopStyles.workshop_title}>
+            {title}
+          </h2>
 
+          <div className={workshopStyles.main_content}>
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
             <hr />
           </div>
 
-          <div className={workshopStyles.side_column}>
+          <div className={workshopStyles.workshop_meta}>
+            <h4 className={workshopStyles.subtitle}>Workshop by</h4>
             <ul className={workshopStyles.links}>
               {company && (
-                <li className={workshopStyles.link_company}>
+                <li>
                   <Link url={company_url} text={company} />
                 </li>
               )}
+              <li>
+                September 24th, 2019
+              </li>
+              <li>
+                Location: TBA
+              </li>
             </ul>
-            <TicketButton />
+
+            <RegisterButton />
           </div>
+
         </div>
       </div>
     </Layout>
