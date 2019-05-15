@@ -36,6 +36,11 @@ const Navigation = props => {
             Venue
           </Link>
         </li>
+        <li className={styles.item}>
+          <Link className={styles.link} to="/workshops">
+            Workshops
+          </Link>
+        </li>
         {/*<li className={styles.item}>
           <a
             className={styles.link}
