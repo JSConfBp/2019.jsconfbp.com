@@ -11,7 +11,6 @@ import styles from '../pages/simpletext.module.scss'
 import workshopStyles from './workshop-styles.module.scss'
 import RegisterButton from '../components/RegisterButton'
 
-
 const Link = props => {
   const { url, text } = props
 
@@ -32,9 +31,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
       />
       <div className={classNames(styles.simpleText)}>
         <div className={workshopStyles.workshop_page}>
-          <h2 className={workshopStyles.workshop_title}>
-            {title}
-          </h2>
+          <h2 className={workshopStyles.workshop_title}>{title}</h2>
 
           <div className={workshopStyles.main_content}>
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
@@ -49,12 +46,8 @@ function SpeakersContentTemplate({ data: { mdx } }) {
                   <Link url={company_url} text={company} />
                 </li>
               )}
-              <li>
-                September 24th, 2019
-              </li>
-              <li>
-                Location: TBA
-              </li>
+              <li>September 24th, 2019</li>
+              <li>Location: TBA</li>
             </ul>
 
             <RegisterButton
@@ -62,7 +55,6 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               disabled={mdx.frontmatter.disabled}
             />
           </div>
-
         </div>
       </div>
     </Layout>
