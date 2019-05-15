@@ -17,7 +17,14 @@
 	min-height: 0;
 
     @media screen and (max-width: $breakpoint-lg) {
-		grid-gap: 0rem;
+			grid-gap: 0rem;
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"title"
+				"meta"
+				"content";
+
+
     }
 
 	.main_content {
@@ -43,8 +50,7 @@
 			margin-bottom: $size-xxl;
 	
 			@media screen and (max-width: $breakpoint-lg) {
-				margin-top: 2rem;
-				margin-left: -2rem
+				
 			}
 			@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
 				margin-left: 2rem
