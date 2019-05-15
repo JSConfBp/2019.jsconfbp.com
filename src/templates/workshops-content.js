@@ -57,7 +57,10 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               </li>
             </ul>
 
-            <RegisterButton />
+            <RegisterButton
+              id={mdx.frontmatter.workshop_id}
+              disabled={mdx.frontmatter.disabled}
+            />
           </div>
 
         </div>
@@ -87,6 +90,8 @@ export const pageQuery = graphql`
         company
         company_url
         socialCard
+        workshop_id
+        disabled
       }
     }
   }
