@@ -32,7 +32,7 @@ const IndexPage = props => (
             fill={true}
             href="https://ti.to/jsconf-bp/jsconf-budapest-2019"
           >
-            Buy tickets
+            Tickets from €311
           </Button>
         </div>
       </div>

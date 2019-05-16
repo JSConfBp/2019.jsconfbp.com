@@ -18,7 +18,7 @@ const TicketButton = () => (
     href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
     className={styles.ticket_button}
   >
-    Buy Your Ticket
+    Tickets from €311
   </Button>
 )
 
