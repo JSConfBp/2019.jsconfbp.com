@@ -12,17 +12,25 @@ const Workshops = props => (
       <h1 className={styles.typo}>Workshops</h1>
 
       <p className={styles.typo}>
-        <strong>These workshops are FREE for every ticket holder of JSConf Budapest or a Combo ticket with CSSConf Budapest.</strong>
+        <strong>
+          These workshops are FREE for every ticket holder of JSConf Budapest or
+          a Combo ticket with CSSConf Budapest.
+        </strong>
       </p>
 
       <p className={styles.typo}>
-        The workshops have limited seats, so be sure to <a href="https://ti.to/jsconf-bp/jsconf-budapest-2019">get your ticket</a>
-        before they fill up! We'll open them slowly, so everyone have a chance to pick a workshop they like.
+        The workshops have limited seats, so be sure to{' '}
+        <a href="https://ti.to/jsconf-bp/jsconf-budapest-2019">
+          get your ticket
+        </a>
+        before they fill up! We'll open them slowly, so everyone have a chance
+        to pick a workshop they like.
       </p>
 
       <p className={styles.typo}>
-        You will be able to register to a workshop using the ID on your ticket. If will be possible to switch the workshop
-        you've picked later, if there is a free seat available on another workshop.
+        You will be able to register to a workshop using the ID on your ticket.
+        If will be possible to switch the workshop you've picked later, if there
+        is a free seat available on another workshop.
       </p>
 
       <WorkshopList data={props.data} />
