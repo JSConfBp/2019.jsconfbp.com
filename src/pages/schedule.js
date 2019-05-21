@@ -18,7 +18,10 @@ const Schedule = () => (
       <h3>Tuesday, 24th September, 2019</h3>
 
       <p>
-        <strong>Workshop day</strong> - <Link to="/workshops">check out the workshops you can choose from!</Link>
+        <strong>Workshop day</strong> -{' '}
+        <Link to="/workshops">
+          check out the workshops you can choose from!
+        </Link>
       </p>
 
       <p>
