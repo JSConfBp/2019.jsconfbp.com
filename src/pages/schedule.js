@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout/index'
+import { Link } from 'gatsby'
 import styles from './simpletext.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
 
@@ -17,13 +18,12 @@ const Schedule = () => (
       <h3>Tuesday, 24th September, 2019</h3>
 
       <p>
-        <strong>Workshop day</strong> - we'll annouce any details as soon as
-        possible!
+        <strong>Workshop day</strong> - <Link to="/workshops">check out the workshops you can choose from!</Link>
       </p>
 
       <p>
         <strong>Meetup night</strong> - We will coordinate with a couple of
-        meetups to have a meetup night just before the
+        meetups to have a meetup night just before the events. Stay tuned!
       </p>
 
       <h3>Wednesday, 25th September, 2019</h3>
