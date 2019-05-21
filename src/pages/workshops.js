@@ -23,7 +23,7 @@ const Workshops = props => (
         <a href="https://ti.to/jsconf-bp/jsconf-budapest-2019">
           get your ticket
         </a>
-        before they fill up! We'll open them slowly, so everyone have a chance
+        before they fill up! We'll open them slowly, so everyone has a chance
         to pick a workshop they like.
       </p>
 
