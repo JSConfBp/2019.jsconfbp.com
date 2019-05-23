@@ -11,7 +11,7 @@ import styles from './index.module.scss'
 
 const IndexPage = props => (
   <MainLayout>
-    <SocialMeta image="social_card.jpg" />
+    <SocialMeta image="social_card_home.jpg" />
     <div>
       <div className={styles.home}>
         <div className={styles.homeContent}>
