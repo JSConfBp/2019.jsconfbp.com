@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://jsconfbp.com',
     title: 'JSConf Budapest 2019',
-    description: 'JSConf Budapest returns! September 26-27. 2019, Budapest, Hungary',
-    keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest',
+    description: 'JSConf Budapest returns! September 26-27. 2019, Budapest, Hungary. Tickets from €311, including free workshops, inclusive catering and barista coffee!',
+    keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest, diversity, inclusivity, community',
     twitter: '@jsconfbp'
   },
   plugins: [
