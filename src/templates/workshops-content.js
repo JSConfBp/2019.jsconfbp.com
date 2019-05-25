@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import classNames from 'classnames'
+import fetch from 'isomorphic-unfetch'
+
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import Button from '../components/Button/index'
 import Layout from '../components/Layout/index'
@@ -10,6 +12,11 @@ import SpeakerImage from '../components/SpeakerImage'
 import styles from '../pages/simpletext.module.scss'
 import workshopStyles from './workshop-styles.module.scss'
 import RegisterButton from '../components/RegisterButton'
+
+
+const SEAT_API = 'https://workshop-registration.herokuapp.com/api/seats'
+//const SEAT_API = 'http://0.0.0.0:8001/api/seats'
+
 
 const Link = props => {
   const { url, text } = props
@@ -21,7 +28,23 @@ const Link = props => {
   )
 }
 function SpeakersContentTemplate({ data: { mdx } }) {
+  const [seats, setSeats] = useState({})
+
+  useEffect(() => {
+    if (Object.keys(seats).length > 0) return;
+
+    fetch(SEAT_API)
+      .then(resp => resp.json())
+      .then(data => setSeats(data))
+      .catch(e => console.error(e))
+  })
+
   const { title, company, company_url, short_description } = mdx.frontmatter
+
+  const countSeats = (id) => {
+    return seats[id] ? (seats[id].seats - seats[id].taken) : 'N/A'
+  }
+
   return (
     <Layout>
       <SocialMeta
@@ -48,6 +71,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               )}
               <li>September 24th, 2019</li>
               <li>Location: TBA</li>
+              <li>Available seats: {countSeats(mdx.frontmatter.workshop_id)}</li>
             </ul>
 
             <RegisterButton

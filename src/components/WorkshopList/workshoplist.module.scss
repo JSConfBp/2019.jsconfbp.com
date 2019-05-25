@@ -90,11 +90,24 @@
 	justify-content: flex-end;
 	padding-top: $size-md;
 
-	
+
 }
 
 .workshop_link {
 	grid-area: link;
 	display: flex;
 	align-items: flex-end;
+}
+
+.seats {
+	padding-top: $size-md;
+	font-size: .9rem;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1rem;
+
+	&_count {
+		display: block;
+		font-weight: bold;
+	}
 }
