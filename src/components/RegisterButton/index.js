@@ -7,7 +7,7 @@ export default ({ id, disabled = false }) => (
     block={true}
     fill={true}
     color={'red'}
-    disabled
+    disabled={disabled}
     href={'https://workshop-registration.herokuapp.com/'}
     className={styles.ticket_button}
   >

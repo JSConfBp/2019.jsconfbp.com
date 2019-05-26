@@ -24,7 +24,7 @@ const WorkshopList = props => {
   const [seats, setSeats] = useState({})
 
   useEffect(() => {
-    if (Object.keys(seats).length > 0) return;
+    if (Object.keys(seats).length > 0) return
 
     fetch(SEAT_API)
       .then(resp => resp.json())
@@ -32,8 +32,8 @@ const WorkshopList = props => {
       .catch(e => console.error(e))
   })
 
-  const countSeats = (id) => {
-    return seats[id] ? (seats[id].seats - seats[id].taken) : 'N/A'
+  const countSeats = id => {
+    return seats[id] ? seats[id].seats - seats[id].taken : 'N/A'
   }
 
   return (
@@ -68,7 +68,6 @@ const WorkshopList = props => {
                   {countSeats(node.frontmatter.workshop_id)}
                 </span>
               </span>
-
             </span>
 
             <p className={styles.workshop_lead}>

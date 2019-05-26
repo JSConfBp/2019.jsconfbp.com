@@ -13,10 +13,8 @@ import styles from '../pages/simpletext.module.scss'
 import workshopStyles from './workshop-styles.module.scss'
 import RegisterButton from '../components/RegisterButton'
 
-
 const SEAT_API = 'https://workshop-registration.herokuapp.com/api/seats'
 //const SEAT_API = 'http://0.0.0.0:8001/api/seats'
-
 
 const Link = props => {
   const { url, text } = props
@@ -31,7 +29,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
   const [seats, setSeats] = useState({})
 
   useEffect(() => {
-    if (Object.keys(seats).length > 0) return;
+    if (Object.keys(seats).length > 0) return
 
     fetch(SEAT_API)
       .then(resp => resp.json())
@@ -41,8 +39,8 @@ function SpeakersContentTemplate({ data: { mdx } }) {
 
   const { title, company, company_url, short_description } = mdx.frontmatter
 
-  const countSeats = (id) => {
-    return seats[id] ? (seats[id].seats - seats[id].taken) : 'N/A'
+  const countSeats = id => {
+    return seats[id] ? seats[id].seats - seats[id].taken : 'N/A'
   }
 
   return (
@@ -71,7 +69,9 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               )}
               <li>September 24th, 2019</li>
               <li>Location: TBA</li>
-              <li>Available seats: {countSeats(mdx.frontmatter.workshop_id)}</li>
+              <li>
+                Available seats: {countSeats(mdx.frontmatter.workshop_id)}
+              </li>
             </ul>
 
             <RegisterButton
