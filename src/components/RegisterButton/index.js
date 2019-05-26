@@ -8,7 +8,7 @@ export default ({ id, disabled = false }) => (
     fill={true}
     color={'red'}
     disabled
-    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
+    href={'https://workshop-registration.herokuapp.com/'}
     className={styles.ticket_button}
   >
     {disabled ? 'Open Soon' : 'Register Now'}
