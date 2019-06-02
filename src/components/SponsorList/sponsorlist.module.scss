@@ -1,0 +1,32 @@
+.sponsor {
+
+	&_subtitle {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	&_list {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: flex-start;
+		margin-bottom: 4rem;
+	}
+
+	&_big {
+		width: 350px;
+	}
+
+	&_med {
+		width: 300px;
+	}
+
+	&_scholarship {
+		width: 300px;
+	}
+
+	&_partner {
+		width: 120px;
+	}
+}

@@ -6,6 +6,7 @@ import MainLayout from '../components/MainLayout'
 import SocialMeta from '../components/SocialMeta'
 import UpdatesList from '../components/UpdatesList'
 import SpeakersList from '../components/SpeakersList'
+import SponsorList from '../components/SponsorList'
 import TeamProfileImage from '../components/TeamProfileImage'
 import styles from './index.module.scss'
 
@@ -19,13 +20,13 @@ const IndexPage = props => (
 
           <span className={styles.date}>26-27th September</span>
 
-          <p>
+          {/*<p>
             Not sure what to expect next year? <br />
             Check out our past events in{' '}
             <a href="http://2017.jsconfbp.com">2017</a>,{' '}
             <a href="http://2016.jsconfbp.com">2016</a> or{' '}
             <a href="http://2015.jsconfbp.com">2015</a>!
-          </p>
+          </p>*/}
 
           <Button
             block={true}
@@ -34,9 +35,13 @@ const IndexPage = props => (
           >
             Tickets from €311
           </Button>
+
+          <Button block={true} fill={false} href="#speakers">
+            Speakers
+          </Button>
         </div>
       </div>
-
+      <a name="speakers" />
       <div className={styles.updates}>
         <div className={styles.updates_content}>
           <h1 className={styles.home_heading}>Speakers</h1>
@@ -60,6 +65,12 @@ const IndexPage = props => (
           <h1 className={styles.home_heading}>Updates</h1>
 
           <UpdatesList data={props.data} />
+        </div>
+      </div>
+
+      <div className={styles.updates}>
+        <div className={styles.updates_content}>
+          <SponsorList />
         </div>
       </div>
     </div>

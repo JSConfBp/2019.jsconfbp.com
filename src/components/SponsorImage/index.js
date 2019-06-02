@@ -1,13 +1,13 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import ProfileImage from '../ProfileImage'
+import Img from 'gatsby-image'
 
-const SpeakerImage = ({ image, color, className = '' }) => (
+const SponsorImage = ({ image, className = '' }) => (
   <StaticQuery
     query={graphql`
-      query speakerImgQuery {
+      query sponsorImgQuery {
         source: allFile(
-          filter: { absolutePath: { regex: "/speakers/images/" } }
+          filter: { absolutePath: { regex: "/static/sponsors/" } }
         ) {
           edges {
             node {
@@ -28,14 +28,13 @@ const SpeakerImage = ({ image, color, className = '' }) => (
           return src.includes(image)
         })
         .map(({ node }, i) => (
-          <ProfileImage
-            imageData={node.childImageSharp.fluid}
+          <Img
             className={className}
-            color={color}
-            key={`speaker-image-${i}`}
+            fluid={node.childImageSharp.fluid}
+            key={image}
           />
         ))
     }}
   />
 )
-export default SpeakerImage
+export default SponsorImage
