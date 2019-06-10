@@ -35,13 +35,8 @@ const IndexPage = props => (
           >
             Tickets from €311
           </Button>
-
-          <Button block={true} fill={false} href="#speakers">
-            Speakers
-          </Button>
         </div>
       </div>
-      <a name="speakers" />
       <div className={styles.updates}>
         <div className={styles.updates_content}>
           <h1 className={styles.home_heading}>Speakers</h1>

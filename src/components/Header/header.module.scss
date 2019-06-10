@@ -16,7 +16,7 @@
         size: cover;
     }
 
-    @include valueByHeaderScroll('height', 84px, 364px);
+    @include valueByHeaderScroll('height', 84px, 300px);
 
     @media screen and (max-width: $breakpoint-sm) {
         background-image: none;

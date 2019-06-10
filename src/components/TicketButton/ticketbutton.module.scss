@@ -45,6 +45,7 @@
     width: (500px / 3);
 
     @media screen and (min-width: $breakpoint-lg) {
+        border-radius: 2px;
         height: 52px;
         width: (400px / 3);
     }
@@ -65,8 +66,8 @@
 
     @media screen and (min-width: $breakpoint-lg) {
         &::before {
-            border-radius: 0;
-            $darkred: darken($jsconfred, 20%);
+            border-radius: 50%;
+            $darkred: #474C51;
 
             left: -6px;
 
@@ -94,7 +95,7 @@
 
     @media screen and (max-width: $breakpoint-lg) {
         &::before {
-            $darkred: darken($jsconfred, 20%);
+            $darkred: #474C51;
 
             left: -6px;
             background-color: $darkred;

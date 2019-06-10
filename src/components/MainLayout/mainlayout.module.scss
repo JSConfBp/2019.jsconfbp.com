@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5 {
 
     @media screen and (min-width: $breakpoint-sm) {
         padding: {
-            top: 364px;
+            top: 290px;
         }
-        min-height: calc(136vh - 364px);
+        min-height: calc(136vh - 290px);
     }
     @media screen and (min-width: $breakpoint-sm) and (max-width: $menu-breakpoint) {
         padding: {
