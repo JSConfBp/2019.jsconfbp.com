@@ -23,7 +23,7 @@
 
     & .title {
         color: #fff;
-        font-size: $size-xxl;
+        font-size: $size-xl;
         line-height: 1.2;
 
         @media screen and (min-width: $breakpoint-lg) {
@@ -107,7 +107,7 @@
         padding: 3rem;
     }
     @media screen and (max-width: $breakpoint-sm) {
-        padding: 3rem 1rem;
+        padding: $size-md $size-sm;
     }
 
     &_content {

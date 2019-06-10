@@ -28,28 +28,33 @@
 }
 
 .button {
-	font-size: 1rem;
+	box-shadow: 0 0 0 1px #000 inset;
+	font: {
+		size: 1rem;
+		weight: 700;
+	}
 	padding: $size-md $size-lg;
 	margin-bottom: $size-lg;
 	cursor: pointer;
-	
 	text: {
 		decoration: none;
 		transform: uppercase;
 	}
-
 	border: 1px solid $color-yellow;
 
-	&:hover, &:focus, &:active {
+	&:hover, &:focus {
 		border-color: $color-white;
 		background-color: $color-white;
 		color: $gray-900 !important;
+		transition: background .3s ease;
+	}
+	&:active {
+		box-shadow: 0px 0px 0px 2px #000 inset;
 	}
 	&__block {
 		display: block;
 		width: fit-content;
 		margin: 0 auto;
-		margin-bottom: $size-lg;
 	}
 
 	&__fill {
@@ -100,11 +105,15 @@
 	&__disabled {
 		background: $gray-400;
 		border-color: transparent;
+		cursor: default;
 
-		&:hover, &:focus, &:active {
-			background: $gray-300;
+		&:hover, &:focus {
+			background: $gray-400;
 			color: $color-white !important;
 			border-color: transparent !important;
+		}
+		&:active {
+			box-shadow: 0 0 0 1px #000 inset;
 		}
 	}
 }
