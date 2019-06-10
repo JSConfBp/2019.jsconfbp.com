@@ -126,8 +126,8 @@ const About = () => (
           <a href="https://twitter.com/cat_a_flame">
             <span>
               <img
-                alt="Stefi"
-                src="https://pbs.twimg.com/profile_images/1075052272269312006/KAE_IJbm_400x400.jpg"
+                alt="Stefanie"
+                src="http://schatten.hu/temp/meh.png"
               />
             </span>
             Stefania Peter
