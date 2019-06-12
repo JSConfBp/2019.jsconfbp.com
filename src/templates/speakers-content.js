@@ -45,6 +45,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     company,
     company_url,
   } = mdx.frontmatter
+
   return (
     <Layout>
       <SocialMeta
@@ -77,14 +78,15 @@ function SpeakersContentTemplate({ data: { mdx } }) {
                   <Link url={link} text="Website" />
                 </li>
               )}
-              {twitter && (
-                <li className={speakerStyles.link_twitter}>
-                  <Link
-                    url={`https://twitter.com/${twitter}`}
-                    text={`@${twitter}`}
-                  />
-                </li>
-              )}
+              {twitter &&
+                twitter.map(twhandle => (
+                  <li className={speakerStyles.link_twitter} key={twhandle}>
+                    <Link
+                      url={`https://twitter.com/${twhandle}`}
+                      text={`@${twhandle}`}
+                    />
+                  </li>
+                ))}
               {github && (
                 <li className={speakerStyles.link_github}>
                   <Link url={`https://github.com/${github}`} text={github} />
@@ -100,7 +102,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
           <div className={speakerStyles.talk_column}>
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
-            <hr />
+            {bio && (<hr />)}
 
             {bio}
 

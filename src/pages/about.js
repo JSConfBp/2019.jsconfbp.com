@@ -125,10 +125,7 @@ const About = () => (
         <li>
           <a href="https://twitter.com/cat_a_flame">
             <span>
-              <img
-                alt="Stefanie"
-                src="http://schatten.hu/temp/meh.png"
-              />
+              <img alt="Stefanie" src="http://schatten.hu/temp/meh.png" />
             </span>
             Stefania Peter
           </a>
