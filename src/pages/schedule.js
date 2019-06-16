@@ -10,7 +10,7 @@ const Schedule = () => (
     <div className={styles.simpleText}>
       <h1>Schedule</h1>
 
-      <p>
+      <p className={styles.last_item}>
         This will be the rough schedule for September, we'll get this more and
         more detailed with time.
       </p>
@@ -24,7 +24,7 @@ const Schedule = () => (
         </Link>
       </p>
 
-      <p>
+      <p  className={styles.last_item}>
         <strong>Meetup night</strong> - We will coordinate with a couple of
         meetups to have a meetup night just before the events. Stay tuned!
       </p>
@@ -37,14 +37,14 @@ const Schedule = () => (
         </strong>
       </p>
 
-      <ul>
-        <li>Breakfast</li>
+      <ul className={styles.last_item}>
+        <li><Link to="/updates/vegan-menu#css-day">Breakfast</Link></li>
         <li>Event opening</li>
         <li>Coffee break</li>
-        <li>Lunch</li>
+        <li><Link to="/updates/vegan-menu#css-day">Lunch</Link></li>
         <li>Coffee break</li>
         <li>Event closing</li>
-        <li>Dinner & Afterparty</li>
+        <li><Link to="/updates/vegan-menu#css-day">Dinner</Link> & Afterparty</li>
       </ul>
 
       <h3>Thursday, 26th September, 2019</h3>
@@ -53,13 +53,13 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 1</strong>
       </p>
 
-      <ul>
-        <li>Breakfast</li>
+      <ul className={styles.last_item}>
+        <li><Link to="/updates/vegan-menu#js-day-1">Breakfast</Link></li>
         <li>Event opening</li>
         <li>Coffee break</li>
-        <li>Lunch</li>
+        <li><Link to="/updates/vegan-menu#js-day-1">Lunch</Link></li>
         <li>Coffee break</li>
-        <li>Dinner</li>
+        <li><Link to="/updates/vegan-menu#js-day-1">Dinner</Link></li>
         <li>Party on Day one </li>
       </ul>
 
@@ -69,10 +69,10 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 2</strong>
       </p>
 
-      <ul>
-        <li>Breakfast</li>
+      <ul className={styles.last_item}>
+        <li><Link to="/updates/vegan-menu#js-day-2">Breakfast</Link></li>
         <li>Coffee break</li>
-        <li>Lunch</li>
+        <li><Link to="/updates/vegan-menu#js-day-2">Lunch</Link></li>
         <li>Coffee break</li>
         <li>Event closing</li>
         <li>Afterparty</li>

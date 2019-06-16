@@ -4,10 +4,9 @@
 @import '../components/sizes.scss';
 
 .simpleText {
-    background-color: #f9f9f9;
+    // background-color: #f9f9f9;
     line-height: 1.48rem;
     max-width: 800px;
-
     min-height: 100vh;
 
     margin: {
@@ -17,6 +16,7 @@
 
     padding: $size-md;
 
+    z-index: 10;
     position: relative;
 
     @media screen and (min-width: $breakpoint-sm) {
@@ -73,11 +73,15 @@
         font-weight: 200;
     }
 
+    & ul {
+        margin-left: 0.35rem;
+    }
+
     & ul li {
         list-style-type: disc;
         margin: {
             left: $size-lg;
-            bottom: $size-md;
+            bottom: $size-sm;
         }
 
         &:last-child {
@@ -107,6 +111,10 @@
     & strikethrough {
         text-decoration: line-through;
         opacity: .5;
+    }
+
+    & .last_item {
+        margin-bottom: $size-xxl;
     }
 
     .team_grid {
