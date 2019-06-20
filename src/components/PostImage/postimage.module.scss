@@ -1,0 +1,11 @@
+@import '../breakpoints.scss';
+@import '../colors.scss';
+@import '../font-face.scss';
+@import '../sizes.scss';
+
+.postImage_container {
+	height: 20rem;
+	overflow: hidden;
+	margin-top: $size-xl;
+	margin-bottom: $size-xl;
+}
