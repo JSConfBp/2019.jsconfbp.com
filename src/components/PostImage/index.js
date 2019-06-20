@@ -10,7 +10,7 @@ const PostImage = ({ image, style = '' }) => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 1200) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
