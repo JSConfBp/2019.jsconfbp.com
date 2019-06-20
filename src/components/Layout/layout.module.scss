@@ -28,6 +28,59 @@
 
     position: relative;
     z-index: 1;
+    overflow: hidden;
+
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 48rem;
+        height: 48rem;
+        background: {
+            image: url('./wire-mesh.svg');
+            repeat: no-repeat;
+            position: bottom right;
+            size: 100%;
+        }
+        opacity: .25;
+
+        @media screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+            width: 32rem;
+            height: 32rem;
+            opacity: .15;
+        }
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+            width: 24rem;
+            height: 24rem;
+            opacity: .15;
+        }
+        @media screen and (max-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        transform: translate(-65%, -15%) rotate(#{random(15) * 30}deg);
+
+        @media screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+            transform: translate(-60%, 50%) rotate(#{random(15) * 30}deg);
+        }
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+            transform: translate(-60%, 100%) rotate(#{random(15) * 30}deg);
+        }
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        transform: translate(65%, 45%) rotate(#{random(15) * 30}deg);
+    }
+
 }
 
 .footer {

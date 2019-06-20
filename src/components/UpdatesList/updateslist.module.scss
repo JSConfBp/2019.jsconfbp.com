@@ -61,12 +61,16 @@
         }
         margin: {
             top: $size-sm;
-            bottom: $size-sm;
+            bottom: $size-md;
         }
         text-decoration: none;
         &:hover, &:focus, &:active {
             color: darken($jsconfred, 10%);
         }
+    }
+
+    & .lead {
+        margin-bottom: $size-md;
     }
 }
 

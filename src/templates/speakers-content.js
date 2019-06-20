@@ -102,7 +102,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
           <div className={speakerStyles.talk_column}>
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
-            {bio && (<hr />)}
+            {bio && <hr />}
 
             {bio}
 

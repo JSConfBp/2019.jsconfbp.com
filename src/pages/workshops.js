@@ -60,6 +60,7 @@ export const query = graphql`
             start
             end
             mentors
+            order
           }
         }
       }
