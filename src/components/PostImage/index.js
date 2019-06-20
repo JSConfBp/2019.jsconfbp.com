@@ -25,12 +25,10 @@ const PostImage = ({ image, style = '' }) => (
           const { src } = node.childImageSharp.fluid
           return src.includes(image)
         })
-        .map(({ node }, i) => (<div className={styles.postImage_container} >
-          <Img
-            style={style}
-            fluid={node.childImageSharp.fluid}
-            key={image}
-          /></div>
+        .map(({ node }, i) => (
+          <div className={styles.postImage_container}>
+            <Img style={style} fluid={node.childImageSharp.fluid} key={image} />
+          </div>
         ))
     }}
   />
