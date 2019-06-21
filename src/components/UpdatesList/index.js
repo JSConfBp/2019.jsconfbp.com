@@ -16,6 +16,7 @@ const UpdatesList = props => (
 
         return 0
       })
+      .slice(0,3)
       .map(({ node }) => (
         <li key={node.id} className={styles.updates_list_item}>
           <span className={styles.date}>{node.frontmatter.date}</span>
