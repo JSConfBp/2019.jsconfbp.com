@@ -37,6 +37,7 @@
         }
 
         li {
+
             list-style-type: none;
             margin: 0;
             padding: 0 1rem;
@@ -50,6 +51,7 @@
 
         .perk_label,
         .perk_value {
+            position: relative;
             display: inline-block;
             padding: 0 2rem;
             min-height: 4rem;
@@ -64,11 +66,25 @@
 
         .perk_label {
             font-weight: 200;
+            padding-right: 3rem;
         }
 
         .perk_value {
             background-color: $color-grey-3;
             color: $color-red;
         }
+
+        .perk_icon {
+            position: absolute;
+            right: .7rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
     }
+}
+
+.popper {
+    font-size: 2rem !important;
 }
