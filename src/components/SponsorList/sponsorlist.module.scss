@@ -14,12 +14,20 @@
 		margin-bottom: 4rem;
 	}
 
+	&_list:last-of-type {
+		margin-bottom: 0rem;
+	}
+
 	&_big {
 		width: 350px;
 	}
 
 	&_med {
-		width: 300px;
+		width: 280px;
+	}
+
+	&_sm {
+		width: 200px;
 	}
 
 	&_scholarship {

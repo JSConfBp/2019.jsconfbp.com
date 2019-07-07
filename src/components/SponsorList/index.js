@@ -16,12 +16,25 @@ const UpdatesList = props => (
 
     <ul className={styles.sponsor_list}>
       {data.big.map(sponsor => (
-        <li className={styles.sponsor_big} key={sponsor.name}>
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />
         </li>
       ))}
     </ul>
-
+    <ul className={styles.sponsor_list}>
+      {data.med.map(sponsor => (
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
+          <SponsorImageLink {...sponsor} />
+        </li>
+      ))}
+    </ul>
+    <ul className={styles.sponsor_list}>
+      {data.sm.map(sponsor => (
+        <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
+          <SponsorImageLink {...sponsor} />
+        </li>
+      ))}
+    </ul>
     <h1 className={styles.sponsor_subtitle}>Scholarship Sponsors</h1>
 
     <ul className={styles.sponsor_list}>
