@@ -17,6 +17,18 @@ export default {
       link: 'https://twilio.com',
       image: 'twilio-logo-red',
     },
+    {
+      name: 'SuperCharge',
+      level: 'med',
+      link: 'https://supercharge.io/',
+      image: 'supercharge_logo17-with-text',
+    },
+    {
+      name: 'EPAM',
+      level: 'med',
+      link: 'https://www.epam.com/',
+      image: 'EPAM_LOGO_Primary',
+    },
   ],
 
   sm: [
