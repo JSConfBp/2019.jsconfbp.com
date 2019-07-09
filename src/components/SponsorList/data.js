@@ -6,8 +6,6 @@ export default {
       link: 'https://mozilla.com',
       image: 'mozilla',
     },
-
-    ,
   ],
 
   med: [
