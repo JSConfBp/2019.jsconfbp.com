@@ -14,12 +14,17 @@ const Navigation = props => {
   return (
     <nav className={className.join(' ')}>
       <ul>
-        <li className={styles.item}>
+        {/* <li className={styles.item}>
           <Link className={styles.link} to="/scholarship-program">
             Scholarship
           </Link>
         </li>
-
+ */}
+        <li className={styles.item}>
+          <Link className={styles.link} to="/">
+            Speakers
+          </Link>
+        </li>
         <li className={styles.item}>
           <Link className={styles.link} to="/schedule">
             Schedule
@@ -38,7 +43,7 @@ const Navigation = props => {
         </li>
         <li className={styles.item}>
           <Link className={styles.link} to="/workshops">
-            Workshops
+            Free Workshops
           </Link>
         </li>
         {/*<li className={styles.item}>
