@@ -40,7 +40,7 @@ const Schedule = () => (
         <br />
       </p>
 
-      <dl className={ classnames(styles.last_item, schedule.list) }>
+      <dl className={classnames(styles.last_item, schedule.list)}>
         <dt>8:00</dt>
         <dd>
           <Link to="/updates/vegan-menu#css-day">Breakfast</Link> & Registration
@@ -69,7 +69,7 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 1</strong>
       </p>
 
-      <ul className={ classnames(styles.last_item, schedule.list) }>
+      <ul className={classnames(styles.last_item, schedule.list)}>
         <dt>8:00</dt>
         <dd>
           <Link to="/updates/vegan-menu#js-day-1">Breakfast</Link> &
@@ -99,7 +99,7 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 2</strong>
       </p>
 
-      <ul className={ classnames(styles.last_item, schedule.list) }>
+      <ul className={classnames(styles.last_item, schedule.list)}>
         <dt>9:00</dt>
         <dd>
           <Link to="/updates/vegan-menu#js-day-2">Breakfast</Link>
