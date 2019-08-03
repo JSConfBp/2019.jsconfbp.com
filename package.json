@@ -21,6 +21,7 @@
     "@mdx-js/mdx": "^1.0.16",
     "@mdx-js/react": "^1.0.16",
     "@mdx-js/tag": "^0.20.3",
+    "classnames": "^2.2.6",
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
     "gatsby-mdx": "^0.6.3",

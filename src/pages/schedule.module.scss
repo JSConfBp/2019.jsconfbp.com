@@ -1,0 +1,13 @@
+.list {
+	display: grid;
+	grid-template-columns: 4rem auto;
+
+	dt {
+		text-align: right;
+		padding-right: 1rem;
+	}
+
+	dd {
+		font-weight: 200;
+	}
+}

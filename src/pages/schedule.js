@@ -1,8 +1,10 @@
 import React from 'react'
+import classnames from 'classnames'
 import Layout from '../components/Layout/index'
 import { Link } from 'gatsby'
 import styles from './simpletext.module.scss'
 import SocialMeta from '../components/SocialMeta/index'
+import schedule from './schedule.module.scss'
 
 const Schedule = () => (
   <Layout>
@@ -35,23 +37,31 @@ const Schedule = () => (
         <strong>
           <a href="http://cssconfbp.rocks/">CSSConf Budapest 2019</a>
         </strong>
+        <br />
       </p>
 
-      <ul className={styles.last_item}>
-        <li>
-          <Link to="/updates/vegan-menu#css-day">Breakfast</Link>
-        </li>
-        <li>Event opening</li>
-        <li>Coffee break</li>
-        <li>
+      <dl className={ classnames(styles.last_item, schedule.list) }>
+        <dt>8:00</dt>
+        <dd>
+          <Link to="/updates/vegan-menu#css-day">Breakfast</Link> & Registration
+        </dd>
+        <dt>9:30</dt>
+        <dd>Event opening</dd>
+        <dt>11:15</dt>
+        <dd>Coffee break</dd>
+        <dt>13:00</dt>
+        <dd>
           <Link to="/updates/vegan-menu#css-day">Lunch</Link>
-        </li>
-        <li>Coffee break</li>
-        <li>Event closing</li>
-        <li>
+        </dd>
+        <dt>15:30</dt>
+        <dd>Coffee break</dd>
+        <dt>17:15</dt>
+        <dd>Event closing & Family photo</dd>
+        <dt>17:45</dt>
+        <dd>
           <Link to="/updates/vegan-menu#css-day">Dinner</Link> & Afterparty
-        </li>
-      </ul>
+        </dd>
+      </dl>
 
       <h3>Thursday, 26th September, 2019</h3>
 
@@ -59,20 +69,28 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 1</strong>
       </p>
 
-      <ul className={styles.last_item}>
-        <li>
-          <Link to="/updates/vegan-menu#js-day-1">Breakfast</Link>
-        </li>
-        <li>Event opening</li>
-        <li>Coffee break</li>
-        <li>
+      <ul className={ classnames(styles.last_item, schedule.list) }>
+        <dt>8:00</dt>
+        <dd>
+          <Link to="/updates/vegan-menu#js-day-1">Breakfast</Link> &
+          Registration
+        </dd>
+        <dt>9:30</dt>
+        <dd>Event opening</dd>
+        <dt>11:15</dt>
+        <dd>Coffee break</dd>
+        <dt>13:00</dt>
+        <dd>
           <Link to="/updates/vegan-menu#js-day-1">Lunch</Link>
-        </li>
-        <li>Coffee break</li>
-        <li>
-          <Link to="/updates/vegan-menu#js-day-1">Dinner</Link>
-        </li>
-        <li>Party on Day one </li>
+        </dd>
+        <dt>15:30</dt>
+        <dd>Coffee break</dd>
+        <dt>17:45</dt>
+        <dd>Closing First day</dd>
+        <dt>18:00</dt>
+        <dd>
+          <Link to="/updates/vegan-menu#js-day-1">Dinner</Link> & party
+        </dd>
       </ul>
 
       <h3>Friday, 27th September, 2019</h3>
@@ -81,17 +99,23 @@ const Schedule = () => (
         <strong>JSConf Budapest 2019 Day 2</strong>
       </p>
 
-      <ul className={styles.last_item}>
-        <li>
+      <ul className={ classnames(styles.last_item, schedule.list) }>
+        <dt>9:00</dt>
+        <dd>
           <Link to="/updates/vegan-menu#js-day-2">Breakfast</Link>
-        </li>
-        <li>Coffee break</li>
-        <li>
+        </dd>
+        <dt>11:30</dt>
+        <dd>Coffee break</dd>
+        <dt>13:15</dt>
+        <dd>
           <Link to="/updates/vegan-menu#js-day-2">Lunch</Link>
-        </li>
-        <li>Coffee break</li>
-        <li>Event closing</li>
-        <li>Afterparty</li>
+        </dd>
+        <dt>15:45</dt>
+        <dd>Coffee break</dd>
+        <dt>18:00</dt>
+        <dd>Event closing & Family photo</dd>
+        <dt>19:30</dt>
+        <dd>Afterparty</dd>
       </ul>
     </div>
   </Layout>
