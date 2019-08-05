@@ -33,7 +33,7 @@ export default {
     {
       name: 'Snyk',
       level: 'sm',
-      link: 'https://snyk.com',
+      link: 'https://snyk.io',
       image: 'snyk-logo-black',
     },
   ],
