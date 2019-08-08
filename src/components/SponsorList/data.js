@@ -55,7 +55,13 @@ export default {
       name: 'SinnerSchrader',
       level: 'scholarship',
       link: 'https://sinnerschrader.com',
-      image: 'S2_Black_RGB',
+      image: 'sinnerschrader',
+    },
+    {
+      name: 'Zalando',
+      level: 'scholarship',
+      link: 'https://jobs.zalando.com/tech/',
+      image: 'zalando',
     },
   ],
   partners: [

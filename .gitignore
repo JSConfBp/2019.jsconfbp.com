@@ -3,3 +3,4 @@ public
 .cache
 src/gdpr/*.json
 tmp
+.vscode
