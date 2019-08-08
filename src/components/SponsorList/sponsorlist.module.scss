@@ -12,6 +12,14 @@
 		justify-content: space-around;
 		align-items: center;
 		margin-bottom: 4rem;
+
+		&_medium {
+			flex-wrap: wrap;
+
+			li {
+				margin: 0 2rem;
+			}
+		}
 	}
 
 	&_list:last-of-type {

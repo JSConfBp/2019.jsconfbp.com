@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import classnames from 'classnames';
 import SponsorImage from '../SponsorImage'
 import data from './data'
 import styles from './sponsorlist.module.scss'
 
 const SponsorImageLink = ({ link, image, name }) => (
-  <a href={link}>
+  <a href={link} title={ name }>
     <SponsorImage className={styles.image} image={image} title={name} />
   </a>
 )
@@ -21,7 +22,7 @@ const UpdatesList = props => (
         </li>
       ))}
     </ul>
-    <ul className={styles.sponsor_list}>
+    <ul className={ classnames(styles.sponsor_list, styles.sponsor_list_medium) }>
       {data.med.map(sponsor => (
         <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />

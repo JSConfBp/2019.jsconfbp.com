@@ -27,6 +27,18 @@ export default {
       link: 'https://www.epam.com/',
       image: 'EPAM_LOGO_Primary',
     },
+    {
+      name: 'Mito',
+      level: 'med',
+      link: 'https://mito.hu/',
+      image: 'mito',
+    },
+    {
+      name: 'Bonomi',
+      level: 'med',
+      link: 'https://bonomi.io/',
+      image: 'bonomi',
+    },
   ],
 
   sm: [
