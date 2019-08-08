@@ -39,6 +39,12 @@ export default {
       link: 'https://bonomi.io/',
       image: 'bonomi',
     },
+    {
+      name: 'RisingStack',
+      level: 'med',
+      link: 'https://risingstack.com/',
+      image: 'risingstack',
+    },
   ],
 
   sm: [
