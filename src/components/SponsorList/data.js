@@ -45,6 +45,19 @@ export default {
       link: 'https://risingstack.com/',
       image: 'risingstack',
     },
+    {
+      name: 'Vacuumlabs',
+      level: 'med',
+      link: 'https://vacuumlabs.com/',
+      image: 'vacuumlabs',
+    },
+
+    {
+      name: 'Microsoft',
+      level: 'med',
+      link: 'https://microsoft.com/',
+      image: 'microsoft',
+    },
   ],
 
   sm: [
@@ -80,6 +93,12 @@ export default {
       name: 'JSLeague',
       link: 'https://www.jsleague.ro/',
       image: 'jsleague-logo-flat',
+    },
+
+    {
+      name: 'IseeQ',
+      link: 'https://iseeq.co/',
+      image: 'iseeq_logo',
     },
   ],
 }

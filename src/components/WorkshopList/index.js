@@ -9,15 +9,16 @@ const SEAT_API = 'https://workshop-registration.herokuapp.com/api/seats'
 
 const filterWorkshops = ({ node }) =>
   node.parent.sourceInstanceName === 'workshops'
-const sortWorkshops = (prev, next) => {
+
+  const sortWorkshops = (prev, next) => {
   console.log(prev.node.frontmatter.order)
 
   const prevOrder = +prev.node.frontmatter.order
   const nextOrder = +next.node.frontmatter.order
 
-  if (prevOrder < nextOrder) return -1
+  if (prevOrder < nextOrder) return 1
 
-  if (prevOrder > nextOrder) return 1
+  if (prevOrder > nextOrder) return -1
 
   return 0
 }
