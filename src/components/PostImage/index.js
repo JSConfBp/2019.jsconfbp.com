@@ -21,7 +21,6 @@ const PostImage = ({ image, style = '', alt = '' }) => (
       }
     `}
     render={data => {
-
       const imageStyle = Object.assign({}, style, {
         //transform: style.transform + ' translateX(-50%)',
         //position: 'absolute'
