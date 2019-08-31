@@ -8,12 +8,12 @@ import schedule from './schedule.module.scss'
 
 const Schedule = () => (
   <Layout>
-    <SocialMeta image="social_card.jpg" />
+    <SocialMeta image="social_card_schedule.jpg" />
     <div className={styles.simpleText}>
       <h1>Schedule</h1>
 
       <p className={styles.last_item}>
-        This will be the rough schedule for September, we'll get this more and
+        This will be the schedule for September, we'll get this more and
         more detailed with time.
       </p>
 
