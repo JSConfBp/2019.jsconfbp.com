@@ -163,7 +163,7 @@ const Schedule = () => (
         </dd>
         <dt>17:15</dt>
         <dd>
-          <strong>HTTP 203 Unplugged</strong>
+          <strong>Making things fast in world of build tools</strong>
           <br /> by Jake Archibald & Surma{' '}
         </dd>
 
