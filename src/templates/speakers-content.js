@@ -15,7 +15,6 @@ const TicketButton = () => (
     block={true}
     fill={true}
     color={'red'}
-    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
     className={styles.ticket_button}
   >
     Tickets from €311
@@ -105,10 +104,6 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             {bio && <hr />}
 
             {bio}
-
-            <hr />
-
-            <TicketButton />
           </div>
         </div>
       </div>
