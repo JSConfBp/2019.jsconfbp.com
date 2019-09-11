@@ -28,9 +28,6 @@ const IndexPage = props => (
             <a href="http://2015.jsconfbp.com">2015</a>!
           </p>*/}
 
-          <Button block={true} fill={false}>
-            Sold Out for 2019, Thank you!
-          </Button>
         </div>
       </div>
       <div className={styles.updates}>

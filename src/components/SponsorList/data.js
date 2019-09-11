@@ -6,6 +6,24 @@ export default {
       link: 'https://mozilla.com',
       image: 'mozilla',
     },
+    {
+      name: 'Tresorit',
+      level: 'big',
+      link: 'https://tresorit.com',
+      image: 'tresorit',
+    },
+    {
+      name: 'Oracle',
+      level: 'big',
+      link: 'https://oracle.com',
+      image: 'oracle',
+    },
+    {
+      name: 'Vacuumlabs',
+      level: 'big',
+      link: 'https://vacuumlabs.com/',
+      image: 'vacuumlabs',
+    },
   ],
 
   med: [
@@ -44,12 +62,6 @@ export default {
       level: 'med',
       link: 'https://risingstack.com/',
       image: 'risingstack',
-    },
-    {
-      name: 'Vacuumlabs',
-      level: 'med',
-      link: 'https://vacuumlabs.com/',
-      image: 'vacuumlabs',
     },
 
     {

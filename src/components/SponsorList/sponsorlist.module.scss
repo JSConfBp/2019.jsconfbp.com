@@ -13,6 +13,10 @@
 		align-items: center;
 		margin-bottom: 4rem;
 
+		&_big {
+			flex-wrap: wrap;
+		}
+
 		&_medium {
 			flex-wrap: wrap;
 
@@ -28,10 +32,11 @@
 
 	&_big {
 		width: 400px;
+		margin: 2rem;
 	}
 
 	&_med {
-		width: 280px;
+		width: 250px;
 	}
 
 	&_sm {
