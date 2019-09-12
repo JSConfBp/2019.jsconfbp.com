@@ -63,12 +63,18 @@ export default {
       link: 'https://risingstack.com/',
       image: 'risingstack',
     },
-
     {
       name: 'Microsoft',
       level: 'med',
       link: 'https://microsoft.com/',
       image: 'microsoft',
+    },
+    {
+      name: 'BlackRock',
+      level: 'med',
+      link:
+        'https://www.blackrock.com/hu/egyeni-befektetok/careers/budapest-recruiting?locale=hu_HU&switchLocale=y&siteEntryPassthrough=true',
+      image: 'blackrock',
     },
   ],
 
