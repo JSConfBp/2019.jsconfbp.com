@@ -38,7 +38,7 @@ export default {
       name: 'instructure',
       level: 'med',
       link:
-        'https://www.instructure.com/about/careers',
+        'https://www.instructure.com/budapest',
       image: 'instructure',
     },
     {
