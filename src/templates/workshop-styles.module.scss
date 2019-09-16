@@ -48,9 +48,9 @@
 		.links {
 			margin: 0;
 			margin-bottom: $size-xxl;
-	
+
 			@media screen and (max-width: $breakpoint-lg) {
-				
+
 			}
 			@media  screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
 				margin-left: 2rem
@@ -61,6 +61,11 @@
 				margin-bottom: .5rem;
 				position: relative;
 			}
+		}
+
+		.mentor_list li {
+			list-style-type: disc;
+			margin-left: 1rem;
 		}
 
 		.ticket_button {

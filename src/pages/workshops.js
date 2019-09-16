@@ -59,7 +59,6 @@ export const query = graphql`
             workshop_id
             start
             end
-            mentors
             order
           }
         }

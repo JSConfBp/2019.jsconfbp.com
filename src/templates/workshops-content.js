@@ -37,18 +37,32 @@ function SpeakersContentTemplate({ data: { mdx } }) {
       .catch(e => console.error(e))
   })
 
-  const { title, company, company_url, short_description } = mdx.frontmatter
-
   const countSeats = id => {
     return seats[id] ? seats[id].seats - seats[id].taken : 'N/A'
   }
 
+  console.log(mdx.frontmatter)
+
+  const {
+    workshop_id,
+    title,
+    short_description,
+    socialCard = 'social-card.png',
+    location = 'TBA',
+    start,
+    end,
+    company,
+    company_url,
+    disabled,
+    mentors
+  } = mdx.frontmatter
+
   return (
     <Layout>
       <SocialMeta
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.short_description}
-        image={mdx.frontmatter.socialCard || 'social-card.png'}
+        title={title}
+        description={short_description}
+        image={socialCard}
       />
       <div className={classNames(styles.simpleText)}>
         <div className={workshopStyles.workshop_page}>
@@ -67,17 +81,28 @@ function SpeakersContentTemplate({ data: { mdx } }) {
                   <Link url={company_url} text={company} />
                 </li>
               )}
-              <li>September 24th, 2019</li>
-              <li>Location: TBA</li>
+              <li>Available seats: {countSeats(workshop_id)}</li>
+              <li>Mentors:
+                <ul className={workshopStyles.mentor_list}>
+                  { mentors.map( mentor => (<li>
+                    { mentor.twitter ? (
+                      <Link url={`https://twitter.com/${mentor.twitter}`} text={mentor.name} />
+                    ) : mentor.name
+                    }
+
+                  </li>)) }
+                </ul>
+              </li>
               <li>
-                Available seats: {countSeats(mdx.frontmatter.workshop_id)}
+                September 24th, 2019, {start} - {end}
+              </li>
+              <li>
+                Location: <br />
+                <strong>{location}</strong>
               </li>
             </ul>
 
-            <RegisterButton
-              id={mdx.frontmatter.workshop_id}
-              disabled={mdx.frontmatter.disabled}
-            />
+            <RegisterButton id={workshop_id} disabled={disabled} />
           </div>
         </div>
       </div>
@@ -108,6 +133,13 @@ export const pageQuery = graphql`
         socialCard
         workshop_id
         disabled
+        location
+        start
+        end
+        mentors {
+          name
+          twitter
+        }
       }
     }
   }

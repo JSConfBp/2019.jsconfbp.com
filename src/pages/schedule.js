@@ -48,13 +48,13 @@ const Schedule = () => (
         <dt>9:30</dt>
         <dd>Event opening</dd>
         <dt>11:15</dt>
-        <dd>Coffee break</dd>
+        <dd>Coffee break by Tresorit</dd>
         <dt>13:00</dt>
         <dd>
-          <Link to="/updates/vegan-menu#css-day">Lunch</Link>
+          <Link to="/updates/vegan-menu#css-day">Lunch by Vacuumlabs</Link>
         </dd>
         <dt>15:30</dt>
-        <dd>Coffee break</dd>
+        <dd>Coffee break by Tresorit</dd>
         <dt>17:15</dt>
         <dd>Event closing & Family photo</dd>
         <dt>17:45</dt>
@@ -104,7 +104,7 @@ const Schedule = () => (
         </dd>
 
         <dt className={schedule.break}>11:15</dt>
-        <dd className={schedule.break}>Coffee break</dd>
+        <dd className={schedule.break}>Coffee break by Tresorit</dd>
 
         <dt>12:00</dt>
         <dd>
@@ -125,7 +125,7 @@ const Schedule = () => (
 
         <dt className={schedule.break}>13:00</dt>
         <dd className={schedule.break}>
-          <Link to="/updates/vegan-menu#js-day-1">Lunch</Link>
+          <Link to="/updates/vegan-menu#js-day-1">Lunch by Vacuumlabs</Link>
         </dd>
 
         <dt>14:30</dt>
@@ -142,7 +142,7 @@ const Schedule = () => (
         </dd>
 
         <dt className={schedule.break}>15:30</dt>
-        <dd className={schedule.break}>Coffee break</dd>
+        <dd className={schedule.break}>Coffee break by Tresorit</dd>
 
         <dt>16:15</dt>
         <dd>
@@ -208,7 +208,7 @@ const Schedule = () => (
           by Rubén Sospedra{' '}
         </dd>
         <dt className={schedule.break}>11:30</dt>
-        <dd className={schedule.break}>Coffee break</dd>
+        <dd className={schedule.break}>Coffee break by Tresorit</dd>
         <dt>12:15</dt>{' '}
         <dd>
           <strong>Deciphering Brainwaves with the Web Audio API</strong>
@@ -223,7 +223,7 @@ const Schedule = () => (
         </dd>
         <dt className={schedule.break}>13:15</dt>
         <dd className={schedule.break}>
-          <Link to="/updates/vegan-menu#js-day-2">Lunch</Link>
+          <Link to="/updates/vegan-menu#js-day-2">Lunch by Vacuumlabs</Link>
         </dd>
         <dt>14:45</dt>{' '}
         <dd>
@@ -241,7 +241,7 @@ const Schedule = () => (
           by Liran Tal{' '}
         </dd>
         <dt className={schedule.break}>15:45</dt>
-        <dd className={schedule.break}>Coffee break</dd>
+        <dd className={schedule.break}>Coffee break by Tresorit</dd>
         <dt>16:30</dt>{' '}
         <dd>
           <strong>Testing presentation components visually</strong>
@@ -265,7 +265,7 @@ const Schedule = () => (
         <dt>18:00</dt>
         <dd>Event closing & Family photo</dd>
         <dt className={schedule.break}>19:30</dt>
-        <dd className={schedule.break}>Afterparty</dd>
+        <dd className={schedule.break}>Afterparty by Tresorit</dd>
       </dl>
     </div>
   </Layout>
