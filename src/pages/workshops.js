@@ -51,7 +51,6 @@ export const query = graphql`
             }
           }
           frontmatter {
-            disabled
             title
             company
             short_description

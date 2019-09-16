@@ -11,8 +11,6 @@ const filterWorkshops = ({ node }) =>
   node.parent.sourceInstanceName === 'workshops'
 
 const sortWorkshops = (prev, next) => {
-  console.log(prev.node.frontmatter.order)
-
   const prevOrder = +prev.node.frontmatter.order
   const nextOrder = +next.node.frontmatter.order
 

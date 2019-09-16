@@ -41,8 +41,6 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     return seats[id] ? seats[id].seats - seats[id].taken : 'N/A'
   }
 
-  console.log(mdx.frontmatter)
-
   const {
     workshop_id,
     title,
@@ -54,7 +52,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     company,
     company_url,
     disabled,
-    mentors
+    mentors,
   } = mdx.frontmatter
 
   return (
@@ -82,15 +80,21 @@ function SpeakersContentTemplate({ data: { mdx } }) {
                 </li>
               )}
               <li>Available seats: {countSeats(workshop_id)}</li>
-              <li>Mentors:
+              <li>
+                Mentors:
                 <ul className={workshopStyles.mentor_list}>
-                  { mentors.map( mentor => (<li>
-                    { mentor.twitter ? (
-                      <Link url={`https://twitter.com/${mentor.twitter}`} text={mentor.name} />
-                    ) : mentor.name
-                    }
-
-                  </li>)) }
+                  {mentors.map(mentor => (
+                    <li>
+                      {mentor.twitter ? (
+                        <Link
+                          url={`https://twitter.com/${mentor.twitter}`}
+                          text={mentor.name}
+                        />
+                      ) : (
+                        mentor.name
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </li>
               <li>
@@ -132,7 +136,6 @@ export const pageQuery = graphql`
         company_url
         socialCard
         workshop_id
-        disabled
         location
         start
         end
