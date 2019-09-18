@@ -25,7 +25,7 @@ export default {
       image: 'vacuumlabs',
     },
   ],
-  
+
   med: [
     {
       name: 'BlackRock',
@@ -37,8 +37,7 @@ export default {
     {
       name: 'instructure',
       level: 'med',
-      link:
-        'https://www.instructure.com/budapest',
+      link: 'https://www.instructure.com/budapest',
       image: 'instructure',
     },
     {

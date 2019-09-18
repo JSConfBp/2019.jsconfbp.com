@@ -158,8 +158,7 @@ const Schedule = () => (
             Taming “Git”osaurus Using Mystical Trees: Understanding complex git
             trees in the developer fairyland
           </strong>
-          <br /> by Damini Satya Kammakomati Taming “Git”osaurus Using Mystical
-          Trees: Understanding complex git trees in the developer fairyland
+          <br /> by Damini Satya Kammakomati
         </dd>
         <dt>17:15</dt>
         <dd>
