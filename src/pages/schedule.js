@@ -26,9 +26,34 @@ const Schedule = () => (
         </Link>
       </p>
 
+      <p>
+        <strong>Meetup night</strong> - Monday and Tuesday evening, September
+        23-24th, the Budapest tech community has some recommendations for you,
+        to bring the local community and the attendees of CSSConf Budapest &
+        JSConf Budapest together before the events.
+      </p>
+
+      <ul>
+        <li>
+          <a href="https://www.meetup.com/Rust-Hungary-Meetup/events/264467545/">
+            Rust Hungary Meetup on Monday, Sept 23rd
+          </a>
+        </li>
+        <li>
+          <a href="https://www.meetup.com/budapest-js/events/259593824/">
+            BudapestJS 2019 September on Tuesday, Sept 24th
+          </a>
+        </li>
+        <li>
+          <a href="https://www.meetup.com/ReactiveMeetups-Budapest/events/264746039/">
+            Reactive Meetups Budapest on Tuesday, Sept 24th
+          </a>
+        </li>
+      </ul>
+
       <p className={styles.last_item}>
-        <strong>Meetup night</strong> - We will coordinate with a couple of
-        meetups to have a meetup night just before the events. Stay tuned!
+        After the meetups on Tuesday let’s gather at{' '}
+        <a href="https://goo.gl/maps/9q6QwzF2TcE4rdnEA">Ankert</a> for drinks!
       </p>
 
       <h3>Wednesday, 25th September, 2019</h3>
@@ -47,7 +72,7 @@ const Schedule = () => (
         </dd>
         <dt>9:30</dt>
         <dd>Event opening</dd>
-        <dt>11:15</dt>
+        <dt>11:20</dt>
         <dd>Coffee break by Tresorit</dd>
         <dt>13:00</dt>
         <dd>
@@ -78,7 +103,7 @@ const Schedule = () => (
         <dt>9:30</dt>
         <dd>Event opening</dd>
 
-        <dt>09:45</dt>
+        <dt>09:50</dt>
         <dd>
           {' '}
           <strong>
@@ -86,7 +111,7 @@ const Schedule = () => (
           </strong>{' '}
           <br /> by Mauricio Palma
         </dd>
-        <dt>10:15</dt>
+        <dt>10:20</dt>
         <dd>
           {' '}
           <strong>
@@ -94,7 +119,7 @@ const Schedule = () => (
           </strong>{' '}
           <br /> by Shelley Vohr
         </dd>
-        <dt>10:45</dt>
+        <dt>10:50</dt>
         <dd>
           {' '}
           <strong>
@@ -103,7 +128,7 @@ const Schedule = () => (
           <br /> by Jorge Marin
         </dd>
 
-        <dt className={schedule.break}>11:15</dt>
+        <dt className={schedule.break}>11:20</dt>
         <dd className={schedule.break}>Coffee break by Tresorit</dd>
 
         <dt>12:00</dt>
