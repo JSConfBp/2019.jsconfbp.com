@@ -129,7 +129,14 @@ const Schedule = () => (
         </dd>
 
         <dt className={schedule.break}>11:20</dt>
-        <dd className={schedule.break}>Coffee break by Tresorit</dd>
+        <dd className={schedule.break}>
+          Coffee break by Tresorit
+
+          <ul>
+            <li>Mozilla Minutes (AMA/panel) about MDN with Ali Spivak at the Mozilla Community Lounge</li>
+				    <li>Recycle Workshop by RePityke in the Small Hall</li>
+          </ul>
+        </dd>
 
         <dt>12:00</dt>
         <dd>
@@ -151,6 +158,13 @@ const Schedule = () => (
         <dt className={schedule.break}>13:00</dt>
         <dd className={schedule.break}>
           <Link to="/updates/vegan-menu#js-day-1">Lunch by Vacuumlabs</Link>
+
+          <ul>
+            <li>Hardware Hacking Panel with Ramon Huidobro, Stephanie Nemeth, Tim Pietrusky at the Mozilla Community Lounge</li>
+				    <li>Lightning talks and Demos at the Mozilla Community Lounge</li>
+				    <li>WebVR Demos, JS Dance Mat Fun at the Mozilla Community Lounge'</li>
+				    <li>Recycle Workshop by RePityke in the Small Hall</li>
+          </ul>
         </dd>
 
         <dt>14:30</dt>
@@ -167,7 +181,14 @@ const Schedule = () => (
         </dd>
 
         <dt className={schedule.break}>15:30</dt>
-        <dd className={schedule.break}>Coffee break by Tresorit</dd>
+        <dd className={schedule.break}>
+          Coffee break by Tresorit
+
+          <ul>
+            <li>Lightning talks and Demos at the Mozilla Community Lounge</li>
+				    <li>WebVR Demos, JS Dance Mat Fun at the Mozilla Community Lounge</li>
+          </ul>
+        </dd>
 
         <dt>16:15</dt>
         <dd>
@@ -232,7 +253,13 @@ const Schedule = () => (
           by Rubén Sospedra{' '}
         </dd>
         <dt className={schedule.break}>11:30</dt>
-        <dd className={schedule.break}>Coffee break by Tresorit</dd>
+        <dd className={schedule.break}>
+          Coffee break by Tresorit
+          <ul>
+            <li>Mozilla Minutes (AMA/panel) aboout DevTools with Hui Jing Chen at the Mozilla Community Lounge</li>
+            <li>Recycle Workshop by RePityke in the Small Hall</li>
+          </ul>
+        </dd>
         <dt>12:15</dt>{' '}
         <dd>
           <strong>Deciphering Brainwaves with the Web Audio API</strong>
@@ -248,6 +275,13 @@ const Schedule = () => (
         <dt className={schedule.break}>13:15</dt>
         <dd className={schedule.break}>
           <Link to="/updates/vegan-menu#js-day-2">Lunch by Vacuumlabs</Link>
+
+          <ul>
+            <li>Futuristic Web Panel with Surma, Isa Silveira, Charlie Gerard at the Mozilla Community Lounge</li>
+            <li>Lightning talks at the Mozilla Community Lounge</li>
+            <li>WebVR Demos, JS Dance Mat Fun at the Mozilla Community Lounge</li>
+            <li>Recycle Workshop by RePityke in the Small Hall</li>
+          </ul>
         </dd>
         <dt>14:45</dt>{' '}
         <dd>
@@ -265,7 +299,15 @@ const Schedule = () => (
           by Liran Tal{' '}
         </dd>
         <dt className={schedule.break}>15:45</dt>
-        <dd className={schedule.break}>Coffee break by Tresorit</dd>
+        <dd className={schedule.break}>
+          Coffee break by Tresorit
+
+          <ul>
+            <li>Lightning talks at the Mozilla Community Lounge</li>
+            <li>WebVR Demos, JS Dance Mat Fun at the Mozilla Community Lounge</li>
+            <li>Recycle Workshop by RePityke in the Small Hall</li>
+          </ul>
+        </dd>
         <dt>16:30</dt>{' '}
         <dd>
           <strong>Testing presentation components visually</strong>
