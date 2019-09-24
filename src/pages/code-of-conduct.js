@@ -16,11 +16,11 @@ const CodeOfConduct = () => (
         <em>tl;dr: Don’t be a Jerk. Be excellent!</em>
       </p>
       <h2>Need help?</h2>
-      <p>Contact Szabolcs!</p>
+      <p>Contact Freevo!</p>
       <p>
-        Twitter: <a href="https://twitter.com/_Nec">@_nec</a> <br />
-        Email: <a href="mailto:nec@jsconfbp.com">nec@jsconfbp.com</a> <br />
-        Phone (HU): +36 70 389 1288
+        Twitter: <a href="https://twitter.com/freevo">@freevo</a> <br />
+        Email: <a href="mailto:freevo@gmail.com">freevo@gmail.com</a> <br />
+        Phone (HU): +36 20 247 8940
       </p>
       <p>
         Conference staff will be happy to help participants contact hotel/venue
