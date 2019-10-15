@@ -104,7 +104,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             {youtube && (
               <YoutubeVideo
                 src={youtube}
-                title="Legendary Lambdas by Tejas Kumar"
+                title={`${title} by ${name}`}
                 className={speakerStyles.video}
               />
             )}
