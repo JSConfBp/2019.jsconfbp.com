@@ -21,6 +21,14 @@ module.exports = {
     {
       resolve:`gatsby-source-filesystem`,
       options:{
+        name:`sketchnotes`,
+        path: `${__dirname}/speakers/sketchnotes`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
         name:`sponsor-images`,
         path: `${__dirname}/static/posts`,
         ignore: [ `**/\.*` ], // ignore files starting with a dot

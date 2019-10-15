@@ -7,6 +7,7 @@ import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage'
 import YoutubeVideo from '../components/YoutubeVideo'
+import SketchNote from '../components/SketchNote'
 
 import styles from '../pages/simpletext.module.scss'
 import speakerStyles from './speaker-styles.module.scss'
@@ -45,6 +46,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     company,
     company_url,
     youtube,
+    sketchnote,
   } = mdx.frontmatter
 
   return (
@@ -109,6 +111,13 @@ function SpeakersContentTemplate({ data: { mdx } }) {
               />
             )}
 
+            {sketchnote && (
+              <SketchNote
+                image={sketchnote}
+                className={speakerStyles.sketchnote}
+              />
+            )}
+
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
             {bio && <hr />}
@@ -143,6 +152,7 @@ export const pageQuery = graphql`
         company_url
         socialCard
         youtube
+        sketchnote
       }
     }
   }
