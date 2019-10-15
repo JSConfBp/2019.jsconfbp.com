@@ -6,6 +6,7 @@ import Button from '../components/Button/index'
 import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage'
+import YoutubeVideo from '../components/YoutubeVideo'
 
 import styles from '../pages/simpletext.module.scss'
 import speakerStyles from './speaker-styles.module.scss'
@@ -43,6 +44,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     github,
     company,
     company_url,
+    youtube,
   } = mdx.frontmatter
 
   return (
@@ -99,6 +101,14 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             </ul>
           </div>
           <div className={speakerStyles.talk_column}>
+            {youtube && (
+              <YoutubeVideo
+                src={youtube}
+                title="Legendary Lambdas by Tejas Kumar"
+                className={speakerStyles.video}
+              />
+            )}
+
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
             {bio && <hr />}
@@ -132,6 +142,7 @@ export const pageQuery = graphql`
         company
         company_url
         socialCard
+        youtube
       }
     }
   }
