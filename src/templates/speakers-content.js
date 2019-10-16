@@ -113,7 +113,7 @@ function SpeakersContentTemplate({ data: { mdx } }) {
 
             {sketchnote && (
               <SketchNote
-                alt={ `Hand-drawn sketch notes summarizing the talk of ${name}` }
+                alt={`Hand-drawn sketch notes summarizing the talk of ${name}`}
                 image={sketchnote}
                 className={speakerStyles.sketchnote}
               />

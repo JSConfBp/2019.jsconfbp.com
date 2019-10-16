@@ -30,14 +30,20 @@ const SpeakerImage = ({ alt, image, className = '' }) => (
           return src.includes(image)
         })
         .map(({ node }, i) => (
-          <div className={ classnames(styles.sketchnote, className) } key={`sketchnote-${i}`}>
+          <div
+            className={classnames(styles.sketchnote, className)}
+            key={`sketchnote-${i}`}
+          >
             <a href={node.childImageSharp.fluid.src}>
-            <Img
-              fluid={node.childImageSharp.fluid}
-              alt={ alt || `Hand-drawn sketch notes summarizing the content of the talk` }
-            />
+              <Img
+                fluid={node.childImageSharp.fluid}
+                alt={
+                  alt ||
+                  `Hand-drawn sketch notes summarizing the content of the talk`
+                }
+              />
             </a>
-            <span className={ styles.credit }>
+            <span className={styles.credit}>
               Sketchnotes by <a href="https://malweene.com/">Malweene</a>,
             </span>
           </div>
