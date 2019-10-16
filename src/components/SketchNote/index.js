@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './sketchnote.module.scss'
 
-const SpeakerImage = ({ image, className = '' }) => (
+const SpeakerImage = ({ alt, image, className = '' }) => (
   <StaticQuery
     query={graphql`
       query sketchnoteQuery {
@@ -34,6 +34,7 @@ const SpeakerImage = ({ image, className = '' }) => (
             <a href={node.childImageSharp.fluid.src}>
             <Img
               fluid={node.childImageSharp.fluid}
+              alt={ alt || `Hand-drawn sketch notes summarizing the content of the talk` }
             />
             </a>
             <span className={ styles.credit }>
