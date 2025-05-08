@@ -27,14 +27,6 @@ const IndexPage = props => (
             <a href="http://2016.jsconfbp.com">2016</a> or{' '}
             <a href="http://2015.jsconfbp.com">2015</a>!
           </p>*/}
-
-          <Button
-            block={true}
-            fill={true}
-            href="https://ti.to/jsconf-bp/jsconf-budapest-2019"
-          >
-            Tickets from €311
-          </Button>
         </div>
       </div>
       <div className={styles.updates}>

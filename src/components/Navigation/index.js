@@ -62,10 +62,6 @@ const Navigation = props => {
             Code of Conduct
           </Link>
         </li>
-        <li className={[styles.item, styles.item_ticketButton].join(' ')}>
-          <TicketButton />
-        </li>
-
         {/*
             <li className={styles.item}>
               <Link className={styles.link} to="/code-of-conduct">

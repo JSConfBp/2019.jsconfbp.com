@@ -6,20 +6,39 @@ export default {
       link: 'https://mozilla.com',
       image: 'mozilla',
     },
+    {
+      name: 'Tresorit',
+      level: 'big',
+      link: 'https://tresorit.com',
+      image: 'tresorit',
+    },
+    {
+      name: 'Oracle',
+      level: 'big',
+      link: 'https://oracle.com',
+      image: 'oracle',
+    },
+    {
+      name: 'Vacuumlabs',
+      level: 'big',
+      link: 'https://vacuumlabs.com/',
+      image: 'vacuumlabs',
+    },
   ],
 
   med: [
     {
-      name: 'Twilio',
+      name: 'BlackRock',
       level: 'med',
-      link: 'https://twilio.com',
-      image: 'twilio-logo-red',
+      link:
+        'https://www.blackrock.com/hu/egyeni-befektetok/careers/budapest-recruiting?locale=hu_HU&switchLocale=y&siteEntryPassthrough=true',
+      image: 'blackrock',
     },
     {
-      name: 'SuperCharge',
+      name: 'instructure',
       level: 'med',
-      link: 'https://supercharge.io/',
-      image: 'supercharge_logo17-with-text',
+      link: 'https://www.instructure.com/budapest',
+      image: 'instructure',
     },
     {
       name: 'EPAM',
@@ -28,10 +47,16 @@ export default {
       image: 'EPAM_LOGO_Primary',
     },
     {
-      name: 'Mito',
+      name: 'SuperCharge',
       level: 'med',
-      link: 'https://mito.hu/',
-      image: 'mito',
+      link: 'https://supercharge.io/',
+      image: 'supercharge_logo17-with-text',
+    },
+    {
+      name: 'Twilio',
+      level: 'med',
+      link: 'https://twilio.com',
+      image: 'twilio-logo-red',
     },
     {
       name: 'Bonomi',
@@ -46,12 +71,11 @@ export default {
       image: 'risingstack',
     },
     {
-      name: 'Vacuumlabs',
+      name: 'Mito',
       level: 'med',
-      link: 'https://vacuumlabs.com/',
-      image: 'vacuumlabs',
+      link: 'https://mito.hu/',
+      image: 'mito',
     },
-
     {
       name: 'Microsoft',
       level: 'med',

@@ -51,7 +51,6 @@ export const query = graphql`
             }
           }
           frontmatter {
-            disabled
             title
             company
             short_description
@@ -59,7 +58,6 @@ export const query = graphql`
             workshop_id
             start
             end
-            mentors
             order
           }
         }

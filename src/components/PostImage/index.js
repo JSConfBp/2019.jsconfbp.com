@@ -2,7 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styles from './postimage.module.scss'
-const PostImage = ({ image, style = '' }) => (
+
+const PostImage = ({ image, style = '', alt = '' }) => (
   <StaticQuery
     query={graphql`
       query postImgQuery {
@@ -20,6 +21,11 @@ const PostImage = ({ image, style = '' }) => (
       }
     `}
     render={data => {
+      const imageStyle = Object.assign({}, style, {
+        //transform: style.transform + ' translateX(-50%)',
+        //position: 'absolute'
+      })
+
       return data.source.edges
         .filter(({ node }) => {
           const { src } = node.childImageSharp.fluid
@@ -27,7 +33,15 @@ const PostImage = ({ image, style = '' }) => (
         })
         .map(({ node }, i) => (
           <div className={styles.postImage_container}>
-            <Img style={style} fluid={node.childImageSharp.fluid} key={image} />
+            <div className={styles.postImage_inner}>
+              <Img
+                style={imageStyle}
+                className={styles.postImage_image}
+                fluid={node.childImageSharp.fluid}
+                key={image}
+                alt={alt}
+              />
+            </div>
           </div>
         ))
     }}

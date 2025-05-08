@@ -2,7 +2,7 @@ const mdxFeed = require("gatsby-mdx/feed");
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jsconfbp.com',
+    siteUrl: 'https://2019.jsconfbp.com',
     title: 'JSConf Budapest 2019',
     description: 'JSConf Budapest 2019, September 26-27, Budapest, Hungary. Tickets from €311, including free workshops, inclusive catering and barista coffee!',
     keywords: 'jsconf, javascript, jsconfbp, conference, budapest, jsconf budapest, diversity, inclusivity, community',
@@ -15,6 +15,14 @@ module.exports = {
       options:{
         name:`speaker-images`,
         path: `${__dirname}/speakers/images`,
+        ignore: [ `**/\.*` ], // ignore files starting with a dot
+      }
+    },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`sketchnotes`,
+        path: `${__dirname}/speakers/sketchnotes`,
         ignore: [ `**/\.*` ], // ignore files starting with a dot
       }
     },

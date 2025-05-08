@@ -25,14 +25,14 @@
     }
 
     ul {
-        --menu-offset: 25px;
+        --menu-offset: 32px;
         transform: translateX(calc( var(--menu-offset) - calc(var(--scroll-ratio) *  var(--menu-offset) )))
     }
 
-    li:nth-child(4) {
+    li:nth-child(3) {
         @include valueByInverseHeaderScroll('padding-right', 0px, 47px);
     }
-    li:nth-child(5) {
+    li:nth-child(4) {
         @include valueByInverseHeaderScroll('padding-left', 0px, 47px);
     }
 

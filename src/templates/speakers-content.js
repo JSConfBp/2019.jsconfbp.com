@@ -6,6 +6,8 @@ import Button from '../components/Button/index'
 import Layout from '../components/Layout/index'
 import SocialMeta from '../components/SocialMeta/index'
 import SpeakerImage from '../components/SpeakerImage'
+import YoutubeVideo from '../components/YoutubeVideo'
+import SketchNote from '../components/SketchNote'
 
 import styles from '../pages/simpletext.module.scss'
 import speakerStyles from './speaker-styles.module.scss'
@@ -15,7 +17,6 @@ const TicketButton = () => (
     block={true}
     fill={true}
     color={'red'}
-    href={'https://ti.to/jsconf-bp/jsconf-budapest-2019'}
     className={styles.ticket_button}
   >
     Tickets from €311
@@ -44,6 +45,8 @@ function SpeakersContentTemplate({ data: { mdx } }) {
     github,
     company,
     company_url,
+    youtube,
+    sketchnote,
   } = mdx.frontmatter
 
   return (
@@ -100,15 +103,27 @@ function SpeakersContentTemplate({ data: { mdx } }) {
             </ul>
           </div>
           <div className={speakerStyles.talk_column}>
+            {youtube && (
+              <YoutubeVideo
+                src={youtube}
+                title={`${title} by ${name}`}
+                className={speakerStyles.video}
+              />
+            )}
+
+            {sketchnote && (
+              <SketchNote
+                alt={`Hand-drawn sketch notes summarizing the talk of ${name}`}
+                image={sketchnote}
+                className={speakerStyles.sketchnote}
+              />
+            )}
+
             <MDXRenderer>{mdx.code.body}</MDXRenderer>
 
             {bio && <hr />}
 
             {bio}
-
-            <hr />
-
-            <TicketButton />
           </div>
         </div>
       </div>
@@ -137,6 +152,8 @@ export const pageQuery = graphql`
         company
         company_url
         socialCard
+        youtube
+        sketchnote
       }
     }
   }

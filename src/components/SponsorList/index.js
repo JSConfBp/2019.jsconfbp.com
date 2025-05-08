@@ -15,7 +15,7 @@ const UpdatesList = props => (
   <>
     <h1 className={styles.sponsor_subtitle}>Sponsors</h1>
 
-    <ul className={styles.sponsor_list}>
+    <ul className={classnames(styles.sponsor_list, styles.sponsor_list_big)}>
       {data.big.map(sponsor => (
         <li className={styles[`sponsor_${sponsor.level}`]} key={sponsor.name}>
           <SponsorImageLink {...sponsor} />
